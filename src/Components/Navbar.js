@@ -17,9 +17,6 @@ function PortfolioNavbar() {
                 />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="https://github.com/waitingonalice">
-                            GitHub
-                        </Nav.Link>
                         <Nav.Link href="#about">About</Nav.Link>
                         <Nav.Link href="#link">Experience</Nav.Link>
                         <Nav.Link href="#projects">Projects</Nav.Link>
@@ -28,12 +25,23 @@ function PortfolioNavbar() {
                 </Navbar.Collapse>
             </Navbar>
             <section className="Intro">
-                <TypeWriterEffect
-                    startDelay={100}
-                    text="Hello! My name is Wilson!"
-                    typeSpeed={100}
-                    hideCursorAfterText={true}
-                ></TypeWriterEffect>
+                <div>
+                    <div id="job-intro">
+                        <TypeWriterEffect
+                            textStyle={{
+                                fontFamily: "Montserrat",
+                                fontWeight: 600,
+                            }}
+                            startDelay={100}
+                            text="Hello World, I'm Wilson!"
+                            typeSpeed={70}
+                            hideCursorAfterText={true}
+                        />
+                    </div>
+                    Front-End Software Developer @
+                    <a href="https://www.trustana.com/"> Trustana</a>.
+                </div>
+                {/* <a href="https://www.trustana.com/">Trustana</a>. */}
             </section>
         </div>
     );

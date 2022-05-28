@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\fcsie\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add gatsby-plugin-chakra-ui @chakra-ui/core @emotion/core @emotion/styled emotion-theming
+  C:\Program Files\nodejs\node.exe C:\Users\fcsie\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @chakra-ui/gatsby-plugin @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\fcsie\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\fcsie\AppData\Local\Programs\Python\Python310\;C:\Users\fcsie\AppData\Local\Microsoft\WindowsApps;C:\Users\fcsie\.dotnet\tools;C:\Users\fcsie\AppData\Local\GitHubDesktop\bin;C:\Users\fcsie\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fcsie\AppData\Roaming\npm;C:\Program Files\Java\jdk-17.0.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\fcsie\Desktop\Application practice\portfolio\node_modules\@parcel\fs-search\fs-search.win32-x64-msvc.node'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\fcsie\Desktop\Application practice\portfolio\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\node.abi93.node'
 
 npm manifest: 
   {
@@ -46,7 +46,9 @@ npm manifest:
       "gatsby-source-filesystem": "^4.15.0",
       "gatsby-transformer-sharp": "^4.15.0",
       "react": "^17.0.2",
+      "react-bootstrap": "^2.4.0",
       "react-dom": "^17.0.2",
+      "react-typewriter-effect": "^1.1.0",
       "sass": "^1.52.1"
     }
   }
