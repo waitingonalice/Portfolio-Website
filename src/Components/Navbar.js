@@ -41,7 +41,6 @@ function PortfolioNavbar() {
                     Front-End Software Developer @
                     <a href="https://www.trustana.com/"> Trustana</a>.
                 </div>
-                {/* <a href="https://www.trustana.com/">Trustana</a>. */}
             </section>
         </div>
     );

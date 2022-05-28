@@ -83,11 +83,13 @@ $gradient-colour: linear-gradient(to right,
        }
 }
 
-@media (max-width:700px) {
+@media (max-width:768px) {
     .Intro{
         padding-left: 5%;
-        padding-bottom: 70%;
-      
-
+        padding-bottom: 65%;
+    }
+    .logo {
+        width: 3rem;
     }
 }
+
