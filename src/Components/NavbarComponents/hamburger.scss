@@ -1,0 +1,41 @@
+$textColour: rgb(97, 109, 128);
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+
+
+        div {
+            width: 32px;
+            height: 5px;
+            background-color: $textColour;
+            margin: 6px;
+            border-radius: 4px;
+            transition: all 0.5s;
+        }
+
+        .open :nth-child(1) {
+            -webkit-transform: translateY(11px);
+            -ms-transform: translateY(11px);
+            -o-transform: translateY(11px);
+            transform: translateY(11px);
+        }
+
+        .open :nth-child(3) {
+            -webkit-transform: translateY(-11px);
+            -ms-transform: translateY(-11px);
+            -o-transform: translateY(-11px);
+            transform: translateY(-11px);
+
+        }
+
+
+    }
+
+
+}

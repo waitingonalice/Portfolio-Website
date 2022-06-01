@@ -1,0 +1,100 @@
+$gradient-colour: linear-gradient(to right,
+        rgb(0, 197, 223),
+        rgb(2, 234, 172));
+$textColour: rgb(97, 109, 128);
+$font1: 'League Spartan',
+    sans-serif;
+$font2: 'Montserrat',
+    sans-serif;
+
+.nav-links {
+    ul {
+        display: flex;
+        list-style: none;
+
+        a {
+            color: $textColour;
+            font-size: larger;
+            font-family: $font2;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        //underline animation
+        a:hover {
+            color: rgb(5, 180, 255);
+            transition: 0.3s;
+
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 4px;
+            border-radius: 4px;
+            background: $gradient-colour;
+            bottom: 10px;
+            left: 10px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .2s ease-out;
+            z-index: -1;
+        }
+
+        a:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+
+}
+
+.DropdownExpanded {
+    display: none;
+}
+
+.DropdownClose {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .DropdownClose {
+        display: none;
+    }
+
+    .DropdownExpanded {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            list-style: none;
+
+
+            a {
+                color: $textColour;
+                font-size: larger;
+                font-family: $font2;
+                text-decoration: none;
+                position: relative;
+
+                &:hover {
+                    color: rgb(5, 180, 255);
+                    transition: 0.3s;
+
+                }
+
+
+            }
+        }
+    }
+
+}

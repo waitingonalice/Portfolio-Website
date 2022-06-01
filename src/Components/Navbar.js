@@ -1,48 +1,67 @@
 import React from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../Styles/Navbar.scss";
-import { Nav, Navbar } from "react-bootstrap";
 import coding from "../images/coding.png";
+import Hamburger from "./NavbarComponents/hamburger";
+import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 import TypeWriterEffect from "react-typewriter-effect";
-
+import AboutMe from "../Components/AboutMe";
+import Projects from "../Components/Projects";
+import ContactMe from "../Components/ContactMe";
 function PortfolioNavbar() {
+    const [toggle, setToggle] = useState(false);
+    const handleToggle = (open) => {
+        setToggle(open);
+    };
+    // console.log(toggle);
     return (
-        <div>
-            <Navbar bg="white" expand="md" sticky="top" className="p-4">
-                <img className="logo" src={coding}></img>
+        <>
+            <header id="top">
+                {/* Start of nav bar */}
+                <nav className="navigation-bar">
+                    <img className="logo" alt="codeLogo" src={coding}></img>
+                    <Hamburger toggle={toggle} handleToggle={handleToggle} />
+                    <Menu />
+                </nav>
+                <DropDownMenu toggle={toggle}></DropDownMenu>
+            </header>
+            {/* end of nav bar */}
 
-                <Navbar.Toggle
-                    aria-controls="basic-navbar-nav"
-                    className="position-relative justify-content-end"
-                />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                        <Nav.Link href="#about">About</Nav.Link>
-                        <Nav.Link href="#link">Experience</Nav.Link>
-                        <Nav.Link href="#projects">Projects</Nav.Link>
-                        <Nav.Link href="#contacts">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-            <section className="Intro">
-                <div>
-                    <div id="job-intro">
-                        <TypeWriterEffect
-                            textStyle={{
-                                fontFamily: "Montserrat",
-                                fontWeight: 600,
-                            }}
-                            startDelay={100}
-                            text="Hello World, I'm Wilson!"
-                            typeSpeed={70}
-                            hideCursorAfterText={true}
-                        />
+            {/* Start of introduction */}
+
+            <div className="container">
+                <section className="Intro">
+                    <div>
+                        <div id="job-intro">
+                            <TypeWriterEffect
+                                textStyle={{
+                                    fontFamily: "Montserrat",
+                                    fontWeight: 600,
+                                }}
+                                startDelay={100}
+                                text="Hello World, I'm Wilson!"
+                                typeSpeed={70}
+                                hideCursorAfterText={true}
+                            />
+                        </div>
+                        Front-End Software Developer @
+                        <a href="https://www.trustana.com/"> Trustana</a>.
                     </div>
-                    Front-End Software Developer @
-                    <a href="https://www.trustana.com/"> Trustana</a>.
-                </div>
-            </section>
-        </div>
+                </section>
+                <section>
+                    <AboutMe></AboutMe>
+                </section>
+                <section>
+                    <Projects></Projects>
+                </section>
+                <section>
+                    <ContactMe></ContactMe>
+                </section>
+            </div>
+
+            {/* end of introduction */}
+        </>
     );
 }
 
