@@ -2,3 +2,23 @@
     background-color: rgb(245, 246, 250);
 
 }
+
+.child-container {
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 0 2em;
+
+}
+
+
+section {
+    margin-bottom: 3em;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .child-container {
+        padding: 0 6%;
+    }
+}

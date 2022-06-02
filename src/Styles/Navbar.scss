@@ -23,70 +23,7 @@ $font2: 'Montserrat',
     }
 }
 
-.container {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 0 5%;
-
-}
-
-section {
-    margin-bottom: 3em;
-}
-
-.Intro {
-    min-height: calc(100vh - 160px);
-    display: flex;
-    position: relative;
-    font-size: 1.5em;
-    font-family: $font2;
-    align-items: center;
-
-    a {
-        position: relative;
-        text-decoration: none;
-        color: $textColour;
-        font-weight: 700;
-        z-index: 1;
-    }
-
-    //highlight animation
-    a::before {
-        content: '';
-        background: $gradient-colour;
-        border-radius: 5px;
-        position: absolute;
-        left: 5px;
-        bottom: 3px;
-        width: 100%;
-        height: 25%;
-        transition: all .3s ease;
-        z-index: -1;
-    }
-
-    a:hover::before {
-        bottom: 0;
-        height: 100%;
-    }
-
-    #job-intro {
-        padding-bottom: 20px;
-        color: $textColour;
-    }
-
-}
-
-
 @media screen and (max-width:768px) {
-
-    .Intro {
-        -webkit-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-        font-size: 1.3rem;
-    }
-
     .navigation-bar {
         padding: 7% 7%;
 
