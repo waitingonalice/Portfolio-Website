@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Montserrat&display=swap');
 $gradient-colour: linear-gradient(to right,
         rgb(1, 224, 254),
         rgb(2, 249, 183));
@@ -16,7 +17,7 @@ $font2: 'Montserrat',
     .job-intro {
         font-family: $font2;
         color: $textColour;
-        margin-top: -10%;
+        margin-top: -8%;
 
 
         p {
@@ -50,8 +51,12 @@ $font2: 'Montserrat',
             height: 100%;
         }
 
-        h1 {
+        .name h1 {
             font-size: 3.5em;
+        }
+
+        .interest h1 {
+            font-size: 3.2em;
         }
 
     }
@@ -97,8 +102,12 @@ $font2: 'Montserrat',
 
             }
 
-            h1 {
+            .name h1 {
                 font-size: 2.5em;
+            }
+
+            .interest h1 {
+                font-size: 2em;
             }
         }
 
