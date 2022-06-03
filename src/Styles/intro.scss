@@ -1,24 +1,20 @@
+@use 'variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Montserrat&display=swap');
-$gradient-colour: linear-gradient(to right,
-        rgb(1, 224, 254),
-        rgb(2, 249, 183));
-$textColour: rgb(97, 109, 128);
-$font1: 'League Spartan',
-    sans-serif;
-$font2: 'Montserrat',
-    sans-serif;
 
 .wrapper {
     min-height: calc(100vh - 150px);
     display: flex;
     position: relative;
     align-items: center;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     .job-intro {
-        font-family: $font2;
-        color: $textColour;
-        margin-top: -8%;
-
+        font-family: v.$font2;
+        color: v.$textColour;
+        margin-top: -5em;
 
         p {
             font-size: 1.3em;
@@ -27,7 +23,7 @@ $font2: 'Montserrat',
         a {
             position: relative;
             text-decoration: none;
-            color: $textColour;
+            color: v.$textColour;
             font-weight: 700;
             z-index: 0;
         }
@@ -35,7 +31,7 @@ $font2: 'Montserrat',
         //highlight animation
         p a::before {
             content: '';
-            background: $gradient-colour;
+            background: v.$gradient-colour;
             border-radius: 5px;
             position: absolute;
             left: 0;
@@ -87,15 +83,12 @@ $font2: 'Montserrat',
 
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:650px) {
 
     .wrapper {
-        -webkit-transition: all 0.4s ease-in-out;
-        -o-transition: all 0.4s ease-in-out;
-        -moz-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
 
         .job-intro {
+            margin-top: -4em;
 
             p {
                 font-size: 1.1em;

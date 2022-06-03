@@ -30,7 +30,7 @@ function Intro() {
                         startDelay={1600}
                         text="App builder, Problem solver"
                         typeSpeed={70}
-                        hideCursorAfterText={true}
+                        hideCursorAfterText={false}
                     />
                 </div>
                 <div className="job-title">

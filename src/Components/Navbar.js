@@ -12,16 +12,14 @@ function PortfolioNavbar() {
     };
     // console.log(toggle);
     return (
-        <>
-            <header id="top">
-                <nav className="navigation-bar">
-                    <img className="logo" alt="codeLogo" src={coding}></img>
-                    <Hamburger toggle={toggle} handleToggle={handleToggle} />
-                    <Menu />
-                </nav>
-                <DropDownMenu toggle={toggle}></DropDownMenu>
-            </header>
-        </>
+        <header id="top">
+            <nav className="navigation-bar">
+                <img className="logo" alt="codeLogo" src={coding}></img>
+                <Hamburger toggle={toggle} handleToggle={handleToggle} />
+                <Menu />
+            </nav>
+            <DropDownMenu toggle={toggle}></DropDownMenu>
+        </header>
     );
 }
 

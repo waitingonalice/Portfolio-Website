@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../Styles/index.scss";
 import PortfolioNavbar from "../Components/Navbar";
 import Intro from "../Components/Intro";
+import Experience from "../Components/Experience";
 import AboutMe from "../Components/AboutMe";
 import Projects from "../Components/Projects";
 import ContactMe from "../Components/ContactMe";
@@ -12,16 +13,19 @@ const IndexPage = () => {
         <div className="parent-container">
             <PortfolioNavbar />
             <div className="child-container">
-                <section className="introduction">
+                <section id="introduction">
                     <Intro></Intro>
                 </section>
-                <section>
+                <section id="about">
                     <AboutMe></AboutMe>
                 </section>
-                <section>
+                <section id="experience">
+                    <Experience></Experience>
+                </section>
+                <section id="project">
                     <Projects></Projects>
                 </section>
-                <section>
+                <section id="contact">
                     <ContactMe></ContactMe>
                 </section>
             </div>

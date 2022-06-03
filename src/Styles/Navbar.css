@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat&display=swap");
+@use 'variables' as v;
+.navigation-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1280px;
+  padding: 1.5em;
+  margin: 0 auto;
+}
+
+.navigation-bar .logo {
+  width: 50px;
+}
+
+@media screen and (max-width: 650px) {
+  .navigation-bar {
+    padding: 7% 7%;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

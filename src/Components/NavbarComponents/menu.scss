@@ -26,6 +26,7 @@ $font2: 'Montserrat',
         a:hover {
             color: rgb(5, 180, 255);
             transition: 0.3s;
+            transform: scale(1.1);
 
         }
 
@@ -40,7 +41,7 @@ $font2: 'Montserrat',
             left: 10px;
             transform-origin: right;
             transform: scaleX(0);
-            transition: transform .2s ease-out;
+            transition: transform .3s ease-in-out;
             z-index: -1;
         }
 
@@ -62,38 +63,53 @@ $font2: 'Montserrat',
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
     .nav-links {
         display: none;
     }
 
+
+
     .DropdownClose {
-        display: none;
+        display: flex;
+        z-index: -999;
+        position: relative;
+        transition: margin .2s ease-out;
+        text-decoration: none;
+        margin: -30% 0 0 0;
+
+        a {
+            color: $textColour;
+        }
     }
 
     .DropdownExpanded {
         display: flex;
         flex-direction: column;
+        position: relative;
+        transition: margin .2s ease-out;
+
 
         ul {
             list-style: none;
-            height: 150px;
+            height: 165px;
+
 
             a {
                 color: $textColour;
-                font-size: larger;
+                font-size: large;
                 font-family: $font2;
                 text-decoration: none;
                 position: relative;
 
                 &:hover {
+                    position: relative;
                     color: rgb(5, 180, 255);
-                    transition: 0.3s;
-
+                    transition: transform 0.4s;
+                    transform: scale(1.1);
+                    margin: 0 0 0 1em;
                 }
             }
         }
-
-
     }
 }

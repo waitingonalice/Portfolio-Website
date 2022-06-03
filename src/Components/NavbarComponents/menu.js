@@ -4,47 +4,45 @@ import "./menu.scss";
 
 export function Menu() {
     return (
-        <>
-            <Nav className={"nav-links"}>
-                <ul>
-                    <li>
-                        <Nav.Link href="#about">About</Nav.Link>
-                    </li>
-                    <li>
-                        <Nav.Link href="#link">Experience</Nav.Link>
-                    </li>
-                    <li>
-                        <Nav.Link href="#projects">Projects</Nav.Link>
-                    </li>
-                    <li>
-                        <Nav.Link href="#contacts">Contact</Nav.Link>
-                    </li>
-                </ul>
-            </Nav>
-        </>
+        <Nav className={"nav-links"}>
+            <ul>
+                <li>
+                    <Nav.Link href="#about">About</Nav.Link>
+                </li>
+                <li>
+                    <Nav.Link href="#experience">Experience</Nav.Link>
+                </li>
+                <li>
+                    <Nav.Link href="#project">Projects</Nav.Link>
+                </li>
+                <li>
+                    <Nav.Link href="#contact">Contact</Nav.Link>
+                </li>
+            </ul>
+        </Nav>
     );
 }
 
 export function DropDownMenu({ toggle }) {
     console.log(toggle);
     return (
-        <>
+        <div className={"link-wrapper"}>
             <Nav className={toggle ? "DropdownExpanded" : "DropdownClose"}>
                 <ul>
                     <li>
                         <Nav.Link href="#about">About</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#link">Experience</Nav.Link>
+                        <Nav.Link href="#experience">Experience</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#projects">Projects</Nav.Link>
+                        <Nav.Link href="#project">Projects</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#contacts">Contact</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
                     </li>
                 </ul>
             </Nav>
-        </>
+        </div>
     );
 }

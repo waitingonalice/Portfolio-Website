@@ -1,14 +1,5 @@
+@use 'variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat&display=swap');
-
-$gradient-colour: linear-gradient(to right,
-        rgb(1, 224, 254),
-        rgb(2, 249, 183));
-$textColour: rgb(97, 109, 128);
-$font1: 'League Spartan',
-    sans-serif;
-$font2: 'Montserrat',
-    sans-serif;
-
 
 .navigation-bar {
     display: flex;
@@ -18,12 +9,13 @@ $font2: 'Montserrat',
     padding: 1.5em;
     margin: 0 auto;
 
+
     .logo {
         width: 50px;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:650px) {
     .navigation-bar {
         padding: 7% 7%;
 
