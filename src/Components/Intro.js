@@ -28,7 +28,7 @@ function Intro() {
                             fontWeight: 500,
                         }}
                         startDelay={1600}
-                        text="App builder, Problem solver"
+                        text="App developer, Problem solver"
                         typeSpeed={70}
                         hideCursorAfterText={false}
                     />

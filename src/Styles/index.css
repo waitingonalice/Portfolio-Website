@@ -1,0 +1,22 @@
+.parent-container {
+  background-color: white;
+}
+
+.child-container {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+@media screen and (max-width: 650px) {
+  .child-container {
+    padding: 0 6%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

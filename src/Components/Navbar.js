@@ -7,8 +7,8 @@ import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 
 function PortfolioNavbar() {
     const [toggle, setToggle] = useState(false);
-    const handleToggle = (open) => {
-        setToggle(open);
+    const handleToggle = (menuState) => {
+        setToggle(menuState);
     };
     // console.log(toggle);
     return (

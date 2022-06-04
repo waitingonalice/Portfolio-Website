@@ -7,6 +7,7 @@ $font1: 'League Spartan',
 $font2: 'Montserrat',
     sans-serif;
 
+
 .nav-links {
     ul {
         display: flex;
@@ -68,8 +69,6 @@ $font2: 'Montserrat',
         display: none;
     }
 
-
-
     .DropdownClose {
         display: flex;
         z-index: -999;
@@ -89,7 +88,6 @@ $font2: 'Montserrat',
         position: relative;
         transition: margin .2s ease-out;
 
-
         ul {
             list-style: none;
             height: 165px;
@@ -105,9 +103,9 @@ $font2: 'Montserrat',
                 &:hover {
                     position: relative;
                     color: rgb(5, 180, 255);
-                    transition: transform 0.4s;
-                    transform: scale(1.1);
-                    margin: 0 0 0 1em;
+                    transition: transform 0.5s;
+                    transform: translateX(1%);
+
                 }
             }
         }
