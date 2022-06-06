@@ -7,10 +7,17 @@ import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 
 function PortfolioNavbar() {
     const [toggle, setToggle] = useState(false);
-    const handleToggle = (menuState) => {
-        setToggle(menuState);
+
+    // const handleHide = () => {
+    //     setToggle(false);
+    // };
+    // const handleShow = () => {
+    //     setToggle(true);
+    // };
+    const handleToggle = () => {
+        setToggle(!toggle);
     };
-    // console.log(toggle);
+
     return (
         <header id="top">
             <nav className="navigation-bar">
@@ -18,7 +25,7 @@ function PortfolioNavbar() {
                 <Hamburger toggle={toggle} handleToggle={handleToggle} />
                 <Menu />
             </nav>
-            <DropDownMenu toggle={toggle}></DropDownMenu>
+            <DropDownMenu toggle={toggle} handleToggle={handleToggle} />
         </header>
     );
 }

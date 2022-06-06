@@ -12,8 +12,8 @@ function Intro() {
                 <div className="name">
                     <TypeWriterEffect
                         textStyle={{
-                            fontFamily: "Montserrat",
-                            fontWeight: 800,
+                            fontFamily: "League Spartan",
+                            fontWeight: 700,
                         }}
                         startDelay={100}
                         text="Hello World, I'm Wilson."
@@ -24,19 +24,21 @@ function Intro() {
                 <div className="interest">
                     <TypeWriterEffect
                         textStyle={{
-                            fontFamily: "Montserrat",
-                            fontWeight: 500,
+                            fontFamily: "League Spartan",
+                            fontWeight: 400,
                         }}
                         startDelay={1600}
-                        text="App developer, Problem solver"
+                        text="App developer, Problem solver."
                         typeSpeed={70}
-                        hideCursorAfterText={false}
+                        hideCursorAfterText={true}
                     />
                 </div>
                 <div className="job-title">
                     <p>
                         Software Engineer @{" "}
-                        <a href="https://www.trustana.com/"> Trustana. </a>
+                        <strong>
+                            <a href="https://www.trustana.com/">Trustana.</a>
+                        </strong>
                     </p>
                 </div>
                 <div className="img-links">

@@ -11,7 +11,9 @@ import ContactMe from "../Components/ContactMe";
 const IndexPage = () => {
     return (
         <div className="parent-container">
-            <PortfolioNavbar />
+            <div className="navigation">
+                <PortfolioNavbar />
+            </div>
             <div className="child-container">
                 <section id="introduction">
                     <Intro></Intro>

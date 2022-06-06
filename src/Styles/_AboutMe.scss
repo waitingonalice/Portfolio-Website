@@ -1,11 +1,50 @@
 @use 'variables' as v;
 
-.title {
-    h1 {
-        color: black;
-        font-family: v.$font3;
-        padding-bottom: 1em;
+.about-wrapper {
+    border: 1px solid black;
+    min-height: v.$height;
+
+    .title {
+        h3 {
+            color: v.$textColour;
+            font-family: v.$font3;
+        }
     }
 }
 
-.about-wrapper {}
+
+.paragraph {
+    font-family: v.$font2;
+    padding: 0.5em 0;
+
+    a {
+
+        color: v.$sentenceColour;
+    }
+
+    a:nth-child(1) {
+        text-decoration: none;
+    }
+
+    .p1,
+    .p2 {
+
+        strong:nth-child(1),
+        strong:nth-child(2) {
+
+            position: relative;
+            z-index: 0;
+            background-size: 100% 0.4em;
+            background-image: v.$gradient-colour;
+            background-repeat: no-repeat;
+            background-position: 0 85%;
+            transition: 0.3s ease-in;
+            border-radius: 5px;
+        }
+
+        strong:nth-child(1):hover,
+        strong:nth-child(2):hover {
+            background-size: 100% 1.2em;
+        }
+    }
+}
