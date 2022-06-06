@@ -1,3 +1,4 @@
+@use 'hamburger' as ham;
 $gradient-colour: linear-gradient(to right,
         rgb(0, 197, 223),
         rgb(2, 234, 172));
@@ -54,13 +55,11 @@ $font2: 'Montserrat',
 
 }
 
-.DropdownExpanded {
+.menu {
     display: none;
 }
 
-.DropdownClose {
-    display: none;
-}
+
 
 
 
@@ -69,49 +68,50 @@ $font2: 'Montserrat',
         display: none;
     }
 
-    .DropdownClose {
-        display: flex;
-        z-index: -999;
-        position: relative;
-        transition: margin .25s ease-out;
-        text-decoration: none;
-        margin: -6em 0 0 0;
-
-        a {
-            color: $textColour;
-        }
+    .menu.active {
+        transform: translateX(0);
+        visibility: visible;
     }
 
-    .DropdownExpanded {
-        position: relative;
-        transition: margin .25s ease-out;
+    .menu {
         display: flex;
-        margin-top: 2em;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        transition: all .4s ease-in-out;
+        transform: translateX(100vw);
+        background: rgb(23, 31, 58);
+        visibility: hidden;
+        z-index: 3;
+        height: 100vh;
+        width: 75%;
+        top: 0;
+        right: 0;
+
+
 
         ul {
-
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
             flex-direction: column;
             list-style: none;
-            height: 165px;
             padding: 0;
-
-
+            height: 40%;
 
             a {
+
                 color: $textColour;
-                font-size: large;
+                font-size: 1.5em;
                 font-family: $font2;
                 text-decoration: none;
-                position: relative;
+
 
                 &:hover {
                     position: relative;
                     color: rgb(5, 180, 255);
-                    transition: transform 0.5s;
-                    transform: translateX(1%);
-
+                    background: red;
                 }
             }
         }

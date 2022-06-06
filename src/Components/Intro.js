@@ -22,18 +22,15 @@ function Intro() {
                     />
                 </div>
 
-                <div className="interest">
-                    <h1> App developer, Problem solver.</h1>
+                <div className="job-title">
+                    Software Engineer @{" "}
+                    <strong>
+                        <a href="https://www.trustana.com/">Trustana.</a>
+                    </strong>
                 </div>
 
-                <div className="job-title">
-                    <p>
-                        Software Engineer @{" "}
-                        <strong>
-                            <a href="https://www.trustana.com/">Trustana.</a>
-                        </strong>
-                    </p>
-                </div>
+                <div className="welcome">Welcome to my portfolio.</div>
+
                 <div className="img-links">
                     <a href="mailto:wilsonsie97@gmail.com">
                         <img alt="gmail-icon" src={gmail}></img>

@@ -8,12 +8,12 @@ import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 function PortfolioNavbar() {
     const [toggle, setToggle] = useState(false);
 
-    // const handleHide = () => {
-    //     setToggle(false);
-    // };
-    // const handleShow = () => {
-    //     setToggle(true);
-    // };
+    const handleHide = () => {
+        setToggle(false);
+    };
+    const handleShow = () => {
+        setToggle(true);
+    };
     const handleToggle = () => {
         setToggle(!toggle);
     };
@@ -25,7 +25,12 @@ function PortfolioNavbar() {
                 <Hamburger toggle={toggle} handleToggle={handleToggle} />
                 <Menu />
             </nav>
-            <DropDownMenu toggle={toggle} handleToggle={handleToggle} />
+            <DropDownMenu
+                toggle={toggle}
+                handleToggle={handleToggle}
+                handleHide={handleHide}
+                handleShow={handleShow}
+            />
         </header>
     );
 }

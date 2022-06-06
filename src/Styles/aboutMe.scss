@@ -19,20 +19,15 @@
     padding: 0.5em 0;
 
     a {
-
-        color: v.$sentenceColour;
-    }
-
-    a:nth-child(1) {
+        color: v.$linkColour;
         text-decoration: none;
     }
 
     .p1,
-    .p2 {
+    .p2,
+    .p3 {
 
-        strong:nth-child(1),
-        strong:nth-child(2) {
-
+        strong {
             position: relative;
             z-index: 0;
             background-size: 100% 0.4em;
@@ -43,9 +38,10 @@
             border-radius: 5px;
         }
 
-        strong:nth-child(1):hover,
-        strong:nth-child(2):hover {
+        strong:hover {
             background-size: 100% 1.2em;
         }
     }
+
+
 }

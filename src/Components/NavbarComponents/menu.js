@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-
+import { useEffect } from "react";
 import "./menu.scss";
 
 export function Menu() {
@@ -24,21 +24,35 @@ export function Menu() {
     );
 }
 
-export function DropDownMenu({ toggle }) {
+export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
     const links = [
         { link: "#about", text: "About" },
         { link: "#experience", text: "Experience" },
-        { link: "#project", text: "Project" },
+        { link: "#project", text: "Projects" },
         { link: "#contact", text: "Contact" },
     ];
+    useEffect(() => {
+        if (toggle === true) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "scroll";
+        }
+    }, [toggle]);
 
     return (
         <div className={"link-wrapper"}>
-            <Nav className={toggle ? "DropdownExpanded" : "DropdownClose"}>
+            <Nav className={toggle ? "menu active" : "menu"}>
                 <ul>
                     {links.map((nav) => (
                         <li key={nav.text}>
-                            <a href={nav.link}>{nav.text}</a>
+                            <a
+                                href={nav.link}
+                                onClick={() => handleToggle()}
+                                onBlur={() => handleHide()}
+                                onFocus={() => handleShow()}
+                            >
+                                {nav.text}
+                            </a>
                         </li>
                     ))}
                 </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/_AboutMe.scss";
+import "../Styles/aboutMe.scss";
 export default function AboutMe() {
     return (
         <div className="about-wrapper">
@@ -10,16 +10,15 @@ export default function AboutMe() {
                 <div className="p1">
                     <p>
                         I graduated with honours with a Bachelor of Science, in{" "}
-                        <strong>Computing and Information Systems</strong> from
-                        the{" "}
+                        Computing and Information Systems from the{" "}
                         <strong>
                             <a href="https://london.ac.uk/">
                                 University of London
                             </a>
                         </strong>{" "}
-                        in <strong>July 2022</strong>. I started software
-                        engineering in 2021 when I was tasked to build my first
-                        educational application{" "}
+                        in July 2022. I started software engineering in 2021
+                        when I was tasked to build my first educational
+                        application{" "}
                         <a href="https://waitingonalice.github.io/Visual-Algo/">
                             Visual Algo
                         </a>
@@ -43,10 +42,14 @@ export default function AboutMe() {
                 <div className="p3">
                     <p>
                         Besides web development, I have worked on cryptography
-                        and neural network projects, and have knowledge in
-                        computer security. When I'm not facing the computer, I
-                        find joy in listening to vinyl, doing carpentry and
-                        building custom mechanical keyboards.
+                        and neural network projects. All my works can be found
+                        on{" "}
+                        <strong>
+                            <a href="https://github.com/waitingonalice">
+                                Github
+                            </a>
+                        </strong>{" "}
+                        which I update regularly.
                     </p>
                 </div>
             </div>
