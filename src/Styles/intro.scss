@@ -10,14 +10,13 @@
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
-
     .job-intro {
         font-family: v.$font2;
         color: v.$textColour;
 
 
         p {
-            font-size: 1.3em;
+            font-size: 1.5em;
         }
 
         strong a {
@@ -29,7 +28,7 @@
             background-size: 100% 0.3em;
             background-position: 0 88%;
             border-radius: 5px;
-            transition: .3s ease-in;
+            transition: .25s ease-in;
         }
 
         a:hover {
@@ -40,10 +39,18 @@
 
         .name h1 {
             font-size: 3.5em;
+            animation: slideDown ease-out 2.5s;
+            animation-iteration-count: 1;
+
         }
 
         .interest h1 {
             font-size: 3.2em;
+            animation: slideDown ease-out 2s, fadeIn ease-out 2s;
+            animation-iteration-count: 1;
+            font-family: v.$font1;
+            font-weight: 400;
+
         }
 
     }
@@ -53,14 +60,21 @@
     }
 
 
+    .job-title {
+        animation: slideLeft ease-out 2s, fadeIn ease-out 2s;
+
+    }
+
     .img-links {
         display: flex;
         justify-content: flex-end;
+        animation: slideRight ease-out 2s, fadeIn ease-out 2s;
+
 
         img {
             width: 40px;
             margin: 0 0.5em;
-            transition: transform .2s;
+            transition: transform .25s;
 
         }
 
@@ -69,6 +83,8 @@
             transform: scale(1.5);
         }
     }
+
+
 
 }
 
@@ -80,22 +96,67 @@
         min-height: calc(100vh - 90px);
 
         .job-intro {
-            margin-top: -5em;
+            margin-top: -6em;
 
             p {
-                font-size: 1.1em;
+                font-size: 1em;
 
             }
 
             .name h1 {
-                font-size: 3em;
+                font-size: 2em;
+
             }
 
             .interest h1 {
-                font-size: 2.5em;
+                font-size: 2em;
             }
         }
 
     }
 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-30%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(30%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }

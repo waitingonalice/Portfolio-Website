@@ -15,24 +15,17 @@ function Intro() {
                             fontFamily: "League Spartan",
                             fontWeight: 700,
                         }}
-                        startDelay={100}
+                        startDelay={0}
                         text="Hello World, I'm Wilson."
-                        typeSpeed={50}
+                        typeSpeed={80}
                         hideCursorAfterText={true}
                     />
                 </div>
+
                 <div className="interest">
-                    <TypeWriterEffect
-                        textStyle={{
-                            fontFamily: "League Spartan",
-                            fontWeight: 400,
-                        }}
-                        startDelay={1600}
-                        text="App developer, Problem solver."
-                        typeSpeed={70}
-                        hideCursorAfterText={true}
-                    />
+                    <h1> App developer, Problem solver.</h1>
                 </div>
+
                 <div className="job-title">
                     <p>
                         Software Engineer @{" "}
