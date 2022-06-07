@@ -1,10 +1,10 @@
 import React from "react";
-import "../Styles/aboutMe.scss";
+import "../Styles/Content/aboutMe.scss";
 export default function AboutMe() {
     return (
         <div className="about-wrapper">
             <div className="title">
-                <h3> &#60;about/&#62;</h3>
+                <h1> About Me</h1>
             </div>
             <div className="paragraph">
                 <div className="p1">
@@ -33,10 +33,9 @@ export default function AboutMe() {
                         passion for learning and tinkering with new
                         technologies, and creating software projects that I am
                         proud of. <br />
-                        At the moment, I mainly do{" "}
-                        <strong>front-end web development</strong>, but I'm also
-                        keen in learning back-end development to become a
-                        full-stack software engineer.
+                        At the moment, I mainly do front-end web development,
+                        but I'm also keen in learning back-end development to
+                        become a full-stack software engineer.
                     </p>
                 </div>
                 <div className="p3">
@@ -53,7 +52,7 @@ export default function AboutMe() {
                     </p>
                 </div>
             </div>
-            <div className="skills"></div>
+            <div className="skills">Skills</div>
         </div>
     );
 }

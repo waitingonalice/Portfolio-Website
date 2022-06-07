@@ -1,6 +1,6 @@
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../Styles/index.scss";
+import "../Styles/Content/index.scss";
 import PortfolioNavbar from "../Components/Navbar";
 import Intro from "../Components/Intro";
 import Experience from "../Components/Experience";
@@ -14,22 +14,24 @@ const IndexPage = () => {
             <div className="navigation">
                 <PortfolioNavbar />
             </div>
-            <div className="child-container">
-                <section id="introduction">
-                    <Intro></Intro>
-                </section>
-                <section id="about">
-                    <AboutMe></AboutMe>
-                </section>
-                <section id="experience">
-                    <Experience></Experience>
-                </section>
-                <section id="project">
-                    <Projects></Projects>
-                </section>
-                <section id="contact">
-                    <ContactMe></ContactMe>
-                </section>
+            <div className="landing">
+                <div className="child-container">
+                    <section id="introduction">
+                        <Intro></Intro>
+                    </section>
+                    <section id="about">
+                        <AboutMe></AboutMe>
+                    </section>
+                    <section id="experience">
+                        <Experience></Experience>
+                    </section>
+                    <section id="project">
+                        <Projects></Projects>
+                    </section>
+                    <section id="contact">
+                        <ContactMe></ContactMe>
+                    </section>
+                </div>
             </div>
         </div>
     );

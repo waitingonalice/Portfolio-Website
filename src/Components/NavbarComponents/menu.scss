@@ -1,8 +1,12 @@
-@use 'hamburger' as ham;
 $gradient-colour: linear-gradient(to right,
-        rgb(0, 197, 223),
-        rgb(2, 234, 172));
-$textColour: rgb(97, 109, 128);
+        rgb(150, 23, 23),
+        rgb(150, 23, 23));
+$background-gradient: linear-gradient(to bottom,
+        rgb(231, 224, 215),
+        rgb(157, 186, 190),
+        rgb(8, 41, 77));
+$textColour: rgb(176, 196, 216);
+$hoverColour: rgb(255, 255, 255);
 $font1: 'League Spartan',
     sans-serif;
 $font2: 'Montserrat',
@@ -13,12 +17,12 @@ $font2: 'Montserrat',
     ul {
         display: flex;
         list-style: none;
+        justify-content: space-around;
 
         a {
             color: $textColour;
             font-size: larger;
             font-family: $font2;
-            text-decoration: none;
             position: relative;
             z-index: 1;
 
@@ -26,29 +30,29 @@ $font2: 'Montserrat',
 
         //underline animation
         a:hover {
-            color: rgb(5, 180, 255);
+            color: $hoverColour;
             transition: 0.3s;
             transform: scale(1.1);
 
         }
 
-        a::before {
+        a::after {
             content: '';
             position: absolute;
             width: 80%;
             height: 4px;
-            border-radius: 4px;
+            border-radius: 5px;
             background: $gradient-colour;
-            bottom: 10px;
+            bottom: 0px;
             left: 10px;
-            transform-origin: right;
+            transform-origin: center;
             transform: scaleX(0);
             transition: transform .3s ease-in-out;
             z-index: -1;
         }
 
-        a:hover::before {
-            transform-origin: left;
+        a:hover::after {
+            transform-origin: center;
             transform: scaleX(1);
         }
     }
@@ -58,9 +62,6 @@ $font2: 'Montserrat',
 .menu {
     display: none;
 }
-
-
-
 
 
 @media screen and (max-width: 650px) {
@@ -75,12 +76,12 @@ $font2: 'Montserrat',
 
     .menu {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         position: fixed;
         transition: all .4s ease-in-out;
         transform: translateX(100vw);
-        background: rgb(23, 31, 58);
+        background: rgb(225, 105, 89);
         visibility: hidden;
         z-index: 3;
         height: 100vh;
@@ -89,31 +90,30 @@ $font2: 'Montserrat',
         right: 0;
 
 
+        a {
+            color: $textColour;
+            font-size: 1.5em;
+            font-family: $font2;
+            text-decoration: none;
+            padding: 1.2em;
 
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-content: space-evenly;
-            flex-direction: column;
-            list-style: none;
-            padding: 0;
-            height: 40%;
+            &:hover {
+                color: $hoverColour;
 
-            a {
-
-                color: $textColour;
-                font-size: 1.5em;
-                font-family: $font2;
-                text-decoration: none;
-
-
-                &:hover {
-                    position: relative;
-                    color: rgb(5, 180, 255);
-                    background: red;
-                }
             }
         }
+
+        ul {
+            display: block;
+            list-style: none;
+            padding: 0;
+
+            li {
+                text-align: center;
+            }
+        }
+
     }
+
+
 }

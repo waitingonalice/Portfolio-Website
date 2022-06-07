@@ -40,23 +40,21 @@ export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
     }, [toggle]);
 
     return (
-        <div className={"link-wrapper"}>
-            <Nav className={toggle ? "menu active" : "menu"}>
-                <ul>
-                    {links.map((nav) => (
-                        <li key={nav.text}>
-                            <a
-                                href={nav.link}
-                                onClick={() => handleToggle()}
-                                onBlur={() => handleHide()}
-                                onFocus={() => handleShow()}
-                            >
-                                {nav.text}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </Nav>
+        <div className={toggle ? "menu active" : "menu"}>
+            <ul>
+                {links.map((nav) => (
+                    <li key={nav.text}>
+                        <Nav.Link
+                            href={nav.link}
+                            onClick={() => handleToggle()}
+                            onBlur={() => handleHide()}
+                            onFocus={() => handleShow()}
+                        >
+                            {nav.text}
+                        </Nav.Link>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import "../Styles/Navbar.scss";
+import "../Styles/Content/Navbar.scss";
 import coding from "../images/coding.png";
+
 import Hamburger from "./NavbarComponents/hamburger";
 import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 

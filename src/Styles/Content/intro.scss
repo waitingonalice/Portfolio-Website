@@ -1,5 +1,5 @@
-@use 'variables' as v;
-@use 'animations';
+@use '../Global/variables' as v;
+@use '../Global/animations';
 
 .wrapper {
     min-height: calc(100vh - 160px);
@@ -12,30 +12,12 @@
     transition: all 0.4s ease-in-out;
 
     .job-intro {
-        font-family: v.$font2;
-        color: v.$textColour;
 
-        strong a {
-            position: relative;
-            text-decoration: none;
-            color: v.$textColour;
-            background-image: v.$gradient-colour;
-            background-repeat: no-repeat;
-            background-size: 100% 0.3em;
-            background-position: 0 88%;
-            border-radius: 5px;
-            transition: .25s ease-in;
-        }
+        color: v.$textColour;
 
         div {
             margin: 1em 0;
         }
-
-        a:hover {
-            background-size: 100% 1.1em;
-        }
-
-
 
         .name h1 {
             font-size: 3.5em;
@@ -46,51 +28,61 @@
             animation-fill-mode: forwards;
         }
 
-
-
-
-
         .job-title {
-            font-size: 2.8em;
+            font-size: 2.5em;
+            font-weight: 500;
+            font-family: v.$font1;
             animation: slideDown ease-out 2s;
             opacity: 0;
-            animation-delay: 1s;
+            animation-delay: 1.7s;
             animation-fill-mode: forwards;
+
+            a {
+                text-decoration: none;
+                color: v.$linkColour;
+                position: relative;
+
+
+            }
+
+
         }
 
         .welcome {
+            font-family: v.$font2;
             font-size: 1.5em;
+            font-weight: 300;
+            color: v.$sentenceColour;
             animation: slideLeft ease-out 2s;
             animation-iteration-count: 1;
-            font-weight: 400;
             opacity: 0;
-            animation-delay: 2s;
+            animation-delay: 2.5s;
             animation-fill-mode: forwards;
         }
 
+        .img-links {
+            display: flex;
+            justify-content: flex-end;
+            animation: slideRight ease-out 2s;
+            opacity: 0;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
+
+            img {
+                width: 40px;
+                margin: 0 0.5em;
+                transition: transform .25s;
+
+
+            }
+
+            img:hover {
+                position: relative;
+                transform: scale(1.5);
+            }
+        }
     }
 
-    .img-links {
-        display: flex;
-        justify-content: flex-end;
-        animation: slideRight ease-out 2s;
-        opacity: 0;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-
-        img {
-            width: 40px;
-            margin: 0 0.5em;
-            transition: transform .25s;
-
-
-        }
-
-        img:hover {
-            position: relative;
-            transform: scale(1.5);
-        }
-    }
 
 
 
@@ -101,25 +93,25 @@
 @media screen and (max-width:650px) {
 
     .wrapper {
-        min-height: calc(100vh - 90px);
+
 
         .job-intro {
-            margin-top: -6em;
+            margin-top: -3em;
 
             div {
                 margin: 0.8em 0;
             }
 
             .name h1 {
-                font-size: 2em;
+                font-size: 3em;
             }
 
             .job-title {
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             .welcome {
-                font-size: 1.3em;
+                font-size: 1.2em;
             }
         }
 

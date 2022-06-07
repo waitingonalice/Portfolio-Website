@@ -1,10 +1,9 @@
 import React from "react";
-import "../Styles/intro.scss";
+import "../Styles/Content/intro.scss";
 import TypeWriterEffect from "react-typewriter-effect";
 import gmail from "../images/gmail.png";
 import linkedIn from "../images/linkedin.png";
 import github from "../images/github.png";
-
 function Intro() {
     return (
         <div className="wrapper">
@@ -13,7 +12,6 @@ function Intro() {
                     <TypeWriterEffect
                         textStyle={{
                             fontFamily: "League Spartan",
-                            fontWeight: 700,
                         }}
                         startDelay={0}
                         text="Hello World, I'm Wilson."
@@ -23,10 +21,8 @@ function Intro() {
                 </div>
 
                 <div className="job-title">
-                    Software Engineer @{" "}
-                    <strong>
-                        <a href="https://www.trustana.com/">Trustana.</a>
-                    </strong>
+                    Frontend Software Engineer @{" "}
+                    <a href="https://www.trustana.com/">Trustana</a>.
                 </div>
 
                 <div className="welcome">Welcome to my portfolio.</div>
