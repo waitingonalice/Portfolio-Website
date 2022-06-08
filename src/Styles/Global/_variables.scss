@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat&display=swap');
-$primary-colour: rgb(8, 41, 77);
+
+$primary-colour: #10273e;
 $gradient-colour: linear-gradient(to right,
         rgb(0, 183, 255),
         rgb(0, 183, 255));
-$background-gradient: linear-gradient(to bottom,
-        rgb(225, 105, 89),
-        // rgb(157, 186, 190),
-        rgb(8, 41, 77));
-$textColour: rgb(255, 255, 255);
+$gradient-colour2: linear-gradient(to right,
+        #ff5d4b, #ff5d4b);
+// $background-gradient: linear-gradient(to top,
+//         rgb(8, 41, 77),
+//         #cd6060);
+$background-gradient: linear-gradient(to top left,
+        #d39a4f 10%,
+        #c05949 100%);
+
+$secondaryColour: #d39a4f;
+$textColour: #fcfcfc;
 $sentenceColour: rgb(201, 209, 217);
-$linkColour: rgb(225, 89, 89);
+$linkColour: #f4e6cd;
 $font1: 'League Spartan',
     sans-serif;
 $font2: 'Montserrat',
     sans-serif;
 $font3: 'Rubik',
     sans-serif;
-
+$font-size-s: 1.2em;
+$font-size-m: 1.5em;
+$font-size-l: 2.5em;
+$font-size-xl: 3.5em;
 $height: calc(100vh);
+$transition1: all .3s ease-out;

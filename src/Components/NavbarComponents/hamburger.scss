@@ -15,28 +15,21 @@ $textColour: #53606d;
         transform: rotate(0deg);
         z-index: 100;
 
-
-
-
         span {
             display: block;
             position: absolute;
             height: 4px;
             width: 100%;
-            background: $textColour;
+            background-color: $textColour;
             border-radius: 9px;
             opacity: 1;
             left: 0;
             transition: .2s ease-in-out;
-
-
         }
 
     }
 
-
-
-    .hamburger span:nth-child(1) {
+    .hamburger span .hamburger span:nth-child(1) {
         top: 0px;
 
 

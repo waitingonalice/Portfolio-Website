@@ -1,12 +1,10 @@
-$gradient-colour: linear-gradient(to right,
-        rgb(150, 23, 23),
-        rgb(150, 23, 23));
+$gradient-colour: #ff5d4b;
 $background-gradient: linear-gradient(to bottom,
         rgb(231, 224, 215),
         rgb(157, 186, 190),
         rgb(8, 41, 77));
-$textColour: rgb(176, 196, 216);
-$hoverColour: rgb(255, 255, 255);
+$textColour: rgb(201, 209, 217);
+$hoverColour: #ffffff;
 $font1: 'League Spartan',
     sans-serif;
 $font2: 'Montserrat',
@@ -47,7 +45,7 @@ $font2: 'Montserrat',
             left: 10px;
             transform-origin: center;
             transform: scaleX(0);
-            transition: transform .3s ease-in-out;
+            transition: transform .3s ease-out;
             z-index: -1;
         }
 
@@ -81,7 +79,7 @@ $font2: 'Montserrat',
         position: fixed;
         transition: all .4s ease-in-out;
         transform: translateX(100vw);
-        background: rgb(225, 105, 89);
+        background: #d39a4f;
         visibility: hidden;
         z-index: 3;
         height: 100vh;
@@ -92,7 +90,7 @@ $font2: 'Montserrat',
 
         a {
             color: $textColour;
-            font-size: 1.5em;
+            font-size: larger;
             font-family: $font2;
             text-decoration: none;
             padding: 1.2em;

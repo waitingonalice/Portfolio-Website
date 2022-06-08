@@ -1,7 +1,20 @@
 @keyframes slideDown {
     from {
-        transform: translateY(-30px);
+        transform: translateY(-40px);
+        opacity: 0;
+    }
 
+    to {
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
     }
 
     to {
@@ -12,10 +25,10 @@
 }
 
 
-@keyframes slideLeft {
+@keyframes slideRight {
     from {
-        transform: translateX(-30px);
-
+        transform: translateX(-40px);
+        opacity: 0;
     }
 
     to {
@@ -25,10 +38,10 @@
     }
 }
 
-@keyframes slideRight {
+@keyframes slideLeft {
     from {
-        transform: translateX(30px);
-
+        transform: translateX(40px);
+        opacity: 0;
     }
 
     to {

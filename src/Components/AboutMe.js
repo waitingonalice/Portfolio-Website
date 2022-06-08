@@ -1,27 +1,28 @@
 import React from "react";
 import "../Styles/Content/aboutMe.scss";
+import { AboutCard } from "../Components/Card/Card.js";
+
 export default function AboutMe() {
     return (
         <div className="about-wrapper">
-            <div className="title">
-                <h1> About Me</h1>
+            <div className="about">
+                <h1>
+                    <span>About Me</span>
+                </h1>
             </div>
             <div className="paragraph">
                 <div className="p1">
                     <p>
                         I graduated with honours with a Bachelor of Science, in{" "}
-                        Computing and Information Systems from the{" "}
-                        <strong>
-                            <a href="https://london.ac.uk/">
-                                University of London
-                            </a>
-                        </strong>{" "}
-                        in July 2022. I started software engineering in 2021
-                        when I was tasked to build my first educational
+                        Computing and Information Systems from the University of
+                        London in July 2022. I started software engineering in
+                        2021 when I was tasked to build my first educational
                         application{" "}
-                        <a href="https://waitingonalice.github.io/Visual-Algo/">
-                            Visual Algo
-                        </a>
+                        <strong>
+                            <a href="https://waitingonalice.github.io/Visual-Algo/">
+                                Visual Algo
+                            </a>
+                        </strong>
                         .
                     </p>
                 </div>
@@ -52,7 +53,12 @@ export default function AboutMe() {
                     </p>
                 </div>
             </div>
-            <div className="skills">Skills</div>
+            <div className="skills">
+                <h1>
+                    <span>Skills</span>
+                </h1>
+                <AboutCard></AboutCard>
+            </div>
         </div>
     );
 }
