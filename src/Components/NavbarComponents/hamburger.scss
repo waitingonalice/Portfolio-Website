@@ -1,4 +1,4 @@
-$textColour: #53606d;
+@use '../../Styles/Global/variables' as v;
 
 .hamburger {
     display: none;
@@ -20,7 +20,7 @@ $textColour: #53606d;
             position: absolute;
             height: 4px;
             width: 100%;
-            background-color: $textColour;
+            background-color: v.$textColour;
             border-radius: 9px;
             opacity: 1;
             left: 0;

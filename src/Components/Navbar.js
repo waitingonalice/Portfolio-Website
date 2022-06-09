@@ -21,7 +21,7 @@ function PortfolioNavbar() {
 
     return (
         <header id="top">
-            <nav className="navigation-bar">
+            <nav id="navigation-bar">
                 <img className="logo" alt="codeLogo" src={coding}></img>
                 <Hamburger toggle={toggle} handleToggle={handleToggle} />
                 <Menu />

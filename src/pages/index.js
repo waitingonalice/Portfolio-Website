@@ -11,7 +11,7 @@ import ContactMe from "../Components/ContactMe";
 const IndexPage = () => {
     return (
         <div className="parent-container">
-            <div className="navigation">
+            <div id="navigation">
                 <PortfolioNavbar />
             </div>
             <div className="landing">

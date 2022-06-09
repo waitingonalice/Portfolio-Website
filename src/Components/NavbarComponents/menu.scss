@@ -1,15 +1,4 @@
-$gradient-colour: #ff5d4b;
-$background-gradient: linear-gradient(to bottom,
-        rgb(231, 224, 215),
-        rgb(157, 186, 190),
-        rgb(8, 41, 77));
-$textColour: rgb(201, 209, 217);
-$hoverColour: #ffffff;
-$font1: 'League Spartan',
-    sans-serif;
-$font2: 'Montserrat',
-    sans-serif;
-
+@use '../../Styles/Global/variables' as v;
 
 .nav-links {
     ul {
@@ -18,9 +7,9 @@ $font2: 'Montserrat',
         justify-content: space-around;
 
         a {
-            color: $textColour;
+            color: v.$sentenceColour;
             font-size: larger;
-            font-family: $font2;
+            font-family: v.$font2;
             position: relative;
             z-index: 1;
 
@@ -28,7 +17,7 @@ $font2: 'Montserrat',
 
         //underline animation
         a:hover {
-            color: $hoverColour;
+            color: v.$textColour;
             transition: 0.3s;
             transform: scale(1.1);
 
@@ -40,7 +29,7 @@ $font2: 'Montserrat',
             width: 80%;
             height: 4px;
             border-radius: 5px;
-            background: $gradient-colour;
+            background: v.$gradient-colour;
             bottom: 0px;
             left: 10px;
             transform-origin: center;
@@ -79,7 +68,7 @@ $font2: 'Montserrat',
         position: fixed;
         transition: all .4s ease-in-out;
         transform: translateX(100vw);
-        background: #d39a4f;
+        background: v.$secondaryColour;
         visibility: hidden;
         z-index: 3;
         height: 100vh;
@@ -89,14 +78,14 @@ $font2: 'Montserrat',
 
 
         a {
-            color: $textColour;
+            color: v.$linkColour;
             font-size: larger;
-            font-family: $font2;
+            font-family: v.$font2;
             text-decoration: none;
             padding: 1.2em;
 
             &:hover {
-                color: $hoverColour;
+                color: v.$textColour;
 
             }
         }

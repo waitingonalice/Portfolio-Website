@@ -5,10 +5,10 @@ import linkedIn from "../images/linkedin.png";
 import github from "../images/github.png";
 function Intro() {
     return (
-        <div className="wrapper">
+        <div id="wrapper">
             <div className="job-intro">
                 <div className="name">
-                    <h1>Wilson Sie.</h1>
+                    <h1>Wilson Sie</h1>
                 </div>
 
                 <div className="job-title">
@@ -28,7 +28,7 @@ function Intro() {
                         <img alt="gmail-icon" src={gmail}></img>
                     </a>
                     <a href="https://www.linkedin.com/in/wilson-sie-6a3485155/">
-                        <img alt="linkedIn-icon" src={linkedIn}></img>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
                     </a>
                 </div>
             </div>

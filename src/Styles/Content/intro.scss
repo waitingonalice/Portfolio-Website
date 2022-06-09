@@ -1,7 +1,7 @@
 @use '../Global/variables' as v;
 @use '../Global/animations';
 
-.wrapper {
+#wrapper {
     min-height: calc(100vh - 160px);
     display: flex;
     position: relative;
@@ -10,6 +10,7 @@
     -o-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+
 
     .job-intro {
         color: v.$linkColour;
@@ -30,7 +31,7 @@
             color: v.$secondaryColour;
 
             &::before {
-                content: "Wilson Sie.";
+                content: "Wilson Sie";
                 position: absolute;
                 left: 5px;
                 top: 1px;
@@ -129,7 +130,7 @@
 
 @media screen and (max-width:650px) {
 
-    .wrapper {
+    #wrapper {
 
 
         .job-intro {

@@ -1,19 +1,42 @@
 @use '../Global/variables' as v;
 @use '../Global/animations';
 
-.about-wrapper {
+#about-wrapper {
     // border: 1px solid black;
     min-height: v.$height;
     display: flex;
     flex-direction: column;
 
+    .about {
+        h1 strong::before {
+            content: 'About Me';
+            position: absolute;
+            width: 100%;
+            left: 3px;
+            bottom: -6px;
+            color: v.$linkColour;
+        }
 
-    h1 span {
+    }
+
+    .skills {
+        h1 strong::before {
+            content: 'Skills';
+            position: absolute;
+            width: 100%;
+            left: 3px;
+            bottom: -6px;
+            color: v.$linkColour;
+        }
+
+    }
+
+    h1 strong {
         // opacity: 0;
         // animation: slideRight ease-out 2s;
         // animation-fill-mode: forwards;
         position: relative;
-        color: v.$textColour;
+        color: v.$secondaryColour;
         font-family: v.$font1;
         background-image: v.$gradient-colour2;
         background-size: 100% 0.1em;
@@ -21,15 +44,15 @@
         background-repeat: no-repeat;
         transition: v.$transition1;
 
-
         &:hover {
             background-size: 100% 1em;
         }
+
+
+
+
     }
 }
-
-
-
 
 .paragraph {
     // opacity: 0;
@@ -39,6 +62,7 @@
     padding: 0.5em 0;
     color: v.$textColour;
 
+    strong,
     a {
         color: v.$linkColour;
         text-decoration: none;
@@ -65,4 +89,23 @@
     }
 
 
+}
+
+@media screen and (max-width:650px) {
+    #about-wrapper {
+
+        .about {
+            h1 strong::before {
+                bottom: -4px;
+                left: 2px;
+            }
+        }
+
+        .skills {
+            h1 strong::before {
+                bottom: -4px;
+                left: 2px;
+            }
+        }
+    }
 }

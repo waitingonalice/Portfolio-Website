@@ -3,6 +3,7 @@ import { Nav } from "react-bootstrap";
 import { useEffect } from "react";
 import "./menu.scss";
 
+import "../../Styles/Content/index.scss";
 export function Menu() {
     return (
         <Nav className={"nav-links"}>
@@ -31,11 +32,20 @@ export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
         { link: "#project", text: "Projects" },
         { link: "#contact", text: "Contact" },
     ];
+    function blur() {
+        document.getElementById("introduction").style.filter = "blur(5px)";
+    }
+    function notBlur() {
+        document.getElementById("introduction").style.filter = "";
+    }
+
     useEffect(() => {
         if (toggle === true) {
             document.body.style.overflow = "hidden";
+            blur();
         } else {
-            document.body.style.overflow = "scroll";
+            document.body.style.overflow = "auto";
+            notBlur();
         }
     }, [toggle]);
 

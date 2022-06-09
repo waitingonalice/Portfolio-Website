@@ -1,7 +1,7 @@
 @use '../Global/variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat&display=swap');
 
-.navigation-bar {
+#navigation-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
