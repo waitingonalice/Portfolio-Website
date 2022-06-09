@@ -2,7 +2,6 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import { useEffect } from "react";
 import "./menu.scss";
-
 import "../../Styles/Content/index.scss";
 export function Menu() {
     return (
@@ -33,10 +32,10 @@ export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
         { link: "#contact", text: "Contact" },
     ];
     function blur() {
-        document.getElementById("introduction").style.filter = "blur(5px)";
+        document.getElementById("wrapper").style.filter = "blur(5px)";
     }
     function notBlur() {
-        document.getElementById("introduction").style.filter = "";
+        document.getElementById("wrapper").style.filter = "";
     }
 
     useEffect(() => {

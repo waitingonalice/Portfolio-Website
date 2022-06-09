@@ -28,7 +28,10 @@ function Intro() {
                         <img alt="gmail-icon" src={gmail}></img>
                     </a>
                     <a href="https://www.linkedin.com/in/wilson-sie-6a3485155/">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+                        <img
+                            alt="linkedin"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                        />
                     </a>
                 </div>
             </div>

@@ -10,22 +10,34 @@ export function AboutCard() {
             </div>
             <div className="main">
                 <div id="js">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                    <img
+                        alt="javascript"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                    />
                     <span className="text">Javascript</span>
                 </div>
 
                 <div id="react">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                    <img
+                        alt="react"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    />
                     <span className="text">React</span>
                 </div>
 
                 <div id="sass">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                    <img
+                        alt="sass"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                    />
                     <span className="text">Sass</span>
                 </div>
 
                 <div id="git">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                    <img
+                        alt=" git"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    />
                     <span className="text">Git</span>
                 </div>
             </div>
@@ -37,23 +49,38 @@ export function AboutCard() {
             </div>
             <div className="secondary">
                 <div id="python">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                    <img
+                        alt="python"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    />
                     <span className="text">Python</span>
                 </div>
                 <div id="java">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                    <img
+                        alt="java"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                    />
                     <span className="text">Java</span>
                 </div>
                 <div id="mysql">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+                    <img
+                        alt="mysql"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                    />
                     <span className="text">mySQL</span>
                 </div>
                 <div id="jupyter">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" />
+                    <img
+                        alt="jupyter"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                    />
                     <span className="text">Jupyter</span>
                 </div>
                 <div id="figma">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                    <img
+                        alt="figma"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    />
                     <span className="text">Figma</span>
                 </div>
             </div>
