@@ -1,61 +1,15 @@
 @use '../../Styles/Global/variables' as v;
 
-#about-card-wrapper {
+#card-wrapper {
     // border: 1px solid black;
     box-shadow: 2px 2px 3px v.$hamburgerColour;
     max-height: 100vh;
     border-radius: 10px;
     background: v.$card-gradient-colour;
-    position: relative;
+    // position: relative;
     padding: v.$font-size-s;
+    z-index: 999;
 
-    .title {
-        color: v.$textColour;
-    }
 
-    .main,
-    .secondary {
-        display: flex;
-        flex-wrap: wrap;
 
-        div {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            margin: 2.5%;
-            align-items: center;
-            color: v.$sentenceColour;
-
-            .text {
-                font-family: v.$font2;
-                font-size: v.$font-size-xs;
-            }
-
-            img {
-                width: 50px;
-                transform: scale(1);
-                transition: all .2s ease;
-
-                &:hover {
-                    transform: scale(1.2);
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:650px) {
-    #about-card-wrapper {
-
-        .main,
-        .secondary {
-            div {
-                margin: 4%;
-
-                img {
-                    width: 40px;
-                }
-            }
-        }
-    }
 }

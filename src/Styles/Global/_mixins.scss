@@ -1,0 +1,46 @@
+@mixin section-header {
+    h1 strong {
+        // opacity: 0;
+        // animation: slideRight ease-out 2s;
+        // animation-fill-mode: forwards;
+        position: relative;
+        color: v.$secondaryColour;
+        font-family: v.$font1;
+        background-image: v.$gradient-colour2;
+        background-size: 100% 0.1em;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: v.$transition1;
+
+        &:hover {
+            background-size: 100% 1em;
+        }
+    }
+}
+
+@mixin text-layer {
+    position: absolute;
+    width: 100%;
+    left: 3px;
+    bottom: -6px;
+    color: v.$linkColour;
+}
+
+@mixin text-layer-mobile {
+    bottom: -4px;
+    left: 2px;
+}
+
+@mixin text-underline {
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    transform-origin: center;
+    transform: scaleX(0);
+    width: 100%;
+    height: 5px;
+    bottom: -10px;
+    left: 0;
+    transition: v.$transition1;
+    background: v.$gradient-colour2;
+}

@@ -1,8 +1,14 @@
 @use '../Global/variables' as v;
 @use '../Global/animations';
+@import '../Global/mixins';
+
 
 #wrapper {
     min-height: calc(100vh - 160px);
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 2em;
+    // position: relative;
     display: flex;
     position: relative;
     align-items: center;
@@ -10,7 +16,6 @@
     -o-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-
 
     .job-intro {
         color: v.$linkColour;
@@ -36,6 +41,8 @@
                 left: 5px;
                 top: 1px;
                 color: v.$linkColour;
+                width: 100%;
+
             }
         }
 
@@ -49,13 +56,13 @@
             h2 {
                 font-family: v.$font2;
                 font-weight: 600;
-                color: v.$textColour;
+                color: v.$linkColour;
 
 
                 a {
                     text-decoration: none;
                     position: relative;
-                    color: v.$linkColour;
+                    color: v.$secondaryColour;
                     transition: v.$transition1;
 
                 }
@@ -120,13 +127,6 @@
         }
     }
 }
-
-
-
-
-
-
-
 
 @media screen and (max-width:650px) {
 
