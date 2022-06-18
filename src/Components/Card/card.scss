@@ -1,0 +1,15 @@
+@use '../../Styles/Global/variables' as v;
+
+#card-wrapper {
+    // border: 1px solid black;
+    box-shadow: 2px 2px 3px v.$hamburgerColour;
+    max-height: 100vh;
+    border-radius: 10px;
+    background: v.$card-gradient-colour;
+    // position: relative;
+    padding: v.$font-size-s;
+    z-index: 999;
+
+
+
+}

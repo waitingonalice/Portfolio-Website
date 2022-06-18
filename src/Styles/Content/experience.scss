@@ -1,0 +1,35 @@
+@use '../Global/variables' as v;
+@import '../Global/mixins';
+
+#experience-wrapper {
+    border: 1px solid black;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+
+    @include section-header;
+
+    .experience {
+        h1 strong::before {
+            content: 'Experience';
+            @include text-layer;
+        }
+
+        .job-title {
+            h5 {
+                font-family: v.$font2 ;
+                color: v.$linkColour;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    #experience-wrapper {
+        .experience {
+            @include text-layer-mobile;
+        }
+    }
+}

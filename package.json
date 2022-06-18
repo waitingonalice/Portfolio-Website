@@ -35,7 +35,9 @@
         "react-aria": "^3.16.0",
         "react-bootstrap": "^2.4.0",
         "react-dom": "^18.1.0",
+        "react-tsparticles": "^2.0.6",
         "react-typewriter-effect": "^1.1.0",
-        "sass": "^1.52.1"
+        "sass": "^1.52.1",
+        "tsparticles": "^2.0.6"
     }
 }

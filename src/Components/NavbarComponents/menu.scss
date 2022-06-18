@@ -1,22 +1,15 @@
-$gradient-colour: linear-gradient(to right,
-        rgb(0, 197, 223),
-        rgb(2, 234, 172));
-$textColour: rgb(97, 109, 128);
-$font1: 'League Spartan',
-    sans-serif;
-$font2: 'Montserrat',
-    sans-serif;
+@use '../../Styles/Global/variables' as v;
 
 .nav-links {
     ul {
         display: flex;
         list-style: none;
+        justify-content: space-around;
 
         a {
-            color: $textColour;
+            color: v.$sentenceColour;
             font-size: larger;
-            font-family: $font2;
-            text-decoration: none;
+            font-family: v.$font2;
             position: relative;
             z-index: 1;
 
@@ -24,77 +17,90 @@ $font2: 'Montserrat',
 
         //underline animation
         a:hover {
-            color: rgb(5, 180, 255);
-            transition: 0.3s;
+            color: v.$textColour;
+            transition: v.$transition1;
+            transform: scale(1.1);
 
         }
 
-        a::before {
+        a::after {
             content: '';
             position: absolute;
             width: 80%;
             height: 4px;
-            border-radius: 4px;
-            background: $gradient-colour;
-            bottom: 10px;
+            border-radius: 5px;
+            background: v.$gradient-colour;
+            bottom: 0px;
             left: 10px;
-            transform-origin: right;
+            transform-origin: center;
             transform: scaleX(0);
-            transition: transform .2s ease-out;
+            transition: v.$transition1;
             z-index: -1;
         }
 
-        a:hover::before {
-            transform-origin: left;
+        a:hover::after {
+            transform-origin: center;
             transform: scaleX(1);
         }
     }
 
 }
 
-.DropdownExpanded {
-    display: none;
-}
-
-.DropdownClose {
+.menu {
     display: none;
 }
 
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
     .nav-links {
         display: none;
     }
 
-    .DropdownClose {
-        display: none;
+    .menu.active {
+        transform: translateX(0);
+        visibility: visible;
     }
 
-    .DropdownExpanded {
+    .menu {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        transition: v.$transition2;
+        transform: translateX(100vw);
+        background: v.$background-gradient;
+        visibility: hidden;
+        z-index: 3;
+        height: 100vh;
+        width: 75%;
+        top: 0;
+        right: 0;
 
-        ul {
-            list-style: none;
 
+        a {
+            color: v.$linkColour;
+            font-size: larger;
+            font-family: v.$font2;
+            text-decoration: none;
+            padding: 1.2em;
 
-            a {
-                color: $textColour;
-                font-size: larger;
-                font-family: $font2;
-                text-decoration: none;
-                position: relative;
-
-                &:hover {
-                    color: rgb(5, 180, 255);
-                    transition: 0.3s;
-
-                }
-
+            &:hover {
+                color: v.$textColour;
 
             }
         }
+
+        ul {
+            display: block;
+            list-style: none;
+            padding: 0;
+
+            li {
+                text-align: center;
+            }
+        }
+
     }
+
 
 }

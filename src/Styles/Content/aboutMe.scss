@@ -1,0 +1,128 @@
+@use '../Global/variables' as v;
+@use '../Global/animations';
+@import '../Global/mixins';
+
+#about-wrapper {
+    border: 1px solid black;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    // z-index: 100;
+
+    @include section-header;
+
+    .about {
+        h1 strong::before {
+            content: 'About Me';
+            @include text-layer;
+        }
+
+    }
+
+    .paragraph {
+        // opacity: 0;
+        // animation: slideLeft ease-out 2s;
+        // animation-fill-mode: forwards;
+        font-family: v.$font2;
+        padding: 0.5em 0;
+        color: v.$textColour;
+
+        strong,
+        a {
+            color: v.$linkColour;
+            text-decoration: none;
+        }
+
+        .p1,
+        .p2,
+        .p3 {
+
+            strong {
+                position: relative;
+                z-index: 0;
+                background-size: 100% 0.2em;
+                background-image: v.$gradient-colour2;
+                background-repeat: no-repeat;
+                background-position: 0 100%;
+                transition: v.$transition1;
+
+            }
+
+            strong:hover {
+                background-size: 100% 1.2em;
+            }
+        }
+
+
+    }
+
+    .skills {
+        h1 strong::before {
+            content: 'Skills';
+            @include text-layer;
+        }
+
+        .title {
+            color: v.$textColour;
+        }
+
+        .main,
+        .secondary {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin: 2.5%;
+                align-items: center;
+                color: v.$sentenceColour;
+
+                .text {
+                    font-family: v.$font2;
+                    font-size: v.$font-size-xs;
+                }
+
+                img {
+                    width: 50px;
+                    transform: scale(1);
+                    transition: all .2s ease;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width:650px) {
+    #about-wrapper {
+
+        .about,
+        .skills {
+            h1 strong::before {
+                @include text-layer-mobile;
+            }
+
+            .main,
+            .secondary {
+                div {
+                    margin: 4%;
+
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
