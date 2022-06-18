@@ -1,41 +1,73 @@
-$textColour: rgb(97, 109, 128);
+@use '../../Styles/Global/variables' as v;
 
 .hamburger {
     display: none;
 }
 
-@media (max-width:768px) {
+@media (max-width:650px) {
+
     .hamburger {
+        position: relative;
+        width: 30px;
+        height: 25px;
         display: flex;
         flex-direction: column;
+        transform: rotate(0deg);
+        z-index: 100;
 
-
-        div {
-            width: 32px;
-            height: 5px;
-            background-color: $textColour;
-            margin: 6px;
-            border-radius: 4px;
-            transition: all 0.5s;
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: v.$textColour;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transition: .2s ease-in-out;
         }
 
-        .open :nth-child(1) {
-            -webkit-transform: translateY(11px);
-            -ms-transform: translateY(11px);
-            -o-transform: translateY(11px);
-            transform: translateY(11px);
-        }
+    }
 
-        .open :nth-child(3) {
-            -webkit-transform: translateY(-11px);
-            -ms-transform: translateY(-11px);
-            -o-transform: translateY(-11px);
-            transform: translateY(-11px);
-
-        }
+    .hamburger span .hamburger span:nth-child(1) {
+        top: 0px;
 
 
     }
 
+    .hamburger span:nth-child(2),
+    .hamburger span:nth-child(3) {
+        top: 10px;
+
+
+    }
+
+    .hamburger span:nth-child(4) {
+        top: 20px;
+
+
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(10px);
+        opacity: 0;
+        // width: 0%;
+        // left: 50%;
+    }
+
+    .hamburger.open span:nth-child(4) {
+        opacity: 0;
+        transform: translateY(-10px);
+        // width: 0%;
+        // left: 50%;
+    }
+
+    .hamburger.open span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
 
 }
