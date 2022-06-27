@@ -2,7 +2,7 @@
 @import '../Global/mixins';
 
 #experience-wrapper {
-    border: 1px solid black;
+    // border: 1px solid black;
     max-height: auto;
     display: flex;
     flex-direction: column;
@@ -18,10 +18,23 @@
         }
 
         .job-title {
+            color: v.$linkColour;
+            display: flex;
+            justify-content: space-between;
+
             h5 {
                 font-family: v.$font2 ;
-                color: v.$linkColour;
             }
+        }
+
+        .position {
+            color: v.$linkColour;
+            padding-left: 1em;
+
+        }
+
+        .experience-description {
+            color: v.$textColour
         }
     }
 }
@@ -30,6 +43,14 @@
     #experience-wrapper {
         .experience {
             @include text-layer-mobile;
+        }
+
+        .job-title {
+            flex-direction: column;
+
+            strong {
+                padding-bottom: 0.5em;
+            }
         }
     }
 }

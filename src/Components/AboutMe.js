@@ -71,6 +71,15 @@ export default function AboutMe() {
                             />
                             <span className="text">Javascript</span>
                         </div>
+                        <div id="ts">
+                            <img
+                                alt="typescript"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                S
+                            />
+
+                            <span className="text">Typescript</span>
+                        </div>
 
                         <div id="react">
                             <img
@@ -88,6 +97,14 @@ export default function AboutMe() {
                             <span className="text">Sass</span>
                         </div>
 
+                        <div id="graphql">
+                            <img
+                                alt="graphql"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                            />
+                            <span className="text">GraphQL</span>
+                        </div>
+
                         <div id="git">
                             <img
                                 alt=" git"
@@ -102,6 +119,7 @@ export default function AboutMe() {
                             <strong>I have experience with:</strong>
                         </h6>
                     </div>
+
                     <div className="secondary">
                         <div id="python">
                             <img
@@ -124,12 +142,13 @@ export default function AboutMe() {
                             />
                             <span className="text">mySQL</span>
                         </div>
-                        <div id="jupyter">
+                        <div id="tailwind">
                             <img
-                                alt="jupyter"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                                alt="tailwind"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                             />
-                            <span className="text">Jupyter</span>
+
+                            <span className="text">Tailwindcss</span>
                         </div>
                         <div id="figma">
                             <img

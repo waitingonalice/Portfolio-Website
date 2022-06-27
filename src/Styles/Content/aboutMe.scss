@@ -3,7 +3,7 @@
 @import '../Global/mixins';
 
 #about-wrapper {
-    border: 1px solid black;
+    // border: 1px solid black;
     max-height: auto;
     display: flex;
     flex-direction: column;
@@ -68,20 +68,20 @@
 
         .main,
         .secondary {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 100px);
 
             div {
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                margin: 2.5%;
                 align-items: center;
                 color: v.$sentenceColour;
 
                 .text {
                     font-family: v.$font2;
                     font-size: v.$font-size-xs;
+                    padding-bottom: v.$font-size-s;
                 }
 
                 img {
@@ -95,8 +95,10 @@
                 }
             }
         }
+
     }
 }
+
 
 
 
@@ -115,11 +117,11 @@
 
             .main,
             .secondary {
-                div {
-                    margin: 4%;
+                grid-template-columns: repeat(auto-fill, 70px);
 
+                div {
                     img {
-                        width: 40px;
+                        width: 35px;
                     }
                 }
             }
