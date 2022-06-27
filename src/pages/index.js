@@ -11,17 +11,12 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 const IndexPage = () => {
     const particlesInit = async (main) => {
-        console.log(main);
-
         // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(main);
     };
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
     return (
         <div className="parent-container">
             <div className="landing">
@@ -29,7 +24,6 @@ const IndexPage = () => {
                     className="particles"
                     id="tsparticles"
                     init={particlesInit}
-                    loaded={particlesLoaded}
                     options={{
                         fpsLimit: 144,
                         fullScreen: { enable: false },
@@ -54,7 +48,7 @@ const IndexPage = () => {
                                     quantity: 4,
                                 },
                                 repulse: {
-                                    distance: 200,
+                                    distance: 150,
                                     duration: 1,
                                 },
                             },
@@ -72,7 +66,7 @@ const IndexPage = () => {
                                 width: 1,
                             },
                             collisions: {
-                                enable: true,
+                                enable: false,
                             },
                             move: {
                                 direction: "none",
@@ -89,7 +83,7 @@ const IndexPage = () => {
                                     enable: true,
                                     area: 800,
                                 },
-                                value: 90,
+                                value: 80,
                             },
                             opacity: {
                                 value: 0.8,
