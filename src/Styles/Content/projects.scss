@@ -1,0 +1,27 @@
+@use '../Global/variables' as v;
+@import '../Global/mixins';
+
+.project-wrapper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  position: relative;
+  z-index: 100;
+  @include section-header;
+
+  .projects {
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 strong::before {
+      content: 'Projects';
+      @include text-layer;
+      bottom: -3px !important;
+    }
+  }
+}

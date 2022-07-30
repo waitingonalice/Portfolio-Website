@@ -2,55 +2,58 @@
 @import '../Global/mixins';
 
 #experience-wrapper {
-    // border: 1px solid black;
-    max-height: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 100;
+  // border: 1px solid black;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  z-index: 100;
 
-    @include section-header;
 
-    .experience {
-        h1 strong::before {
-            content: 'Experience';
-            @include text-layer;
-        }
+  @include section-header;
 
-        .job-title {
-            color: v.$linkColour;
-            display: flex;
-            justify-content: space-between;
-
-            h5 {
-                font-family: v.$font2 ;
-            }
-        }
-
-        .position {
-            color: v.$linkColour;
-            padding-left: 1em;
-
-        }
-
-        .experience-description {
-            color: v.$textColour
-        }
+  .experience {
+    h1 strong::before {
+      content: 'Experience';
+      @include text-layer;
     }
+
+    .job-title {
+      color: v.$linkColour;
+      display: flex;
+      justify-content: space-between;
+
+      h5 {
+        font-family: v.$font2 ;
+      }
+    }
+
+    .position {
+      color: v.$linkColour;
+      padding-left: 1em;
+
+    }
+
+    .experience-description {
+      color: v.$textColour
+    }
+  }
 }
 
 @media screen and (max-width:650px) {
-    #experience-wrapper {
-        .experience {
-            @include text-layer-mobile;
-        }
-
-        .job-title {
-            flex-direction: column;
-
-            strong {
-                padding-bottom: 0.5em;
-            }
-        }
+  #experience-wrapper {
+    .experience {
+      @include text-layer-mobile;
     }
+
+    .job-title {
+      flex-direction: column;
+
+      strong {
+        padding-bottom: 0.5em;
+      }
+    }
+  }
 }

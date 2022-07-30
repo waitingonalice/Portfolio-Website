@@ -4,9 +4,11 @@
 
 #about-wrapper {
     // border: 1px solid black;
-    max-height: auto;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     // z-index: 100;
 
     @include section-header;
