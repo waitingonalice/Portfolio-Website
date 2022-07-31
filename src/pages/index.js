@@ -25,7 +25,7 @@ const IndexPage = () => {
           id="tsparticles"
           init={particlesInit}
           options={{
-            fpsLimit: 144,
+            fpsLimit: 60,
             fullScreen: { enable: true },
             background: {
               size: "cover",
@@ -34,7 +34,7 @@ const IndexPage = () => {
               detectsOn: "window",
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -81,9 +81,9 @@ const IndexPage = () => {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  area: 1000,
                 },
-                value: 80,
+                value: 40,
               },
               opacity: {
                 value: 0.2,

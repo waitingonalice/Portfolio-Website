@@ -22,7 +22,7 @@
     position: absolute;
     width: 100%;
     left: 3px;
-    bottom: -6px;
+    bottom: -5px;
     color: v.$linkColour;
 }
 
@@ -43,4 +43,12 @@
     left: 0;
     transition: v.$transition1;
     background: v.$gradient-colour2;
+}
+
+@mixin wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
 }

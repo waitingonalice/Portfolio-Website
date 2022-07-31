@@ -3,10 +3,9 @@
 #card-wrapper {
     // border: 1px solid black;
     box-shadow: 2px 2px 3px v.$hamburgerColour;
-    max-height: 100vh;
     border-radius: 10px;
     background-image: v.$card-gradient-colour;
     // position: relative;
-    padding: v.$font-size-s;
+    padding: v.$font-size-m;
 
 }

@@ -2,17 +2,9 @@
 @import '../Global/mixins';
 
 #experience-wrapper {
-  // border: 1px solid black;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  z-index: 100;
-
-
+  @include wrapper;
   @include section-header;
+
 
   .experience {
     h1 strong::before {
@@ -45,14 +37,13 @@
 @media screen and (max-width:650px) {
   #experience-wrapper {
     .experience {
-      @include text-layer-mobile;
-    }
 
-    .job-title {
-      flex-direction: column;
+      .job-title {
+        flex-direction: column;
 
-      strong {
-        padding-bottom: 0.5em;
+        strong {
+          padding-bottom: 0.5em;
+        }
       }
     }
   }
