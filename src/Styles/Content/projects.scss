@@ -4,10 +4,9 @@
 .project-wrapper {
   @include wrapper;
   @include section-header;
+  font-family: v.$font2;
 
   .projects {
-
-
     h1 strong::before {
       content: 'Projects';
       @include text-layer;
@@ -28,21 +27,20 @@
     margin: 0 0 3em 0;
 
     .description {
+      padding-top: 2em;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 100%;
 
       p {
         color: v.$sentenceColour
       }
 
       h3 {
-        color: v.$linkColour
+        color: v.$linkColour;
+        font-family: v.$font1
       }
-
-      padding-top: 2em;
-      display: flex;
-
-      justify-content: space-between;
-      flex-direction: column;
-      width: 100%;
     }
   }
 }

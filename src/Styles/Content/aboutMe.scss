@@ -5,6 +5,7 @@
 #about-wrapper {
   @include wrapper;
   @include section-header;
+  font-family: v.$font2;
 
 
   .about {
@@ -19,7 +20,6 @@
     // opacity: 0;
     // animation: slideLeft ease-out 2s;
     // animation-fill-mode: forwards;
-    font-family: v.$font2;
     padding-bottom: 0.5em;
     color: v.$textColour;
 
@@ -78,9 +78,8 @@
         color: v.$sentenceColour;
 
         .text {
-          font-family: v.$font2;
           font-size: v.$font-size-xs;
-          margin-bottom: v.$font-size-xs;
+          margin-bottom: v.$font-size-s;
         }
 
         img {
@@ -110,8 +109,6 @@
 
       .main,
       .secondary {
-
-
         div {
           img {
             width: 35px;

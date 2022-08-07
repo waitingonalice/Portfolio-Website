@@ -46,7 +46,9 @@ function Projects() {
           <Card key={ele.title} classStyle={"project-container"}>
             <img src={ele.image} alt={`${ele.alt}`} />
             <div className="description">
-              <h3>{ele.title}</h3>
+              <div className="title">
+                <h3>{ele.title}</h3>
+              </div>
               <p>{ele.description}</p>
             </div>
           </Card>

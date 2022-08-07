@@ -4,13 +4,12 @@
 #experience-wrapper {
   @include wrapper;
   @include section-header;
+  font-family: v.$font2;
 
   ol {
     list-style: upper-roman;
 
-    li {
-      font-family: v.$font2;
-    }
+
   }
 
   hr {
@@ -31,14 +30,10 @@
       color: v.$linkColour;
       display: flex;
       justify-content: space-between;
-
-      h3 {
-        font-family: v.$font2 ;
-      }
+      font-family: v.$font1;
     }
 
     h5 {
-
       color: v.$sentenceColour
     }
 
@@ -59,7 +54,7 @@
       }
 
       .text {
-        font-family: v.$font2;
+
         font-size: v.$font-size-xs;
         margin-bottom: v.$font-size-xs ;
       }
