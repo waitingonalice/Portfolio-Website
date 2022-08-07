@@ -52,21 +52,6 @@ export default function AboutMe() {
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
       alt: "GraphQL",
     },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      alt: "Tailwindcss",
-    },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      alt: "Sass",
-    },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      alt: "Figma",
-    },
   ];
 
   return (
@@ -104,8 +89,9 @@ export default function AboutMe() {
           </div>
           <div className="p3">
             <p>
-              Besides web development, I have worked on cryptography and neural
-              network projects. All my works can be found on{" "}
+              Besides web development, I have worked on other projects such as
+              cryptography and neural networking. All of my works can be found
+              on{" "}
               <strong>
                 <a href="https://github.com/waitingonalice">Github</a>
               </strong>{" "}

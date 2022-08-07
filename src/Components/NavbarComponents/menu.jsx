@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./menu.scss";
 import "../../Styles/Content/index.scss";
 export function Menu() {
@@ -24,7 +24,7 @@ export function Menu() {
   );
 }
 
-export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
+export function DropDownMenu({ toggle, handleToggle, setToggle }) {
   const links = [
     { link: "#about", text: "About" },
     { link: "#experience", text: "Experience" },
@@ -35,11 +35,11 @@ export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
     document.getElementById("wrapper").style.filter = "blur(5px)";
   }
   function notBlur() {
-    document.getElementById("wrapper").style.filter = "";
+    document.getElementById("wrapper").style.filter = null;
   }
 
   useEffect(() => {
-    if (toggle === true) {
+    if (toggle) {
       document.body.style.overflow = "hidden";
       blur();
     } else {
@@ -48,17 +48,16 @@ export function DropDownMenu({ toggle, handleToggle, handleHide, handleShow }) {
     }
   }, [toggle]);
 
+  /*
+   * @todo - useRef to close menu when clicked outside of menu
+   */
+
   return (
     <div className={toggle ? "menu active" : "menu"}>
       <ul>
         {links.map((nav) => (
           <li key={nav.text}>
-            <Nav.Link
-              href={nav.link}
-              onClick={() => handleToggle()}
-              onBlur={() => handleHide()}
-              onFocus={() => handleShow()}
-            >
+            <Nav.Link href={nav.link} onClick={() => handleToggle()}>
               {nav.text}
             </Nav.Link>
           </li>

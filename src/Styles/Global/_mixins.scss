@@ -1,3 +1,5 @@
+@use '../Global/variables' as v;
+
 @mixin section-header {
     h1 strong {
         // opacity: 0;
@@ -51,4 +53,5 @@
     justify-content: center;
     align-content: center;
     position: relative;
+    padding-top: v.$font-size-m;
 }

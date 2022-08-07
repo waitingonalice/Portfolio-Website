@@ -5,6 +5,17 @@
   @include wrapper;
   @include section-header;
 
+  ol {
+    list-style: upper-roman;
+
+    li {
+      font-family: v.$font2;
+    }
+  }
+
+  hr {
+    color: v.$hrColor
+  }
 
   .experience {
     h1 strong::before {
@@ -12,25 +23,61 @@
       @include text-layer;
     }
 
+    .job {
+      margin-bottom: v.$font-size-l
+    }
+
     .job-title {
       color: v.$linkColour;
       display: flex;
       justify-content: space-between;
 
-      h5 {
+      h3 {
         font-family: v.$font2 ;
       }
     }
 
-    .position {
-      color: v.$linkColour;
-      padding-left: 1em;
+    h5 {
 
+      color: v.$sentenceColour
     }
 
     .experience-description {
       color: v.$textColour
     }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 90px);
+
+      div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: v.$sentenceColour;
+      }
+
+      .text {
+        font-family: v.$font2;
+        font-size: v.$font-size-xs;
+        margin-bottom: v.$font-size-xs ;
+      }
+
+    }
+
+    img {
+      width: 50px;
+      transform: scale(1);
+      transition: all .2s ease;
+      margin: v.$font-size-xs 0;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+    }
+
   }
 }
 
@@ -45,6 +92,14 @@
           padding-bottom: 0.5em;
         }
       }
+
+
+      .icons {
+        img {
+          width: 35px;
+        }
+      }
+
     }
   }
 }

@@ -6,6 +6,7 @@
   @include wrapper;
   @include section-header;
 
+
   .about {
     h1 strong::before {
       content: 'About Me';
@@ -19,7 +20,7 @@
     // animation: slideLeft ease-out 2s;
     // animation-fill-mode: forwards;
     font-family: v.$font2;
-    padding: 0.5em 0;
+    padding-bottom: 0.5em;
     color: v.$textColour;
 
     strong,
@@ -52,13 +53,11 @@
   }
 
   .skills {
+    padding-top: v.$font-size-m;
+
     h1 strong::before {
       content: 'Skills';
       @include text-layer;
-    }
-
-    h1 {
-      padding-bottom: 0.5em;
     }
 
 
@@ -69,7 +68,7 @@
     .main,
     .secondary {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 100px);
+      grid-template-columns: repeat(auto-fill, 90px);
 
       div {
         position: relative;
@@ -81,13 +80,14 @@
         .text {
           font-family: v.$font2;
           font-size: v.$font-size-xs;
-          padding-bottom: v.$font-size-s;
+          margin-bottom: v.$font-size-xs;
         }
 
         img {
           width: 50px;
           transform: scale(1);
           transition: all .2s ease;
+          margin: v.$font-size-xs 0;
 
           &:hover {
             transform: scale(1.2);
@@ -110,7 +110,7 @@
 
       .main,
       .secondary {
-        grid-template-columns: repeat(auto-fill, 90px);
+
 
         div {
           img {

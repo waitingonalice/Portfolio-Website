@@ -4,11 +4,10 @@
 
 
 #wrapper {
-    min-height: calc(100vh - 160px);
+    min-height: 100vh;
     margin: 0 auto;
     max-width: 950px;
     padding: 2em;
-    // position: relative;
     display: flex;
     position: relative;
     align-items: center;
@@ -16,6 +15,7 @@
     -o-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    overflow-x: auto;
 
     .job-intro {
         color: v.$linkColour;
