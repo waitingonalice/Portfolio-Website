@@ -55,3 +55,14 @@
     position: relative;
     padding-top: v.$font-size-m;
 }
+
+@mixin images {
+    width: 50px;
+    transform: scale(1);
+    transition: all .2s ease;
+    margin: v.$font-size-xs 0;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
