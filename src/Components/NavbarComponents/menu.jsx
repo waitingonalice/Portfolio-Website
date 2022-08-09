@@ -1,8 +1,8 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import "./menu.scss";
-import "../../Styles/Content/index.scss";
+
 export function Menu() {
   return (
     <Nav className={"nav-links"}>
@@ -24,40 +24,29 @@ export function Menu() {
   );
 }
 
-export function DropDownMenu({ toggle, handleToggle, setToggle }) {
+export function DropDownMenu({ toggle, handleToggle }) {
   const links = [
     { link: "#about", text: "About" },
     { link: "#experience", text: "Experience" },
     { link: "#project", text: "Projects" },
     { link: "#contact", text: "Contact" },
   ];
-  function blur() {
-    document.getElementById("wrapper").style.filter = "blur(5px)";
-  }
-  function notBlur() {
-    document.getElementById("wrapper").style.filter = null;
-  }
-
   useEffect(() => {
     if (toggle) {
       document.body.style.overflow = "hidden";
-      blur();
+      document.getElementById("wrapper").style.filter = "blur(5px)";
     } else {
       document.body.style.overflow = "auto";
-      notBlur();
+      document.getElementById("wrapper").style.filter = null;
     }
   }, [toggle]);
 
-  /*
-   * @todo - useRef to close menu when clicked outside of menu
-   */
-
   return (
-    <div className={toggle ? "menu active" : "menu"}>
+    <div className={`menu ${toggle && "active"}`}>
       <ul>
         {links.map((nav) => (
           <li key={nav.text}>
-            <Nav.Link href={nav.link} onClick={() => handleToggle()}>
+            <Nav.Link href={nav.link} onClick={handleToggle}>
               {nav.text}
             </Nav.Link>
           </li>
