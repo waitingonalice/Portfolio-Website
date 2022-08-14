@@ -8,8 +8,6 @@
 
   ol {
     list-style: upper-roman;
-
-
   }
 
   hr {
@@ -89,4 +87,31 @@
 
     }
   }
+}
+
+
+@media screen and (max-width:380px) {
+
+  #experience-wrapper {
+    .experience {
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:320px) {
+
+  #experience-wrapper {
+    .experience {
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+
 }

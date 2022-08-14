@@ -12,14 +12,17 @@ function PortfolioNavbar() {
     setToggle(!toggle);
   };
   /*
-   * Remove warning of hamburger
+   * Remove warning for hamburger
    */
   useOnClickOutside(ref, () => setToggle(false));
-  console.log(ref);
+
   return (
     <header id="top">
       <nav className="navigation-bar">
-        <img className="logo" alt="codeLogo" src={coding}></img>
+        <a href="#introduction">
+          <img className="logo" alt="codeLogo" src={coding} />
+        </a>
+
         <div ref={ref}>
           <Hamburger toggle={toggle} handleToggle={handleToggle} />
           <Menu />

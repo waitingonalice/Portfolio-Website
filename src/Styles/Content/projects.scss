@@ -13,36 +13,108 @@
     }
   }
 
-  img {
-    width: 100%;
-
-  }
 
   .project-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     flex-direction: column;
     margin: 0 0 3em 0;
 
-    .description {
+    // img {
+    //   width: 100%;
+    // }
+    .title {
       padding-top: 2em;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      width: 100%;
 
-      p {
-        color: v.$sentenceColour
+      a {
+        text-decoration: none;
       }
 
-      h3 {
+      h3 strong {
         color: v.$linkColour;
-        font-family: v.$font1
+        font-family: v.$font1;
+        background-image: v.$gradient-colour2;
+        background-size: 100% 0.2em;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: v.$transition1;
+
+        &:hover {
+          background-size: 100% 1em;
+        }
+      }
+    }
+  }
+
+  p {
+    color: v.$sentenceColour
+  }
+
+  .icons {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+
+    .icon-wrapper {
+      width: 90px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: v.$sentenceColour;
+
+      .desc {
+        font-size: v.$font-size-xs;
+        margin-bottom: v.$font-size-xs ;
+      }
+    }
+
+    img {
+      @include images;
+
+    }
+  }
+}
+
+@media screen and (max-width:650px) {
+  .project-wrapper {
+    .icons {
+      .icon-wrapper {
+        .desc {
+          margin-bottom: 0;
+          opacity: 0;
+        }
+
+        &:hover .desc {
+          transition: all 0.5s ease;
+          opacity: 1
+        }
+      }
+
+      img {
+        width: 35px;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width:475px) {
+  .project-wrapper {
+    .icons {
+      justify-content: center;
+
+      .icon-wrapper {
+        width: 70px;
       }
     }
   }
 }
 
-@media screen and (max-width:650px) {}
+@media screen and (max-width:390px) {
+  .project-wrapper {
+    .icons {
+      .icon-wrapper {
+        width: 65px;
+      }
+    }
+  }
+}

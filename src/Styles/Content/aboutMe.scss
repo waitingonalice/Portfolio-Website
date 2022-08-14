@@ -53,7 +53,7 @@
   }
 
   .skills {
-    padding-top: v.$font-size-m;
+    padding-top: 5em;
 
     h1 strong::before {
       content: 'Skills';
@@ -96,9 +96,6 @@
 
     .about,
     .skills {
-      // h1 strong::before {
-      //   @include text-layer-mobile;
-      // }
 
       .main,
       .secondary {
@@ -107,6 +104,32 @@
             width: 35px;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:380px) {
+  #about-wrapper {
+    .skills {
+
+      .main,
+      .secondary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #about-wrapper {
+    .skills {
+
+      .main,
+      .secondary {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
       }
     }
   }

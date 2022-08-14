@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import { useEffect } from "react";
 import "./menu.scss";
+import "../../Styles/Content/index.scss";
 
 export function Menu() {
   return (
@@ -34,10 +35,10 @@ export function DropDownMenu({ toggle, handleToggle }) {
   useEffect(() => {
     if (toggle) {
       document.body.style.overflow = "hidden";
-      document.getElementById("wrapper").style.filter = "blur(5px)";
+      document.getElementById("child-container").style.filter = "blur(5px)";
     } else {
       document.body.style.overflow = "auto";
-      document.getElementById("wrapper").style.filter = null;
+      document.getElementById("child-container").style.filter = null;
     }
   }, [toggle]);
 
