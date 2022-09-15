@@ -7,12 +7,13 @@
         justify-content: space-around;
 
         a {
+            text-decoration: none;
             color: v.$sentenceColour;
             font-size: larger;
             font-family: v.$font2;
             position: relative;
             z-index: 1;
-
+            margin-left: 1em
         }
 
         //underline animation
@@ -63,6 +64,7 @@
 
     .menu {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         position: fixed;
@@ -81,7 +83,6 @@
             font-size: larger;
             font-family: v.$font2;
             text-decoration: none;
-            padding: 1.2em;
 
             &:hover {
                 color: v.$textColour;
@@ -90,11 +91,13 @@
         }
 
         ul {
-            display: block;
+
+
             list-style: none;
             padding: 0;
 
             li {
+                padding: 1.5em;
                 text-align: center;
             }
         }

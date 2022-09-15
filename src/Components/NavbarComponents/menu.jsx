@@ -1,27 +1,26 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
 import { useEffect } from "react";
 import "./menu.scss";
 import "../../Styles/Content/index.scss";
 
 export function Menu() {
   return (
-    <Nav className={"nav-links"}>
+    <div className={"nav-links"}>
       <ul>
         <li>
-          <Nav.Link href="#about">About</Nav.Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          <Nav.Link href="#experience">Experience</Nav.Link>
+          <a href="#experience">Experience</a>
         </li>
         <li>
-          <Nav.Link href="#project">Projects</Nav.Link>
+          <a href="#project">Projects</a>
         </li>
         <li>
-          <Nav.Link href="#contact">Contact</Nav.Link>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
-    </Nav>
+    </div>
   );
 }
 
@@ -47,9 +46,9 @@ export function DropDownMenu({ toggle, handleToggle }) {
       <ul>
         {links.map((nav) => (
           <li key={nav.text}>
-            <Nav.Link href={nav.link} onClick={handleToggle}>
+            <a href={nav.link} onClick={handleToggle}>
               {nav.text}
-            </Nav.Link>
+            </a>
           </li>
         ))}
       </ul>
