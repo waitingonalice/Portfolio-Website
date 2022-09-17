@@ -3,130 +3,134 @@
 @import '../Global/mixins';
 
 #about-wrapper {
-    // border: 1px solid black;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    // z-index: 100;
+  @include wrapper;
+  @include section-header;
+  font-family: v.$font2;
 
-    @include section-header;
 
-    .about {
-        h1 strong::before {
-            content: 'About Me';
-            @include text-layer;
-        }
-
+  .about {
+    h1 strong::before {
+      content: 'About Me';
+      @include text-layer;
     }
 
-    .paragraph {
-        // opacity: 0;
-        // animation: slideLeft ease-out 2s;
-        // animation-fill-mode: forwards;
-        font-family: v.$font2;
-        padding: 0.5em 0;
-        color: v.$textColour;
+  }
 
-        strong,
-        a {
-            color: v.$linkColour;
-            text-decoration: none;
-        }
+  .paragraph {
+    // opacity: 0;
+    // animation: slideLeft ease-out 2s;
+    // animation-fill-mode: forwards;
+    padding-bottom: 0.5em;
+    color: v.$textColour;
 
-        .p1,
-        .p2,
-        .p3 {
-
-            strong {
-                position: relative;
-                z-index: 0;
-                background-size: 100% 0.2em;
-                background-image: v.$gradient-colour2;
-                background-repeat: no-repeat;
-                background-position: 0 100%;
-                transition: v.$transition1;
-
-            }
-
-            strong:hover {
-                background-size: 100% 1.2em;
-            }
-        }
-
-
+    strong,
+    a {
+      color: v.$linkColour;
+      text-decoration: none;
     }
 
-    .skills {
-        h1 strong::before {
-            content: 'Skills';
-            @include text-layer;
-        }
+    .p1,
+    .p2,
+    .p3 {
 
-        .title {
-            color: v.$textColour;
-        }
+      strong {
+        position: relative;
+        z-index: 0;
+        background-size: 100% 0.2em;
+        background-image: v.$gradient-colour2;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        transition: v.$transition1;
 
-        .main,
-        .secondary {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 100px);
+      }
 
-            div {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: v.$sentenceColour;
-
-                .text {
-                    font-family: v.$font2;
-                    font-size: v.$font-size-xs;
-                    padding-bottom: v.$font-size-s;
-                }
-
-                img {
-                    width: 50px;
-                    transform: scale(1);
-                    transition: all .2s ease;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
-        }
-
+      strong:hover {
+        background-size: 100% 1.2em;
+      }
     }
+
+
+  }
+
+  .skills {
+    padding-top: 5em;
+
+    h1 strong::before {
+      content: 'Skills';
+      @include text-layer;
+    }
+
+
+    .title {
+      color: v.$textColour;
+    }
+
+    .main,
+    .secondary {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 90px);
+
+      div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: v.$sentenceColour;
+
+        .text {
+          font-size: v.$font-size-xs;
+          margin-bottom: v.$font-size-s;
+        }
+
+        img {
+          @include images
+        }
+      }
+    }
+
+  }
 }
 
-
-
-
-
-
-
-
 @media screen and (max-width:650px) {
-    #about-wrapper {
+  #about-wrapper {
 
-        .about,
-        .skills {
-            h1 strong::before {
-                @include text-layer-mobile;
-            }
+    .about,
+    .skills {
 
-            .main,
-            .secondary {
-                grid-template-columns: repeat(auto-fill, 70px);
-
-                div {
-                    img {
-                        width: 35px;
-                    }
-                }
-            }
+      .main,
+      .secondary {
+        div {
+          img {
+            width: 35px;
+          }
         }
+      }
     }
+  }
+}
+
+@media screen and (max-width:380px) {
+  #about-wrapper {
+    .skills {
+
+      .main,
+      .secondary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #about-wrapper {
+    .skills {
+
+      .main,
+      .secondary {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
 }

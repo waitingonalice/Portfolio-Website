@@ -18,110 +18,109 @@ const IndexPage = () => {
   };
 
   return (
-    <div className="parent-container">
-      <div className="landing">
-        <Particles
-          className="particles"
-          id="tsparticles"
-          init={particlesInit}
-          options={{
-            fpsLimit: 144,
-            fullScreen: { enable: true },
-            background: {
-              size: "cover",
-            },
-            interactivity: {
-              detectsOn: "window",
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 150,
-                  duration: 1,
-                },
-              },
-            },
-
-            particles: {
-              color: {
-                value: "#ffffff",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.2,
-                width: 1,
-              },
-              collisions: {
+    <>
+      <Particles
+        className="particles"
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fpsLimit: 60,
+          fullScreen: { enable: true },
+          background: {
+            size: "cover",
+          },
+          interactivity: {
+            detectsOn: "window",
+            events: {
+              onClick: {
                 enable: false,
+                mode: "push",
               },
-              move: {
-                direction: "none",
+              onHover: {
                 enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: true,
-                speed: 3,
-                straight: false,
+                mode: "repulse",
               },
-              number: {
-                density: {
-                  enable: true,
-                  area: 800,
-                },
-                value: 80,
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
               },
-              opacity: {
-                value: 0.2,
-              },
-              shape: {
-                type: "polygon",
-              },
-              size: {
-                value: { min: 1, max: 5 },
+              repulse: {
+                distance: 150,
+                duration: 1,
               },
             },
-            detectRetina: true,
-          }}
-        />
+          },
+
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.2,
+              width: 1,
+            },
+            collisions: {
+              enable: false,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: true,
+              speed: 3,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 1000,
+              },
+              value: 40,
+            },
+            opacity: {
+              value: 0.2,
+            },
+            shape: {
+              type: "polygon",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+      <div className="parent-container">
         <div id="navigation">
           <PortfolioNavbar />
         </div>
 
-        <section id="introduction">
-          <Intro></Intro>
-        </section>
+        <div id="child-container">
+          <section id="introduction">
+            <Intro></Intro>
+          </section>
+          <section id="about">
+            <AboutMe></AboutMe>
+          </section>
+          <section id="experience">
+            <Experience></Experience>
+          </section>
+          <section id="project">
+            <Projects></Projects>
+          </section>
+          <section id="contact">
+            <ContactMe></ContactMe>
+          </section>
+        </div>
       </div>
-
-      <div className="child-container">
-        <section id="about">
-          <AboutMe></AboutMe>
-        </section>
-        <section id="experience">
-          <Experience></Experience>
-        </section>
-        <section id="project">
-          <Projects></Projects>
-        </section>
-        <section id="contact">
-          <ContactMe></ContactMe>
-        </section>
-      </div>
-    </div>
+    </>
   );
 };
 

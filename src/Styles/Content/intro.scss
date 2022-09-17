@@ -4,155 +4,149 @@
 
 
 #wrapper {
-    min-height: calc(100vh - 160px);
-    margin: 0 auto;
-    max-width: 950px;
-    padding: 2em;
-    // position: relative;
-    display: flex;
-    position: relative;
-    align-items: center;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
-    .job-intro {
+
+  .job-intro {
+    color: v.$linkColour;
+    margin-top: -45%;
+
+    div {
+      margin: 0.8em 0;
+    }
+
+    .name h1 {
+      font-size: v.$font-size-xl;
+      font-family: v.$font1;
+      animation: slideDown ease-out 1.5s;
+      animation-iteration-count: 1;
+      opacity: 0;
+      animation-delay: .2s;
+      animation-fill-mode: forwards;
+      color: v.$secondaryColour;
+
+      &::before {
+        content: "Wilson Sie";
+        position: absolute;
+        left: 5px;
+        top: 1px;
         color: v.$linkColour;
-        margin-top: -25%;
+        width: 100%;
 
-        div {
-            margin: 0.8em 0;
-        }
-
-        .name h1 {
-            font-size: v.$font-size-xl;
-            font-family: v.$font1;
-            animation: slideDown ease-out 1.5s;
-            animation-iteration-count: 1;
-            opacity: 0;
-            animation-delay: .2s;
-            animation-fill-mode: forwards;
-            color: v.$secondaryColour;
-
-            &::before {
-                content: "Wilson Sie";
-                position: absolute;
-                left: 5px;
-                top: 1px;
-                color: v.$linkColour;
-                width: 100%;
-
-            }
-        }
-
-        .job-title {
-            animation: slideDown ease-out 1.5s;
-            animation-iteration-count: 1;
-            opacity: 0;
-            animation-delay: 1.5s;
-            animation-fill-mode: forwards;
-
-            h2 {
-                font-family: v.$font2;
-                font-weight: 600;
-                color: v.$linkColour;
-
-
-                a {
-                    text-decoration: none;
-                    position: relative;
-                    color: v.$secondaryColour;
-                    transition: v.$transition1;
-
-                }
-
-                a::after {
-                    content: "";
-                    position: absolute;
-                    border-radius: 5px;
-                    transform-origin: center;
-                    transform: scaleX(0);
-                    width: 100%;
-                    height: 5px;
-                    bottom: -10px;
-                    left: 0;
-                    transition: v.$transition1;
-                    background: v.$gradient-colour2;
-
-                }
-
-                a:hover::after {
-                    transform: scaleX(1);
-                    transform-origin: center;
-
-                }
-            }
-
-
-        }
+      }
     }
 
-    .welcome {
+    .job-title {
+      animation: slideDown ease-out 1.5s;
+      animation-iteration-count: 1;
+      opacity: 0;
+      animation-delay: 1.5s;
+      animation-fill-mode: forwards;
+
+      h2 {
         font-family: v.$font2;
-        font-size: 1.5em;
-        font-weight: 300;
-        color: v.$sentenceColour;
-        animation: slideRight ease-out 1.5s;
-        animation-iteration-count: 1;
-        opacity: 0;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
-    }
+        font-weight: 600;
+        color: v.$linkColour;
 
-    .img-links {
-        display: flex;
-        justify-content: flex-end;
-        animation: slideLeft ease-out 1.5s;
-        opacity: 0;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
 
-        img {
-            width: 40px;
-            margin: 0 0.5em;
-            transition: transform .25s;
-
+        a {
+          text-decoration: none;
+          position: relative;
+          color: v.$secondaryColour;
+          transition: v.$transition1;
 
         }
 
-        img:hover {
-            position: relative;
-            transform: scale(1.5);
+        a::after {
+          content: "";
+          position: absolute;
+          border-radius: 5px;
+          transform-origin: center;
+          transform: scaleX(0);
+          width: 100%;
+          height: 5px;
+          bottom: -10px;
+          left: 0;
+          transition: v.$transition1;
+          background: v.$gradient-colour2;
+
         }
+
+        a:hover::after {
+          transform: scaleX(1);
+          transform-origin: center;
+
+        }
+      }
+
+
     }
+  }
+
+  .welcome {
+    font-family: v.$font2;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: v.$sentenceColour;
+    animation: slideRight ease-out 1.5s;
+    animation-iteration-count: 1;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .img-links {
+    display: flex;
+    justify-content: flex-end;
+    animation: slideLeft ease-out 1.5s;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    img {
+      width: 40px;
+      margin: 0 0.5em;
+      transition: transform .25s;
+
+
+    }
+
+    img:hover {
+      position: relative;
+      transform: scale(1.5);
+    }
+  }
 }
 
 @media screen and (max-width:650px) {
 
-    #wrapper {
+  #wrapper {
+    .job-intro {
 
+      div {
+        margin: 0.8em 0;
+      }
 
-        .job-intro {
+      .name h1 {
+        font-size: v.$font-size-l;
+      }
 
+      .job-title h2 {
+        font-size: v.$font-size-m;
+      }
 
-            div {
-                margin: 0.8em 0;
-            }
-
-            .name h1 {
-                font-size: v.$font-size-l;
-            }
-
-            .job-title h2 {
-                font-size: v.$font-size-m;
-            }
-
-            .welcome {
-                font-size: v.$font-size-s;
-            }
-        }
-
+      .welcome {
+        font-size: v.$font-size-s;
+      }
     }
+
+  }
 
 }

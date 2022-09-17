@@ -1,39 +1,57 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../Styles/Content/Navbar.scss";
 import coding from "../images/coding.png";
-
 import Hamburger from "./NavbarComponents/hamburger";
 import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 
 function PortfolioNavbar() {
-    const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const ref = useRef(null);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+  /*
+   * Remove warning for hamburger
+   */
+  useOnClickOutside(ref, () => setToggle(false));
 
-    const handleHide = () => {
-        setToggle(false);
-    };
-    const handleShow = () => {
-        setToggle(true);
-    };
-    const handleToggle = () => {
-        setToggle(!toggle);
-    };
+  return (
+    <header id="top">
+      <nav className="navigation-bar">
+        <a href="#introduction">
+          <img className="logo" alt="codeLogo" src={coding} />
+        </a>
 
-    return (
-        <header id="top">
-            <nav id="navigation-bar">
-                <img className="logo" alt="codeLogo" src={coding}></img>
-                <Hamburger toggle={toggle} handleToggle={handleToggle} />
-                <Menu />
-            </nav>
-            <DropDownMenu
-                toggle={toggle}
-                handleToggle={handleToggle}
-                handleHide={handleHide}
-                handleShow={handleShow}
-            />
-        </header>
-    );
+        <div ref={ref}>
+          <Hamburger toggle={toggle} handleToggle={handleToggle} />
+          <Menu />
+          <DropDownMenu
+            toggle={toggle}
+            handleToggle={handleToggle}
+            reference={ref}
+          />
+        </div>
+      </nav>
+    </header>
+  );
 }
+
+const useOnClickOutside = (ref, eventHandler) => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      eventHandler(event);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [ref, eventHandler]);
+};
 
 export default PortfolioNavbar;

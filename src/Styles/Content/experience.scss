@@ -2,17 +2,17 @@
 @import '../Global/mixins';
 
 #experience-wrapper {
-  // border: 1px solid black;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  z-index: 100;
-
-
+  @include wrapper;
   @include section-header;
+  font-family: v.$font2;
+
+  ol {
+    list-style: upper-roman;
+  }
+
+  hr {
+    color: v.$hrColor
+  }
 
   .experience {
     h1 strong::before {
@@ -20,40 +20,98 @@
       @include text-layer;
     }
 
+    .job {
+      margin-bottom: v.$font-size-l
+    }
+
     .job-title {
       color: v.$linkColour;
       display: flex;
       justify-content: space-between;
-
-      h5 {
-        font-family: v.$font2 ;
-      }
+      font-family: v.$font1;
     }
 
-    .position {
-      color: v.$linkColour;
-      padding-left: 1em;
-
+    h5 {
+      color: v.$sentenceColour
     }
 
     .experience-description {
       color: v.$textColour
     }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 90px);
+
+      div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: v.$sentenceColour;
+      }
+
+      .text {
+
+        font-size: v.$font-size-xs;
+        margin-bottom: v.$font-size-xs ;
+      }
+
+    }
+
+    img {
+      @include images
+    }
+
   }
 }
 
 @media screen and (max-width:650px) {
   #experience-wrapper {
     .experience {
-      @include text-layer-mobile;
+
+      .job-title {
+        flex-direction: column;
+
+        strong {
+          padding-bottom: 0.5em;
+        }
+      }
+
+
+      .icons {
+        img {
+          width: 35px;
+        }
+      }
+
     }
+  }
+}
 
-    .job-title {
-      flex-direction: column;
 
-      strong {
-        padding-bottom: 0.5em;
+@media screen and (max-width:380px) {
+
+  #experience-wrapper {
+    .experience {
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
   }
+
+}
+
+@media screen and (max-width:320px) {
+
+  #experience-wrapper {
+    .experience {
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+
 }

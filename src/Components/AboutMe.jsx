@@ -52,21 +52,6 @@ export default function AboutMe() {
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
       alt: "GraphQL",
     },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      alt: "Tailwindcss",
-    },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      alt: "Sass",
-    },
-    {
-      imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      alt: "Figma",
-    },
   ];
 
   return (
@@ -97,15 +82,15 @@ export default function AboutMe() {
               software fascinating. This fueled my passion for learning and
               tinkering with new technologies, and creating software projects
               that I am proud of. At the moment, I mainly do{" "}
-              <strong>front-end web development</strong>, but I'm also keen in
-              learning back-end development to become a full-stack software
-              engineer.
+              <strong>front-end web development</strong>, but I'm keen in
+              learning backend development as well.
             </p>
           </div>
           <div className="p3">
             <p>
-              Besides web development, I have worked on cryptography and neural
-              network projects. All my works can be found on{" "}
+              Besides web development, I have worked on other projects such as
+              cryptography and neural networking. All of my works can be found
+              on{" "}
               <strong>
                 <a href="https://github.com/waitingonalice">Github</a>
               </strong>{" "}
