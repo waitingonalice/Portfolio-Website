@@ -31,17 +31,17 @@ const IndexPage = () => {
           },
           interactivity: {
             detectsOn: "window",
-            events: {
-              onClick: {
-                enable: false,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
+            // events: {
+            //   onClick: {
+            //     enable: false,
+            //     mode: "push",
+            //   },
+            //   onHover: {
+            //     enable: false,
+            //     mode: "repulse",
+            //   },
+            //   resize: true,
+            // },
             modes: {
               push: {
                 quantity: 4,
@@ -80,9 +80,9 @@ const IndexPage = () => {
             number: {
               density: {
                 enable: true,
-                area: 1000,
+                area: 1200,
               },
-              value: 40,
+              value: 30,
             },
             opacity: {
               value: 0.2,
@@ -91,7 +91,7 @@ const IndexPage = () => {
               type: "polygon",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 10 },
             },
           },
           detectRetina: true,

@@ -3,11 +3,77 @@
 
 .contact-wrapper {
   min-height: 100vh;
+  @include wrapper;
+  align-items: center;
 
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: v.$sentenceColour
+  h1 strong {
+    color: v.$secondaryColour;
+    font-family: v.$font1;
+    position: relative;
+  }
+
+  .in-touch-header {
+
+    h1 strong::before {
+      content: 'Got a question?';
+      @include text-layer;
+    }
+  }
+
+  h4 {
+    max-width: 80%;
+    margin-top: 1em;
+    color: v.$linkColour;
+    font-family: v.$font1;
+    text-align: center;
+  }
+
+  #contact-btn {
+    position: relative;
+    margin-top: 1.5em;
+    font-family: v.$font1;
+    color: v.$linkColour;
+    padding: 0.3em 1em;
+    background-image: linear-gradient(to top left,
+        #fa9e26 0%,
+        #e62a0d 70%);
+    border-radius: 25px;
+    z-index: 1;
+
+    &:hover {
+      svg {
+        margin-bottom: 8px;
+      }
+    }
+
+    a {
+      svg {
+        margin-bottom: 4px;
+      }
+
+      text-decoration: none;
+      color: v.$linkColour;
+      font-size: 20px;
+    }
+  }
+
+  #contact-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top left,
+        #e62a0d 0%,
+        #fa9e26 70%);
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+    border-radius: 25px;
+  }
+
+  #contact-btn:hover::before {
+    opacity: 1;
   }
 }
