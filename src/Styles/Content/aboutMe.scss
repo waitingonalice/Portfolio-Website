@@ -21,7 +21,7 @@
     // animation: slideLeft ease-out 2s;
     // animation-fill-mode: forwards;
     padding-bottom: 0.5em;
-    color: v.$textColour;
+    @include text-style;
 
     strong,
     a {
@@ -44,6 +44,10 @@
 
   .skills {
     padding-top: 5em;
+
+    h1 {
+      text-align: center;
+    }
 
     h1 strong::before {
       content: 'Skills';

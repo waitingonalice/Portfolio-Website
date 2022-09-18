@@ -106,7 +106,7 @@ function Experience() {
         <h1>
           <strong>Experience</strong>
         </h1>
-        <Card>
+        <Card classStyle={"experience-container"}>
           {experience.map((ele, idx) => (
             <div className="job" key={idx}>
               <div className="job-title">

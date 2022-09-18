@@ -15,10 +15,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.1.2",
     "bootstrap": "^5.2.1",
     "clsx": "^1.2.1",
-    "framer-motion": "^6.3.10",
     "gatsby": "^4.15.2",
     "gatsby-plugin-sass": "^5.15.1",
     "gatsby-source-filesystem": "^4.19.0",

@@ -9,6 +9,7 @@ import Projects from "../Components/Projects";
 import ContactMe from "../Components/ContactMe";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+
 const IndexPage = () => {
   const particlesInit = async (main) => {
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets

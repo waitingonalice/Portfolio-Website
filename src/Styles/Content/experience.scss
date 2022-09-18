@@ -15,10 +15,16 @@
   }
 
   .experience {
+    h1 {
+      text-align: center;
+    }
+
     h1 strong::before {
       content: 'Experience';
       @include text-layer;
     }
+
+
 
     .job {
       margin-bottom: v.$font-size-l
@@ -36,7 +42,7 @@
     }
 
     .experience-description {
-      color: v.$textColour
+      @include text-style;
     }
 
     .icons {
@@ -52,7 +58,6 @@
       }
 
       .text {
-
         font-size: v.$font-size-xs;
         margin-bottom: v.$font-size-xs ;
       }
@@ -69,7 +74,6 @@
 @media screen and (max-width:650px) {
   #experience-wrapper {
     .experience {
-
       .job-title {
         flex-direction: column;
 
@@ -77,7 +81,6 @@
           padding-bottom: 0.5em;
         }
       }
-
 
       .icons {
         img {

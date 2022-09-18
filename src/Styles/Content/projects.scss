@@ -7,21 +7,21 @@
   font-family: v.$font2;
 
   .projects {
+    h1 {
+      text-align: center;
+    }
+
     h1 strong::before {
       content: 'Projects';
       @include text-layer;
     }
   }
 
-
   .project-container {
     display: flex;
     flex-direction: column;
     margin: 0 0 3em 0;
 
-    // img {
-    //   width: 100%;
-    // }
     .title {
       padding-top: 1em;
 
@@ -37,9 +37,10 @@
     }
   }
 
-  p {
-    color: v.$sentenceColour
+  .description {
+    @include text-style;
   }
+
 
   .icons {
     display: flex;
@@ -53,7 +54,7 @@
       flex-direction: column;
       color: v.$sentenceColour;
 
-      .desc {
+      .text {
         font-size: v.$font-size-xs;
         margin-bottom: v.$font-size-xs ;
       }
@@ -89,7 +90,7 @@
   }
 }
 
-@media screen and (max-width:475px) {
+@media screen and (max-width:650px) {
   .project-wrapper {
     .icons {
       justify-content: center;
@@ -101,7 +102,7 @@
   }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:380px) {
   .project-wrapper {
     .icons {
       .icon-wrapper {

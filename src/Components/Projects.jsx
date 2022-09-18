@@ -41,7 +41,7 @@ function Projects() {
         {
           imgLink:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-          alt: "TailwindCSS",
+          alt: "Tailwind",
         },
       ],
     },
@@ -175,7 +175,7 @@ function Projects() {
                 ele.stack.map((item, idx) => (
                   <div key={idx} className="icon-wrapper">
                     <img src={item.imgLink} alt={item.alt} />
-                    <div className="desc">{item.alt}</div>
+                    <div className="text">{item.alt}</div>
                   </div>
                 ))}
             </div>

@@ -73,3 +73,10 @@
         transform: scale(1.2);
     }
 }
+
+
+@mixin text-style {
+    line-height: 1.8;
+    color: v.$textColour;
+    font-size: 15px;
+}
