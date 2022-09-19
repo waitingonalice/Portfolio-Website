@@ -1,7 +1,12 @@
 import "../Styles/Content/contact.scss";
 import React, { useEffect, useState, useReducer } from "react";
-import { HiOutlineMail, HiOutlineMailOpen } from "react-icons/hi";
+import {
+  HiOutlineMail,
+  HiOutlineMailOpen,
+  HiOutlinePaperAirplane,
+} from "react-icons/hi";
 import { FormLabel, FormInput, FormText } from "../Components/Form/Form";
+
 function ContactMe() {
   const [mailIcon, setMailIcon] = useState(<HiOutlineMail />);
   useEffect(() => {
@@ -33,9 +38,10 @@ function ContactMe() {
         Let's get in touch. Feel free to use the contact form or email button
         below.
       </h4>
-      <span role="button" id="contact-btn">
+      <button id="contact-btn">
         <a href="mailto:wilsonsie.fc@gmail.com">Email {mailIcon}</a>
-      </span>
+      </button>
+
       <div className="contact-form form-floating">
         <FormInput type={"text"} id={"name"} />
         <FormLabel htmlFor={"name"} children={"Name"} />
@@ -47,6 +53,11 @@ function ContactMe() {
       <div className="contact-form form-floating">
         <FormText id={"comment"} />
         <FormLabel htmlFor={"comment"} children={"Leave a comment"} />
+      </div>
+      <div className="submit-btn-position">
+        <button className="submit-btn">
+          Submit <HiOutlinePaperAirplane />
+        </button>
       </div>
     </div>
   );

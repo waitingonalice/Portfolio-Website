@@ -25,7 +25,7 @@ export const FormInput = ({ type, onChange, className, id }) => {
 export const FormText = ({ name, onChange }) => {
   return (
     <textarea
-      style={{ height: 150 + "px" }}
+      style={{ height: 120 + "px" }}
       className="form-control shadow-none"
       placeholder={"Leave a comment here"}
       name={name}
