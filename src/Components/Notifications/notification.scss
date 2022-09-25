@@ -1,0 +1,24 @@
+.alert {
+  width: 95%;
+  position: fixed;
+  top: 1em;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 1.5em;
+  }
+
+  .close-button {
+    border-radius: 50%;
+    border: 0px;
+  }
+
+}
