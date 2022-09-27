@@ -1,16 +1,21 @@
+@use '../../Styles/Global/animations';
+
+
 .alert {
-  width: 95%;
+  min-width: 40%;
   position: fixed;
-  top: 1em;
+  top: 2em;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: slideLeft ease-in-out 0.3s
 }
 
 .notification-content {
   display: flex;
   align-items: center;
+
 
   .icon {
     margin-right: 1.5em;
@@ -21,4 +26,11 @@
     border: 0px;
   }
 
+}
+
+@media screen and (max-width:650px) {
+  .alert {
+    min-width: 90%;
+    top: 1em;
+  }
 }

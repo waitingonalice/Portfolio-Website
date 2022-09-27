@@ -1,32 +1,32 @@
 @use '../Global/variables' as v;
 @import '../Global/mixins';
 
+h1 strong {
+  color: v.$secondaryColour;
+  font-family: v.$font1;
+  position: relative;
+}
+
+h4 {
+  margin-top: 1em;
+  color: v.$linkColour;
+  font-family: v.$font1;
+  text-align: center;
+}
+
 .contact-wrapper {
   min-height: 100vh;
   @include wrapper;
   align-items: center;
 
-  h1 strong {
-    color: v.$secondaryColour;
-    font-family: v.$font1;
-    position: relative;
-  }
 
   .in-touch-header {
-
     h1 strong::before {
       content: 'Got a question?';
       @include text-layer;
     }
   }
 
-  h4 {
-    max-width: 80%;
-    margin-top: 1em;
-    color: v.$linkColour;
-    font-family: v.$font1;
-    text-align: center;
-  }
 
   #contact-btn {
     position: relative;

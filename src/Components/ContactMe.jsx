@@ -9,23 +9,19 @@ import { FormLabel, FormInput, FormText } from "../Components/Form/Form";
 import { sendTelegramMessage } from "../utils/api";
 import { toLocalDate } from "../utils/formatter";
 import Notification from "./Notifications/notification";
-const fields = {
+const initState = {
   name: "",
   email: "",
   message: "",
-  notification: false,
+  isSubmitting: false,
 };
 
 const formReducer = (state, action) => {
   switch (action.type) {
     case "handleInput":
       return { ...state, [action.field]: action.payload };
-    case "handleReset":
-      return { ...fields };
-    case "handleNotificationOn":
-      return { notification: true };
-    case "handleNotificationOff":
-      return { notification: false };
+    case "handleIsSubmitting":
+      return { ...initState, isSubmitting: action.payload };
     default:
       return state;
   }
@@ -33,27 +29,8 @@ const formReducer = (state, action) => {
 
 function ContactMe() {
   const [mailIcon, setMailIcon] = useState(<HiOutlineMail />);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formValues, setFormValues] = useReducer(formReducer, fields);
-  const handleInput = (e) => {
-    setFormValues({
-      type: "handleInput",
-      field: e.target.id,
-      payload: e.target.value,
-    });
-  };
-
-  const handleOnClick = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setFormValues({
-      type: "handleReset",
-    });
-    const form = document.getElementById("form");
-    form.reset();
-    await sendTelegramMessage({ ...formValues, timestamp: toLocalDate() });
-    setIsSubmitting(false);
-  };
+  const [formState, setFormState] = useReducer(formReducer, initState);
+  const [resCode, setResCode] = useState();
 
   useEffect(() => {
     const mouseTarget = document.getElementById("contact-btn");
@@ -73,22 +50,36 @@ function ContactMe() {
     };
   }, []);
 
-  const checkMandatoryFields = Object.values(formValues).includes("");
-  console.log(formValues);
   useEffect(() => {
-    if (isSubmitting) {
-      setFormValues({ type: "handleNotificationOn" });
-      setTimeout(() => {
-        setFormValues({ type: "handleNotificationOff" });
-      }, 3000);
-    }
-  }, [isSubmitting]);
+    setTimeout(() => setResCode(undefined), 3000);
+  }, [resCode]);
+
+  const handleInput = (e) => {
+    setFormState({
+      type: "handleInput",
+      field: e.target.id,
+      payload: e.target.value,
+    });
+  };
+
+  const handleOnClick = async (e) => {
+    e.preventDefault();
+    setFormState({ type: "handleIsSubmitting", payload: true });
+    const form = document.getElementById("form");
+    form.reset();
+    const response = await sendTelegramMessage({
+      ...formState,
+      timestamp: toLocalDate(),
+    });
+    setResCode(response.status);
+    setFormState({ type: "handleIsSubmitting", payload: false });
+  };
+
+  const checkMandatoryFields = Object.values(formState).includes("");
 
   return (
     <div className="contact-wrapper">
-      {formValues.notification && (
-        <Notification children={"Submission success!"} />
-      )}
+      {resCode && <Notification resCode={resCode} />}
       <div className="in-touch-header">
         <h1>
           <strong>Got a question?</strong>
@@ -117,10 +108,10 @@ function ContactMe() {
         <div className="submit-btn-position">
           <button
             className="submit-btn"
-            disabled={checkMandatoryFields}
+            disabled={checkMandatoryFields || formState.isSubmitting}
             onClick={handleOnClick}
           >
-            {isSubmitting ? (
+            {formState.isSubmitting ? (
               <>Submitting...</>
             ) : (
               <>

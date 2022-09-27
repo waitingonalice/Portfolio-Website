@@ -1,37 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./notification.scss";
-
+import clsx from "clsx";
 import { HiOutlineCheckCircle, HiX, HiOutlineXCircle } from "react-icons/hi";
-import { useEffect } from "react";
-const Notification = ({ status = "success", children }) => {
+
+const Notification = ({ className, resCode }) => {
   const [fade, setFade] = useState(false);
+
   const notificationStatus = {
-    status: status,
+    statusCode: resCode,
+    status: "success",
+    children: "Submission success!",
     icon: <HiOutlineCheckCircle size={25} />,
   };
 
   const dynamicStatus = () => {
-    switch (notificationStatus.status) {
-      case "danger":
-        return { ...notificationStatus, icon: <HiOutlineXCircle size={25} /> };
+    switch (resCode) {
+      case 200:
+        return { ...notificationStatus };
+      case 400:
+        return {
+          status: "danger",
+          children: "Submission failed, please refresh your page.",
+          icon: <HiOutlineXCircle size={25} />,
+        };
       default:
-        return { ...notificationStatus, status: "success" };
+        return notificationStatus;
     }
   };
 
   return (
-    <div
-      className={`alert alert-${dynamicStatus().status} ${fade && "fade"}`}
-      role="alert"
-    >
-      <div className="notification-content">
-        <div className="icon">{dynamicStatus().icon}</div>
-        <strong>{children}</strong>
-      </div>
-      <div role={"button"} onClick={() => setFade(true)} tabIndex="0">
-        <HiX />
-      </div>
-    </div>
+    <>
+      {
+        <div
+          className={clsx(
+            `alert alert-${dynamicStatus().status} ${fade && "fade"}`,
+            className
+          )}
+          role="alert"
+        >
+          <div className="notification-content">
+            <div className="icon">{dynamicStatus().icon}</div>
+            <strong>{dynamicStatus().children}</strong>
+          </div>
+          <div role={"button"} onClick={() => setFade(true)} tabIndex="0">
+            <HiX />
+          </div>
+        </div>
+      }
+    </>
   );
 };
 
