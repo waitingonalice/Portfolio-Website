@@ -1,0 +1,22 @@
+@use '../../Styles/Global/variables' as v;
+
+.form-label {
+  color: v.$linkColour;
+  font-family: v.$font1;
+  font-size: v.$font-size-s;
+  font-weight: bolder;
+}
+
+.form-control:focus,
+.form-control:active,
+.form-control {
+  background: transparent;
+  color: v.$textColour;
+  font-family: v.$font2;
+  font-size: v.$font-size-xs;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  margin-top: 10px;
+}

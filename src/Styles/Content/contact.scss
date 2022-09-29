@@ -1,0 +1,169 @@
+@use '../Global/variables' as v;
+@import '../Global/mixins';
+
+h1 strong {
+  color: v.$secondaryColour;
+  font-family: v.$font1;
+  position: relative;
+}
+
+h4 {
+  margin-top: 1em;
+  color: v.$linkColour;
+  font-family: v.$font1;
+  text-align: center;
+}
+
+.contact-wrapper {
+  min-height: 100vh;
+  @include wrapper;
+  align-items: center;
+
+
+  .in-touch-header {
+    h1 strong::before {
+      content: 'Got a question?';
+      @include text-layer;
+    }
+  }
+
+
+  #contact-btn {
+    position: relative;
+    margin-top: 1.5em;
+    font-family: v.$font1;
+    color: v.$linkColour;
+    padding: 0.5em 1.5em;
+    background-image: linear-gradient(to top left,
+        #fa9e26 0%,
+        #e62a0d 70%);
+    border-radius: 25px;
+    z-index: 1;
+    border: none;
+
+    &:hover {
+      svg {
+        margin-bottom: 8px;
+      }
+    }
+
+    a {
+      svg {
+        margin-bottom: 4px;
+      }
+
+      text-decoration: none;
+      color: v.$linkColour;
+      font-size: 20px;
+    }
+  }
+
+  #contact-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top left,
+        #e62a0d 30%,
+        #fa9e26 100%);
+    z-index: -1;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+    border-radius: 25px;
+  }
+
+  #contact-btn:hover::before {
+    opacity: 1;
+  }
+
+  .submit-btn {
+    position: relative;
+    margin-top: 1.5em;
+    font-family: v.$font1;
+    color: v.$linkColour;
+    background-image: linear-gradient(to bottom right,
+        #0088CC 20%,
+        #5aabd3 100%);
+    padding: 0.5em 1.5em;
+    border-radius: 25px;
+    border: none;
+    z-index: 1;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right,
+          #5aabd3 0%,
+          #0088CC 80%);
+      z-index: -1;
+      transition: opacity 0.2s linear;
+      opacity: 0;
+      border-radius: 25px;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    svg {
+      margin-bottom: 5px;
+      margin-left: 5px;
+      transform: rotate(45deg);
+    }
+
+  }
+
+  .submit-btn-position {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .contact-form {
+    width: 80%;
+    margin-top: 2em;
+  }
+
+  .form {
+    @include wrapper;
+    padding-top: 5em;
+    width: 100%;
+    align-items: center;
+  }
+
+  .error-message {
+    font-family: v.$font2;
+    font-size: v.$font-size-xs;
+    color: #e62a0d;
+    margin-top: 5px;
+  }
+}
+
+
+
+@media screen and (max-width:650px) {
+  .contact-wrapper {
+    .form {
+      padding-top: 1em;
+    }
+
+    .submit-btn-position {
+      display: flex;
+      justify-content: center;
+    }
+
+    .submit-btn {
+      padding: 0.5em 1em
+    }
+  }
+}

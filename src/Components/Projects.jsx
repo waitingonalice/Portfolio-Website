@@ -15,7 +15,7 @@ function Projects() {
         <p>
           I needed to learn how to consume and mutate GraphQL APIs during my
           internship, hence this project was born. It is a simple React
-          application that categorises and displays all SpaceX rockets based on
+          application that filters and displays all SpaceX rockets based on
           their launchsites. <br></br> By building this application, I learned
           the difference in concept between GraphQL and REST APIs and their
           respective use cases. Furthermore, I was able to pick up on Typescript
@@ -41,7 +41,7 @@ function Projects() {
         {
           imgLink:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-          alt: "TailwindCSS",
+          alt: "Tailwind",
         },
       ],
     },
@@ -53,8 +53,8 @@ function Projects() {
       description: (
         <p>
           You are viewing it! This site was built with GatsbyJS and styled with
-          SASS. Building this site enabled me to learn Sass, mobile
-          responsiveness and practice CSS flexbox/grid. All of my achievements,
+          SASS. Building this site enabled me to learn Sass, mobile responsive
+          practices and practice CSS flexbox/grid. All of my achievements,
           experiences and past works can be found here.
         </p>
       ),
@@ -175,7 +175,7 @@ function Projects() {
                 ele.stack.map((item, idx) => (
                   <div key={idx} className="icon-wrapper">
                     <img src={item.imgLink} alt={item.alt} />
-                    <div className="desc">{item.alt}</div>
+                    <div className="text">{item.alt}</div>
                   </div>
                 ))}
             </div>

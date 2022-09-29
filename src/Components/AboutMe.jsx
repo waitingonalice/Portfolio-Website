@@ -103,7 +103,7 @@ export default function AboutMe() {
         <h1>
           <strong>Skills</strong>
         </h1>
-        <Card>
+        <Card classStyle={"skills-container"}>
           <div className="title">
             <h6>
               <strong>I mostly work with:</strong>

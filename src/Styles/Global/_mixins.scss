@@ -8,29 +8,32 @@
         position: relative;
         color: v.$secondaryColour;
         font-family: v.$font1;
-        background-image: v.$gradient-colour2;
-        background-size: 100% 0.2em;
-        background-position: 0 100%;
-        background-repeat: no-repeat;
-        transition: v.$transition1;
+    }
+}
 
-        &:hover {
-            background-size: 100% 1em;
-        }
+@mixin text-highlight {
+    background-image: v.$gradient-colour2;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: v.$transition1;
+
+    &:hover {
+        background-size: 100% 1em;
     }
 }
 
 @mixin text-layer {
     position: absolute;
     width: 100%;
-    left: 3px;
+    left: 4px;
     bottom: -5px;
     color: v.$linkColour;
 }
 
 @mixin text-layer-mobile {
-    bottom: -4px;
-    left: 2px;
+    bottom: 0px;
+    left: 5px;
 }
 
 @mixin text-underline {
@@ -69,4 +72,11 @@
     &:hover {
         transform: scale(1.2);
     }
+}
+
+
+@mixin text-style {
+    line-height: 1.8;
+    color: v.$textColour;
+    font-size: 15px;
 }

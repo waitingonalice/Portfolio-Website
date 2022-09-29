@@ -21,7 +21,7 @@
     // animation: slideLeft ease-out 2s;
     // animation-fill-mode: forwards;
     padding-bottom: 0.5em;
-    color: v.$textColour;
+    @include text-style;
 
     strong,
     a {
@@ -36,24 +36,18 @@
       strong {
         position: relative;
         z-index: 0;
-        background-size: 100% 0.2em;
-        background-image: v.$gradient-colour2;
-        background-repeat: no-repeat;
-        background-position: 0 100%;
-        transition: v.$transition1;
-
+        @include text-highlight
       }
 
-      strong:hover {
-        background-size: 100% 1.2em;
-      }
     }
-
-
   }
 
   .skills {
     padding-top: 5em;
+
+    h1 {
+      text-align: center;
+    }
 
     h1 strong::before {
       content: 'Skills';

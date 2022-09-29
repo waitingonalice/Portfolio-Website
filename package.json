@@ -1,44 +1,40 @@
 {
-    "name": "tfolio",
-    "version": "1.0.0",
-    "private": true,
-    "description": "portfolio",
-    "author": "Wilson Sie",
-    "keywords": [
-        "gatsby"
-    ],
-    "scripts": {
-        "develop": "gatsby develop",
-        "start": "gatsby develop",
-        "build": "gatsby build",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean"
-    },
-    "dependencies": {
-        "@chakra-ui/gatsby-plugin": "^3.0.0",
-        "@chakra-ui/react": "^2.1.2",
-        "@emotion/react": "^11.9.0",
-        "@emotion/styled": "^11.8.1",
-        "@mdx-js/mdx": "^1.6.22",
-        "@mdx-js/react": "^1.6.22",
-        "bootstrap": "^5.2.0-beta1",
-        "clsx": "^1.2.1",
-        "framer-motion": "^6.3.10",
-        "gatsby": "^4.15.2",
-        "gatsby-plugin-image": "^2.15.0",
-        "gatsby-plugin-mdx": "^3.19.0",
-        "gatsby-plugin-sass": "^5.15.1",
-        "gatsby-plugin-sharp": "^4.15.0",
-        "gatsby-plugin-sitemap": "^5.15.0",
-        "gatsby-source-filesystem": "^4.19.0",
-        "gatsby-transformer-sharp": "^4.15.1",
-        "react": "^18.1.0",
-        "react-aria": "^3.16.0",
-        "react-bootstrap": "^2.4.0",
-        "react-dom": "^18.1.0",
-        "react-tsparticles": "^2.1.4",
-        "react-typewriter-effect": "^1.1.0",
-        "sass": "^1.52.1",
-        "tsparticles": "^2.1.4"
+  "name": "tfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "portfolio",
+  "author": "Wilson Sie",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "clsx": "^1.2.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "gatsby": "^4.15.2",
+    "gatsby-plugin-sass": "^5.15.1",
+    "gatsby-source-filesystem": "^4.19.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
+    "react-tsparticles": "^2.1.4",
+    "sass": "^1.52.1",
+    "tsparticles": "^2.1.4"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }

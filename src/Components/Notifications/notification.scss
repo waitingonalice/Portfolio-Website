@@ -1,0 +1,36 @@
+@use '../../Styles/Global/animations';
+
+
+.alert {
+  min-width: 60%;
+  position: fixed;
+  top: 2em;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideLeft ease-in-out 0.3s
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+
+
+  .icon {
+    margin-right: 1.5em;
+  }
+
+  .close-button {
+    border-radius: 50%;
+    border: 0px;
+  }
+
+}
+
+@media screen and (max-width:650px) {
+  .alert {
+    min-width: 90%;
+    top: 1em;
+  }
+}
