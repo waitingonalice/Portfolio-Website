@@ -140,7 +140,16 @@ h4 {
     width: 100%;
     align-items: center;
   }
+
+  .error-message {
+    font-family: v.$font2;
+    font-size: v.$font-size-xs;
+    color: #e62a0d;
+    margin-top: 5px;
+  }
 }
+
+
 
 @media screen and (max-width:650px) {
   .contact-wrapper {

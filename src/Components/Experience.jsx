@@ -13,27 +13,30 @@ function Experience() {
       description: (
         <ol>
           <li>
-            Learned clean code principles and code commit practices in a
-            development environment.
-          </li>
-          <li>
-            Worked in a CI/CD environment that utilises software such as JIRA,
-            Confluence, Trello and Gitlab.
-          </li>
-          <li>
             Researched, documented and performed a Proof of Concept for
             localisation software to be integrated into supplier portal
-            pipeline.
+            pipeline. Was also active in the process of integrating localisation
+            into supplier portal.
           </li>
           <li>
-            Played a key role in integrating localisation for supplier portal.
+            Improved supplier onboarding process with the use of cookies to
+            categorise suppliers.
+          </li>
+
+          <li>
+            Was responsible for building the new homepage for supplier facing
+            portal that displayed informative dashboards based on user data.
           </li>
           <li>
-            Worked closely with UI/UX designers to build a new homepage for
-            supplier facing portal that displays informative dashboards based on
-            user data.
+            Contributed to the overall improvement of UX for supplier portal by
+            refactoring how components are displayed and implementing skeleton
+            loaders into website flow.
           </li>
-          <li>Improved overall UX for supplier portal and admin portal. </li>
+          <li>
+            Worked in an agile development environment that required active
+            participation in the requirements gathering, design and development
+            phases. Utilised tools such as Confluence and Jira.{" "}
+          </li>
         </ol>
       ),
       stack: [

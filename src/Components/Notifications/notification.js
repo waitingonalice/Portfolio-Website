@@ -5,7 +5,7 @@ import { HiOutlineCheckCircle, HiX, HiOutlineXCircle } from "react-icons/hi";
 
 const Notification = ({ className, resCode }) => {
   const [fade, setFade] = useState(false);
-
+  const [notificationTimeout, setnotificationTimeout] = useState(false);
   const notificationStatus = {
     statusCode: resCode,
     status: "success",
@@ -20,20 +20,30 @@ const Notification = ({ className, resCode }) => {
       case 400:
         return {
           status: "danger",
-          children: "Submission failed, please refresh your page.",
+          children: "Submission failed.",
+          icon: <HiOutlineXCircle size={25} />,
+        };
+      case 500:
+        return {
+          status: "danger",
+          children: "Server Error, submission failed.",
           icon: <HiOutlineXCircle size={25} />,
         };
       default:
         return notificationStatus;
     }
   };
-
+  useEffect(() => {
+    setTimeout(() => setnotificationTimeout(true), 2500);
+  }, []);
   return (
     <>
       {
         <div
           className={clsx(
-            `alert alert-${dynamicStatus().status} ${fade && "fade"}`,
+            `alert alert-${dynamicStatus().status} ${
+              fade || (notificationTimeout && "fade")
+            }`,
             className
           )}
           role="alert"

@@ -10,20 +10,24 @@ export const FormLabel = ({ children, htmlFor }) => {
   );
 };
 
-export const FormInput = ({ type, onChange, className, id }) => {
+export const FormInput = ({ type, onChange, className, id, error }) => {
   return (
-    <input
-      required
-      type={type}
-      className={clsx("form-control shadow-none", className)}
-      onChange={onChange}
-      id={id}
-      placeholder={"name@example.com"}
-    />
+    <>
+      <input
+        required
+        type={type}
+        className={clsx("form-control shadow-none", className)}
+        onChange={onChange}
+        id={id}
+        name={id}
+        placeholder={"name@example.com"}
+      />
+      {error && <div className="error-message">{error}</div>}
+    </>
   );
 };
 
-export const FormText = ({ id, name, onChange }) => {
+export const FormText = ({ id, onChange }) => {
   return (
     <textarea
       required
@@ -32,7 +36,7 @@ export const FormText = ({ id, name, onChange }) => {
       style={{ height: 120 + "px" }}
       className="form-control shadow-none"
       placeholder={"Leave a comment here"}
-      name={name}
+      name={id}
       autoComplete="on"
       onChange={onChange}
     />
