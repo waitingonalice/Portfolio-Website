@@ -33,7 +33,7 @@ export const FormText = ({ id, onChange }) => {
       required
       type="text"
       id={id}
-      style={{ height: 120 + "px" }}
+      style={{ height: 180 + "px" }}
       className="form-control shadow-none"
       placeholder={"Leave a comment here"}
       name={id}

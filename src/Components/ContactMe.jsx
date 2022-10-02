@@ -33,13 +33,13 @@ const formReducer = (state, action) => {
 const Spinner = () => {
   return <div className="spinner"></div>;
 };
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
 function ContactMe() {
   const [mailIcon, setMailIcon] = useState(<HiOutlineMail />);
   const [formState, setFormState] = useReducer(formReducer, initState);
   const [resCode, setResCode] = useState();
   const [error, setError] = useState(false);
-  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   useEffect(() => {
     const mouseTarget = document.getElementById("contact-btn");
     mouseTarget.addEventListener("mouseenter", () =>
@@ -75,15 +75,15 @@ function ContactMe() {
     if (!formState.email.match(emailRegex)) {
       return setError(true);
     }
-    //stops the other functions from being called upon validation failure
     setError(false);
+    //stops the other functions from being called upon validation failure
     setFormState({ type: "handleIsSubmitting", payload: true });
     delete formState.isSubmitting;
     const response = await sendTelegramMessage({
       ...formState,
       timestamp: toLocalDate(),
     });
-    setResCode(response.status);
+    response && setResCode(response.status);
     setFormState({ type: "handleIsSubmitting", payload: false });
   };
 

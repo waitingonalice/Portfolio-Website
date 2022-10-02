@@ -6,20 +6,29 @@
   @include wrapper;
   @include section-header;
   font-family: v.$font2;
-
+  flex-direction: row;
 
   .about {
-    h1 strong::before {
-      content: 'About Me';
-      @include text-layer;
+    margin-right: 3em;
+
+    h1 {
+      font-size: v.$font-size-xl;
     }
 
+    h1 strong {
+      &::after {
+        @include title-highlight;
+      }
+
+      &::before {
+        content: 'About Me';
+        @include text-layer;
+      }
+    }
   }
 
   .paragraph {
-    // opacity: 0;
-    // animation: slideLeft ease-out 2s;
-    // animation-fill-mode: forwards;
+    padding-top: 2em;
     padding-bottom: 0.5em;
     @include text-style;
 
@@ -43,17 +52,8 @@
   }
 
   .skills {
-    padding-top: 5em;
-
-    h1 {
-      text-align: center;
-    }
-
-    h1 strong::before {
-      content: 'Skills';
-      @include text-layer;
-    }
-
+    padding-top: 4em;
+    min-width: 40%;
 
     .title {
       color: v.$textColour;
@@ -85,23 +85,35 @@
   }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:1024px) {
   #about-wrapper {
+    flex-direction: column;
 
-    .about,
     .skills {
+      padding-top: 0;
+    }
 
-      .main,
-      .secondary {
-        div {
-          img {
-            width: 35px;
-          }
-        }
-      }
+    .about {
+      margin-right: 0;
     }
   }
 }
+
+@media screen and (max-width:650px) {
+  #about-wrapper {
+    .about {
+      h1 {
+        font-size: v.$font-size-l;
+      }
+
+      h1 strong::after {
+        @include title-highlight-mobile
+      }
+    }
+  }
+
+}
+
 
 @media screen and (max-width:380px) {
   #about-wrapper {

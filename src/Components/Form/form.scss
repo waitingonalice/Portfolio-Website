@@ -3,8 +3,9 @@
 .form-label {
   color: v.$linkColour;
   font-family: v.$font1;
-  font-size: v.$font-size-s;
+  font-size: v.$font-size-m;
   font-weight: bolder;
+
 }
 
 .form-control:focus,
@@ -13,10 +14,9 @@
   background: transparent;
   color: v.$textColour;
   font-family: v.$font2;
-  font-size: v.$font-size-xs;
   border-top: none;
   border-right: none;
   border-left: none;
   border-radius: 0px;
-  margin-top: 10px;
+  margin-top: 20px;
 }

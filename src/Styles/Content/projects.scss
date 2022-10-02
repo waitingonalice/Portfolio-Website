@@ -9,6 +9,13 @@
   .projects {
     h1 {
       text-align: center;
+      font-size: v.$font-size-xl ;
+    }
+
+    h1 strong::after {
+      @include title-highlight;
+      left: 4.5rem;
+      top: 4rem;
     }
 
     h1 strong::before {
@@ -19,8 +26,19 @@
 
   .project-container {
     display: flex;
-    flex-direction: column;
-    margin: 0 0 3em 0;
+    margin: 2em 0 3em 0;
+    align-items: center;
+
+    .project-img {
+      width: 50%;
+      min-height: 100%;
+      border: 8px solid v.$primary-colour;
+      border-radius: 10px;
+    }
+
+    .content {
+      margin-left: 3rem;
+    }
 
     .title {
       padding-top: 1em;
@@ -44,11 +62,11 @@
 
   .icons {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     flex-wrap: wrap;
 
     .icon-wrapper {
-      width: 90px;
+      width: 80px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -65,10 +83,94 @@
 
     }
   }
+
+  .repo-btn {
+    a {
+      text-decoration: none;
+      color: v.$linkColour;
+      font-size: v.$font-size-s;
+    }
+
+    @include button;
+    padding: 0.4em 1em;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-image: linear-gradient(to left,
+      #f1523c 0%,
+      #e62a0d 70%);
+
+
+    &::before {
+      @include button-before;
+      background-image: linear-gradient(to left,
+          #e62a0d 30%,
+          #f1523c 100%)
+    }
+
+    &:hover::before {
+      opacity: 1
+    }
+  }
+
+  .site-btn {
+    @include opposite-button;
+
+    a {
+      text-decoration: none;
+      color: v.$linkColour;
+      font-size: v.$font-size-s;
+    }
+  }
+
+
 }
+
+@media screen and (max-width:1024px) {
+  .project-wrapper {
+    .projects {
+      .project-container {
+        .project-img {
+          width: 100%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .content {
+          margin-left: 0;
+        }
+
+        .project-img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width:650px) {
   .project-wrapper {
+    .projects {
+      h1 {
+        font-size: v.$font-size-l;
+      }
+
+      h1 strong::after {
+        @include title-highlight-mobile;
+        left: 3rem;
+      }
+
+      .project-container {
+
+        .repo-btn,
+        .site-btn {
+          font-size: v.$font-size-xs;
+        }
+      }
+    }
+
     .icons {
       .icon-wrapper {
         .desc {
@@ -80,33 +182,8 @@
           transition: all 0.5s ease;
           opacity: 1
         }
-      }
 
-      img {
-        width: 35px;
-      }
 
-    }
-  }
-}
-
-@media screen and (max-width:650px) {
-  .project-wrapper {
-    .icons {
-      justify-content: center;
-
-      .icon-wrapper {
-        width: 70px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width:380px) {
-  .project-wrapper {
-    .icons {
-      .icon-wrapper {
-        width: 65px;
       }
     }
   }

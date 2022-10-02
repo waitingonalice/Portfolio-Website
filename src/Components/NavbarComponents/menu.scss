@@ -18,10 +18,8 @@
 
         //underline animation
         a:hover {
-            color: v.$textColour;
+            color: v.$gradient-colour;
             transition: v.$transition1;
-            transform: scale(1.1);
-
         }
 
         a::after {

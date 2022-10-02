@@ -11,6 +11,6 @@ export const sendTelegramMessage = async (text) => {
     });
     return response;
   } catch (err) {
-    console.err(err);
+    console.log(err);
   }
 };
