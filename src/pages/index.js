@@ -23,13 +23,16 @@ const IndexPage = () => {
     <>
       <Helmet>
         <title>Wilson Sie</title>
-        <meta name="title" content="Wilson Sie" />
-        <meta name="description" content="" />
-        <link rel="icon" href="https://i.imgur.com/ZvkSezs.png" />
+        <meta name="title" content="Wilson Sie's" />
+        <meta
+          name="description"
+          content="Hello, I'm Wilson. Welcome to my portfolio where I showcase all of my past works and experiences."
+        />
+        <link rel="icon" href="https://i.imgur.com/EHK1LlB.png" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://wilson-sie.dev/" />
-        <meta property="og:title" content="Wilson Sie" />
+        <meta property="og:title" content="Wilson Sie dev portfolio" />
         <meta property="og:description" content="" />
         <meta property="og:image" content="" />
 

@@ -23,6 +23,7 @@
       &::before {
         content: 'About Me';
         @include text-layer;
+        white-space: nowrap;
       }
     }
   }

@@ -23,6 +23,7 @@ h4 {
     h1 strong::before {
       content: 'Got a question?';
       @include text-layer;
+      white-space: nowrap;
     }
   }
 
