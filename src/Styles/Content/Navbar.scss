@@ -22,3 +22,16 @@
   }
 
 }
+
+@media screen and (max-width:650px) {
+  .navigation-bar {
+    .main-logo {
+      h1 strong {
+        &::before {
+          top: -4px;
+          left: 3px;
+        }
+      }
+    }
+  }
+}
