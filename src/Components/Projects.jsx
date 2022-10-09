@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/Content/projects.scss";
 import { Card } from "./Card/Card";
 import visualAlgo from "../images/visualAlgo.png";
 import spaceX from "../images/spacex.png";
 import portfolio from "../images/portfolio.png";
+import { HiOutlineExternalLink } from "react-icons/hi";
 function Projects() {
   const projectMapper = [
     {
@@ -16,10 +17,7 @@ function Projects() {
           I needed to learn how to consume and mutate GraphQL APIs during my
           internship, hence this project was born. It is a simple React
           application that filters and displays all SpaceX rockets based on
-          their launchsites. <br></br> By building this application, I learned
-          the difference in concept between GraphQL and REST APIs and their
-          respective use cases. Furthermore, I was able to pick up on Typescript
-          and TailwindCSS along the way.
+          their launchsites.
         </p>
       ),
       stack: [
@@ -49,12 +47,13 @@ function Projects() {
       image: portfolio,
       alt: "Portfolio Site",
       title: "Portfolio Site",
-      link: "",
+      link: "https://github.com/waitingonalice/Portfolio-Website",
+      liveLink: "xyz.com",
       description: (
         <p>
           You are viewing it! This site was built with GatsbyJS and styled with
           SASS. Building this site enabled me to learn Sass, mobile responsive
-          practices and practice CSS flexbox/grid. All of my achievements,
+          practices and learn CSS flexbox/grid. All of my achievements,
           experiences and past works can be found here.
         </p>
       ),
@@ -81,12 +80,14 @@ function Projects() {
       alt: "Visual Algo",
       title: "Visual Algo",
       link: "https://github.com/waitingonalice/Visual-Algo",
+      liveLink: "https://waitingonalice.github.io/Visual-Algo/",
       description: (
         <p>
-          Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae
-          elit libero, a pharetra augue mollis interdum. Nulla vitae elit
-          libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a
-          pharetra augue mollis interdum.
+          During the height of Covid-19, I had to learn data structures and
+          algorithms for a module I was taking. Being a visual learner, I
+          created an interactive application that allowed users to visualise how
+          different sorting algorithms interacted with random numbers. Building
+          this project served as an entry point to learn React.
         </p>
       ),
       stack: [
@@ -107,50 +108,6 @@ function Projects() {
         },
       ],
     },
-    {
-      image: null,
-      alt: "Kohonen Neural Network",
-      title: "Image optimizer with SOM neural network",
-      link: "https://github.com/waitingonalice/Kohonen-Neural-Network-SOM-",
-      description: (
-        <p>
-          {" "}
-          Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae
-          elit libero, a pharetra augue mollis interdum. Nulla vitae elit
-          libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a
-          pharetra augue mollis interdum.
-        </p>
-      ),
-      stack: [
-        {
-          imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-          alt: "Python",
-        },
-      ],
-    },
-    {
-      image: null,
-      alt: "Kohonen Neural Network",
-      title: "Diffie Hellman - El Gamal Asymmetric Cryptosystem",
-      link: "https://github.com/waitingonalice/Diffie-Hellman-ElGamal",
-      description: (
-        <p>
-          "Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla
-          vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit
-          libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a
-          pharetra augue mollis interdum."
-        </p>
-      ),
-
-      stack: [
-        {
-          imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-          alt: "Python",
-        },
-      ],
-    },
   ];
 
   return (
@@ -161,23 +118,39 @@ function Projects() {
         </h1>
         {projectMapper.map((ele) => (
           <Card key={ele.title} classStyle={"project-container"}>
-            {ele.image && <img src={ele.image} alt={`${ele.alt}`} />}
-            <div className="title">
-              <h3>
+            {ele.image && (
+              <img className="project-img" src={ele.image} alt={`${ele.alt}`} />
+            )}
+            <div className="content">
+              <div className="title">
+                <h3>
+                  <a href={ele.link}>
+                    <strong>{ele.title}</strong>
+                  </a>
+                </h3>
+              </div>
+              <div className="description">{ele.description}</div>
+              <div className="icons">
+                {ele.stack &&
+                  ele.stack.map((item, idx) => (
+                    <div key={idx} className="icon-wrapper">
+                      <img src={item.imgLink} alt={item.alt} />
+                      <div className="text">{item.alt}</div>
+                    </div>
+                  ))}
+              </div>
+              <button className="repo-btn">
                 <a href={ele.link}>
-                  <strong>{ele.title}</strong>
+                  Repository <HiOutlineExternalLink />
                 </a>
-              </h3>
-            </div>
-            <div className="description">{ele.description}</div>
-            <div className="icons">
-              {ele.stack &&
-                ele.stack.map((item, idx) => (
-                  <div key={idx} className="icon-wrapper">
-                    <img src={item.imgLink} alt={item.alt} />
-                    <div className="text">{item.alt}</div>
-                  </div>
-                ))}
+              </button>
+              {ele.liveLink && (
+                <button className="site-btn">
+                  <a href={ele.liveLink}>
+                    Live site <HiOutlineExternalLink />
+                  </a>
+                </button>
+              )}
             </div>
           </Card>
         ))}

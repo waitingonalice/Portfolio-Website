@@ -1,8 +1,10 @@
 import React from "react";
 import "../Styles/Content/intro.scss";
-import gmail from "../images/gmail.png";
-import github from "../images/github.png";
-
+import { FaGithub } from "react-icons/fa";
+import { MdOutlineDescription } from "react-icons/md";
+import { RiLinkedinFill } from "react-icons/ri";
+import { IoMdArrowDropright } from "react-icons/io";
+import { HiChevronDoubleUp } from "react-icons/hi";
 function Intro() {
   return (
     <>
@@ -14,28 +16,52 @@ function Intro() {
 
           <div className="job-title">
             <h2>
-              Software Engineer @{" "}
+              Frontend Software Developer @{" "}
               <a href="https://www.trustana.com/">Trustana.</a>
             </h2>
           </div>
 
-          <div className="welcome">Welcome to my portfolio.</div>
+          <div className="welcome">An insight into my life on the web.</div>
 
-          <div className="img-links">
-            <a href="https://github.com/waitingonalice">
-              <img alt="github-icon" src={github}></img>
+          <div className="links">
+            <a className="portfolio-btn" href="#about">
+              Portfolio <IoMdArrowDropright />
             </a>
-            <a href="mailto:wilsonsie97@gmail.com">
-              <img alt="gmail-icon" src={gmail}></img>
-            </a>
-            <a href="https://www.linkedin.com/in/wilson-sie-6a3485155/">
-              <img
-                alt="linkedin"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-              />
-            </a>
+            <div className="icon-wrapper">
+              <a
+                href="https://github.com/waitingonalice/CV/blob/main/Resume.pdf"
+                className="link-btn"
+              >
+                <MdOutlineDescription />
+                <p>Resume</p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/wilson-sie-6a3485155/"
+                className="link-btn"
+              >
+                <RiLinkedinFill />
+                <p>LinkedIn</p>
+              </a>
+              <a href="https://github.com/waitingonalice" className="link-btn">
+                <FaGithub />
+                <p>Github</p>
+              </a>
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        id="back-to-landing"
+        tabIndex={0}
+        role="button"
+        onClick={() => {
+          const rootElement = document.documentElement;
+          rootElement.scrollTo({
+            top: 0,
+          });
+        }}
+      >
+        <HiChevronDoubleUp />
       </div>
     </>
   );

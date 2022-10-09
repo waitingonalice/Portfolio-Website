@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./notification.scss";
 import clsx from "clsx";
-import { HiOutlineCheckCircle, HiX, HiOutlineXCircle } from "react-icons/hi";
+import {
+  HiOutlineCheckCircle,
+  HiX,
+  HiOutlineXCircle,
+  HiOutlineExclamationCircle,
+} from "react-icons/hi";
 
 const Notification = ({ className, resCode }) => {
   const [fade, setFade] = useState(false);
@@ -30,7 +35,11 @@ const Notification = ({ className, resCode }) => {
           icon: <HiOutlineXCircle size={25} />,
         };
       default:
-        return notificationStatus;
+        return {
+          status: "warning",
+          children: "Unknown error.",
+          icon: <HiOutlineExclamationCircle size={25} />,
+        };
     }
   };
   useEffect(() => {

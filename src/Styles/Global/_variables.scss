@@ -9,11 +9,15 @@ $card-gradient-colour: linear-gradient(to bottom right,
     #173650 0%,
     #53789561 100%);
 $background-gradient: linear-gradient(to top left,
-    #d39a4f 0%,
+    #f16755 0%,
     #fb3923 100%);
 $background-gradient2: linear-gradient(to bottom,
     #386488 0%,
     #0a2336 100%);
+
+$background-gradient3: linear-gradient(to bottom right,
+    #f8d8a1 50%,
+    #ddb882 100%);
 
 //#386488 0%,
 //#0a2336 100%
@@ -36,7 +40,7 @@ $font-size-l: 2.5em;
 $font-size-xl: 3.5em;
 $height: calc(100vh);
 
-$transition1: all .3s ease-out;
+$transition1: all .2s ease-out;
 $transition2: all .4s ease-in-out;
 
 $hrColor: #808b96;

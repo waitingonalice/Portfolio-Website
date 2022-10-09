@@ -8,8 +8,11 @@ import {
 } from "react-icons/hi";
 import { FormLabel, FormInput, FormText } from "../Components/Form/Form";
 import { sendTelegramMessage } from "../utils/api";
-import { toLocalDate } from "../utils/formatter";
+import { toLocalDate, toLocalYear } from "../utils/formatter";
 import Notification from "./Notifications/notification";
+import { FaGithub } from "react-icons/fa";
+import { MdOutlineDescription } from "react-icons/md";
+import { RiLinkedinFill } from "react-icons/ri";
 const initState = {
   name: "",
   email: "",
@@ -33,13 +36,13 @@ const formReducer = (state, action) => {
 const Spinner = () => {
   return <div className="spinner"></div>;
 };
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
 function ContactMe() {
   const [mailIcon, setMailIcon] = useState(<HiOutlineMail />);
   const [formState, setFormState] = useReducer(formReducer, initState);
   const [resCode, setResCode] = useState();
   const [error, setError] = useState(false);
-  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   useEffect(() => {
     const mouseTarget = document.getElementById("contact-btn");
     mouseTarget.addEventListener("mouseenter", () =>
@@ -75,15 +78,15 @@ function ContactMe() {
     if (!formState.email.match(emailRegex)) {
       return setError(true);
     }
-    //stops the other functions from being called upon validation failure
     setError(false);
+    //stops the other functions from being called upon validation failure
     setFormState({ type: "handleIsSubmitting", payload: true });
     delete formState.isSubmitting;
     const response = await sendTelegramMessage({
       ...formState,
       timestamp: toLocalDate(),
     });
-    setResCode(response.status);
+    response && setResCode(response.status);
     setFormState({ type: "handleIsSubmitting", payload: false });
   };
 
@@ -92,6 +95,7 @@ function ContactMe() {
   return (
     <div className="contact-wrapper">
       {resCode && <Notification resCode={resCode} />}
+
       <div className="in-touch-header">
         <h1>
           <strong>Got a question?</strong>
@@ -141,6 +145,21 @@ function ContactMe() {
           </button>
         </div>
       </form>
+
+      <footer className="footer">
+        <small>&copy; Copyright 2021 - {toLocalYear()}, Wilson Sie</small>
+        <div className="icons">
+          <a href="https://github.com/waitingonalice/CV/blob/main/Resume.pdf">
+            <MdOutlineDescription />
+          </a>
+          <a href="https://www.linkedin.com/in/wilson-sie-6a3485155/">
+            <RiLinkedinFill />
+          </a>
+          <a href="https://github.com/waitingonalice">
+            <FaGithub />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

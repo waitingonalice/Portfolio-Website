@@ -15,10 +15,9 @@ h4 {
 }
 
 .contact-wrapper {
-  min-height: 100vh;
+  min-height: 90vh;
   @include wrapper;
   align-items: center;
-
 
   .in-touch-header {
     h1 strong::before {
@@ -29,17 +28,8 @@ h4 {
 
 
   #contact-btn {
-    position: relative;
     margin-top: 1.5em;
-    font-family: v.$font1;
-    color: v.$linkColour;
-    padding: 0.5em 1.5em;
-    background-image: linear-gradient(to top left,
-        #fa9e26 0%,
-        #e62a0d 70%);
-    border-radius: 25px;
-    z-index: 1;
-    border: none;
+    @include button;
 
     &:hover {
       svg {
@@ -59,19 +49,7 @@ h4 {
   }
 
   #contact-btn::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to top left,
-        #e62a0d 30%,
-        #fa9e26 100%);
-    z-index: -1;
-    transition: opacity 0.2s linear;
-    opacity: 0;
-    border-radius: 25px;
+    @include button-before;
   }
 
   #contact-btn:hover::before {
@@ -124,28 +102,52 @@ h4 {
   }
 
   .submit-btn-position {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: end;
   }
 
   .contact-form {
-    width: 80%;
+    width: 100%;
     margin-top: 2em;
   }
 
   .form {
     @include wrapper;
-    padding-top: 5em;
-    width: 100%;
+    padding-top: 3em;
+    width: 80%;
     align-items: center;
   }
 
   .error-message {
     font-family: v.$font2;
     font-size: v.$font-size-xs;
-    color: #e62a0d;
+    color: #e41616;
     margin-top: 5px;
+  }
+
+  .footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    small {
+      color: v.$linkColour;
+      margin-right: v.$font-size-xs;
+    }
+
+
+    .icons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100px;
+
+      svg {
+        text-decoration: none;
+        color: v.$linkColour;
+      }
+    }
   }
 }
 
@@ -153,7 +155,9 @@ h4 {
 
 @media screen and (max-width:650px) {
   .contact-wrapper {
+
     .form {
+      width: 100%;
       padding-top: 1em;
     }
 
@@ -164,6 +168,10 @@ h4 {
 
     .submit-btn {
       padding: 0.5em 1em
+    }
+
+    .footer {
+      margin-top: 20%;
     }
   }
 }

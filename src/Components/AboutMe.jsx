@@ -100,9 +100,6 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="skills">
-        <h1>
-          <strong>Skills</strong>
-        </h1>
         <Card classStyle={"skills-container"}>
           <div className="title">
             <h6>

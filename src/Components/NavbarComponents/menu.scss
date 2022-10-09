@@ -9,19 +9,17 @@
         a {
             text-decoration: none;
             color: v.$sentenceColour;
-            font-size: larger;
+            font-size: v.$font-size-s;
             font-family: v.$font2;
             position: relative;
             z-index: 1;
-            margin-left: 1em
+            margin-left: 2em
         }
 
         //underline animation
         a:hover {
-            color: v.$textColour;
+            color: v.$gradient-colour;
             transition: v.$transition1;
-            transform: scale(1.1);
-
         }
 
         a::after {
@@ -31,7 +29,7 @@
             height: 4px;
             border-radius: 5px;
             background: v.$gradient-colour;
-            bottom: -5px;
+            bottom: -10px;
             left: 0px;
             transform-origin: center;
             transform: scaleX(0);
@@ -70,7 +68,7 @@
         position: fixed;
         transition: v.$transition2;
         transform: translateX(100vw);
-        background: v.$background-gradient;
+        background: v.$background-gradient3;
         z-index: 3;
         width: 75%;
         height: 100vh;
@@ -79,7 +77,7 @@
 
 
         a {
-            color: v.$linkColour;
+            color: v.$primary-colour;
             font-size: larger;
             font-family: v.$font2;
             text-decoration: none;
@@ -91,8 +89,6 @@
         }
 
         ul {
-
-
             list-style: none;
             padding: 0;
 
