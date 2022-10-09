@@ -10,7 +10,10 @@ export const sendTelegramMessage = async (text) => {
   try {
     const response = await fetch(endpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: JSON.stringify({ chat_id, text: unescapeMessage }, null, 2),
     });
     return response;
