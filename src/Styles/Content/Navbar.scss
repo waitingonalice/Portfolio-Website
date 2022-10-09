@@ -14,7 +14,7 @@
 
     h1 strong {
       &::before {
-        content: "WS.";
+        content: "WS";
         @include text-layer
       }
     }

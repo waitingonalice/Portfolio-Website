@@ -20,7 +20,7 @@ function PortfolioNavbar() {
       <nav className="navigation-bar">
         <span className="main-logo">
           <h1>
-            <strong>WS.</strong>
+            <strong>WS</strong>
           </h1>
         </span>
 

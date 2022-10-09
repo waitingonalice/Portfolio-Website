@@ -9,6 +9,7 @@ import Projects from "../Components/Projects";
 import ContactMe from "../Components/ContactMe";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
   const particlesInit = async (main) => {
@@ -20,6 +21,24 @@ const IndexPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Wilson Sie</title>
+        <meta name="title" content="Wilson Sie" />
+        <meta name="description" content="" />
+        <link rel="icon" href="https://i.imgur.com/ZvkSezs.png" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wilson-sie.dev/" />
+        <meta property="og:title" content="Wilson Sie" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://wilson-sie.dev/" />
+        <meta property="twitter:title" content="Wilson Sie" />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:image" content="" />
+      </Helmet>
       <Particles
         className="particles"
         id="tsparticles"
