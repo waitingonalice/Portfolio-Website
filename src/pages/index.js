@@ -23,7 +23,7 @@ const IndexPage = () => {
     <>
       <Helmet>
         <title>Wilson Sie</title>
-        <meta name="title" content="Wilson Sie's" />
+        <meta name="title" content="Wilson Sie" />
         <meta
           name="description"
           content="Hello, I'm Wilson. Welcome to my portfolio where I showcase all of my past works and experiences."

@@ -156,6 +156,12 @@ h4 {
 
 @media screen and (max-width:650px) {
   .contact-wrapper {
+    .in-touch-header {
+      h1 strong::before {
+        top: -4px;
+        left: 3px;
+      }
+    }
 
     .form {
       width: 100%;
