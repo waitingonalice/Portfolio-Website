@@ -98,7 +98,7 @@ function ContactMe() {
 
       <div className="in-touch-header">
         <h1>
-          <strong>Got a question?</strong>
+          <strong>Have a question?</strong>
         </h1>
       </div>
       <h4>
