@@ -107,11 +107,10 @@
 @mixin button {
     position: relative;
     font-family: v.$font1;
-
     padding: 0.5em 1.5em;
     background-image: linear-gradient(to top left,
             #f1523c 0%,
-            #e62a0d 70%);
+            #e62a0d 80%);
     border-radius: 25px;
     z-index: 1;
     border: none;
@@ -127,7 +126,7 @@
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to top left,
-            #e62a0d 30%,
+            #e62a0d 20%,
             #f1523c 100%);
     z-index: -1;
     transition: opacity 0.2s linear;
@@ -140,4 +139,32 @@
     color: v.$linkColour;
     font-family: v.$font1;
     border: 0;
+}
+
+@mixin custom-scollbar {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #acb3bb;
+        border-top-left-radius: 0.5rem;
+        /* 8px */
+        border-top-right-radius: 0.5rem;
+        /* 8px */
+        border-bottom-left-radius: 0.5rem;
+        /* 8px */
+        border-bottom-right-radius: 0.5rem;
+        /* 8px */
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: v.$hrColor;
+    }
 }

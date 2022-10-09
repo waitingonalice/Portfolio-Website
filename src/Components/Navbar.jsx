@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "../Styles/Content/Navbar.scss";
-import coding from "../images/coding.png";
 import Hamburger from "./NavbarComponents/hamburger";
 import { Menu, DropDownMenu } from "./NavbarComponents/menu";
 
@@ -19,9 +18,11 @@ function PortfolioNavbar() {
   return (
     <header id="top">
       <nav className="navigation-bar">
-        <a href="#introduction">
-          <img className="logo" alt="codeLogo" src={coding} />
-        </a>
+        <span className="main-logo">
+          <h1>
+            <strong>WS.</strong>
+          </h1>
+        </span>
 
         <div ref={ref}>
           <Hamburger toggle={toggle} handleToggle={handleToggle} />

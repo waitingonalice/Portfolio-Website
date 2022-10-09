@@ -1,15 +1,24 @@
 @use '../Global/variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat&display=swap');
+@import '../Global/mixins';
 
 .navigation-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
 
-    .logo {
-        width: 50px;
+  .main-logo {
+    text-decoration: none;
 
+    h1 strong {
+      &::before {
+        content: "WS.";
+        @include text-layer
+      }
     }
+
+  }
+
 }

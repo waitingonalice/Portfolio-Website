@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/Content/projects.scss";
 import { Card } from "./Card/Card";
 import visualAlgo from "../images/visualAlgo.png";
@@ -48,12 +48,12 @@ function Projects() {
       alt: "Portfolio Site",
       title: "Portfolio Site",
       link: "https://github.com/waitingonalice/Portfolio-Website",
-      liveLink: "",
+      liveLink: "xyz.com",
       description: (
         <p>
           You are viewing it! This site was built with GatsbyJS and styled with
           SASS. Building this site enabled me to learn Sass, mobile responsive
-          practices and practice CSS flexbox/grid. All of my achievements,
+          practices and learn CSS flexbox/grid. All of my achievements,
           experiences and past works can be found here.
         </p>
       ),
@@ -74,7 +74,6 @@ function Projects() {
           alt: "Sass",
         },
       ],
-      liveSite: "www.xyz.com", // to add a live link
     },
     {
       image: visualAlgo,
@@ -84,10 +83,11 @@ function Projects() {
       liveLink: "https://waitingonalice.github.io/Visual-Algo/",
       description: (
         <p>
-          Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae
-          elit libero, a pharetra augue mollis interdum. Nulla vitae elit
-          libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a
-          pharetra augue mollis interdum.
+          During the height of Covid-19, I had to learn data structures and
+          algorithms for a module I was taking. Being a visual learner, I
+          created an interactive application that allowed users to visualise how
+          different sorting algorithms interacted with random numbers. Building
+          this project served as an entry point to learn React.
         </p>
       ),
       stack: [
@@ -107,7 +107,6 @@ function Projects() {
           alt: "CSS3",
         },
       ],
-      liveSite: "https://waitingonalice.github.io/Visual-Algo/",
     },
   ];
 
@@ -145,7 +144,7 @@ function Projects() {
                   Repository <HiOutlineExternalLink />
                 </a>
               </button>
-              {ele.liveSite && (
+              {ele.liveLink && (
                 <button className="site-btn">
                   <a href={ele.liveLink}>
                     Live site <HiOutlineExternalLink />

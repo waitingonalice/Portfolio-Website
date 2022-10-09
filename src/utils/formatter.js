@@ -8,3 +8,8 @@ export const toLocalDate = () => {
   };
   return date.toLocaleString("en-GB", options);
 };
+
+export const toLocalYear = () => {
+  const date = new Date();
+  return date.getFullYear();
+};
