@@ -21,7 +21,7 @@ h4 {
 
   .in-touch-header {
     h1 strong::before {
-      content: 'Got a question?';
+      content: 'Have a question?';
       @include text-layer;
       white-space: nowrap;
     }
