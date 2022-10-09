@@ -106,7 +106,7 @@ function ContactMe() {
         below.
       </h4>
       <button id="contact-btn">
-        <a href="mailto:wilsonsie.fc@gmail.com">Email {mailIcon}</a>
+        <a href="mailto:wilson.sie.dev@gmail.com">Email {mailIcon}</a>
       </button>
       <form className="form" id="form">
         <div className="contact-form form-floating">
