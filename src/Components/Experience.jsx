@@ -22,10 +22,13 @@ function Experience() {
             Improved supplier onboarding process with the use of cookies to
             categorise suppliers.
           </li>
-
           <li>
             Was responsible for building the new homepage for supplier facing
             portal that displayed informative dashboards based on user data.
+          </li>
+          <li>
+            Built a feature that enabled suppliers to upload their products with
+            an excel template to AWS S3.
           </li>
           <li>
             Contributed to the overall improvement of UX for supplier portal by

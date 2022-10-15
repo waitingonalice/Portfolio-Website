@@ -82,8 +82,8 @@ export default function AboutMe() {
               software fascinating. This fueled my passion for learning and
               tinkering with new technologies, and creating software projects
               that I am proud of. At the moment, I mainly do{" "}
-              <strong>front-end web development</strong>, but I'm keen in
-              learning backend development as well.
+              <strong>front-end web development</strong>, but I'm also keen in
+              learning backend development.
             </p>
           </div>
           <div className="p3">
