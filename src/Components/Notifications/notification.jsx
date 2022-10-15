@@ -51,7 +51,7 @@ const Notification = ({ className, resCode }) => {
         <div
           className={clsx(
             `alert alert-${dynamicStatus().status} ${
-              fade || (notificationTimeout && "fade")
+              (fade || notificationTimeout) && "fade"
             }`,
             className
           )}
