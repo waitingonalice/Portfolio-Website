@@ -1,6 +1,6 @@
-// const token = process.env.GATSBY_BOT_TOKEN;
+const token = process.env.GATSBY_BOT_TOKEN;
 const chat_id = process.env.GATSBY_USER_ID;
-const endpoint = `https://api.telegram.org/bot5408504185:AAEm-QEr3Lle-wWz9VV-K0bDzzM-yKJsBqA/sendMessage`;
+const endpoint = `https://api.telegram.org/bot${token}/sendMessage`;
 
 export const sendTelegramMessage = async (text) => {
   const unescapeMessage = {
