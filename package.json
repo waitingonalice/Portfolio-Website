@@ -19,7 +19,7 @@
     "clsx": "^1.2.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
-    "gatsby": "^4.15.2",
+    "gatsby": "^4.24.8",
     "gatsby-plugin-react-helmet": "^5.24.0",
     "gatsby-plugin-sass": "^5.15.1",
     "gatsby-plugin-vercel": "^1.0.3",
