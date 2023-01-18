@@ -30,7 +30,7 @@
     "react-icons": "^4.4.0",
     "react-tsparticles": "^2.1.4",
     "sass": "^1.52.1",
-    "tsparticles": "^2.1.4"
+    "tsparticles": "^2.8.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0"
