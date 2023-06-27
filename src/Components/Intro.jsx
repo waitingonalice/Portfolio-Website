@@ -16,7 +16,7 @@ function Intro() {
 
           <div className="job-title">
             <h2>
-              Frontend Software Developer at{" "}
+              Software Engineer at{" "}
               <a href="https://www.trustana.com/">Trustana.</a>
             </h2>
           </div>
