@@ -48,7 +48,6 @@ function Projects() {
       alt: "Portfolio Site",
       title: "Portfolio Site",
       link: "https://github.com/waitingonalice/Portfolio-Website",
-      liveLink: "https://wilson-sie.dev",
       description: (
         <p>
           You are viewing it! This site was built with GatsbyJS and styled with
