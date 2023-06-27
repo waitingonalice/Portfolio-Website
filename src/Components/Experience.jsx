@@ -3,42 +3,41 @@ import { Card } from "../Components/Card/Card";
 import "../Styles/Content/experience.scss";
 
 function Experience() {
-  const currMonth = new Date().toLocaleString("default", { month: "long" });
-  const currYear = new Date().getFullYear();
   const experience = [
     {
       company: "Trustana",
-      date: `June 2022 - ${currMonth} ${currYear}`,
-      position: "Software Engineer Intern",
+      date: `December 2022 - Present`,
+      position: "Associate Software Engineer",
       description: (
         <ol>
           <li>
-            Researched, documented and performed a Proof of Concept for
-            localisation software to be integrated into supplier portal
-            pipeline. Was also active in the process of integrating localisation
-            into supplier portal.
+            Was wholly responsible for building a feature that allowed suppliers
+            and internal users to import products with a given excel template.
+            This sped up the manual process of importing products individually
+            by supporting multiple product uploads with a single file.
           </li>
           <li>
-            Improved supplier onboarding process with the use of cookies to
-            categorise suppliers.
+            Built reusable components for the codebase. Most notably, a
+            component that allowed users to upload multiple files at once that
+            connected to AWS S3, with custom validations and UI.
           </li>
           <li>
-            Was responsible for building the new homepage for supplier facing
-            portal that displayed informative dashboards based on user data.
+            Helped to establish company's component library using Storybook that
+            was published as a package via AWS Codeartifact. Built and migrated
+            existing components from the codebase to the component library to be
+            used across different projects to ensure UI consistency and improve
+            developer efficiency. (Eventually)
           </li>
           <li>
-            Built a feature that enabled suppliers to upload their products with
-            an excel template to AWS S3.
+            Was responsible for building multiple key services for Sass
+            platforms on the frontend, mainly the Product Management, Internal
+            Admin and Product Catalog portals.
           </li>
           <li>
-            Contributed to the overall improvement of UX for supplier portal by
-            refactoring how components are displayed and implementing skeleton
-            loaders into website flow.
-          </li>
-          <li>
-            Worked in an agile development environment that required active
-            participation in the requirements gathering, design and development
-            phases. Utilised tools such as Confluence and Jira.{" "}
+            Wrote automation scripts to improve developer experience and
+            increase work efficiency. This reduced the number of bugs written by
+            automating manual processes and was also used as a measure to scale
+            to the increasing size of the codebase.
           </li>
         </ol>
       ),
@@ -52,6 +51,16 @@ function Experience() {
           imgLink:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
           alt: "React",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          alt: "NodeJS",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+          alt: "NextJS",
         },
         {
           imgLink:
@@ -71,18 +80,42 @@ function Experience() {
       ],
     },
     {
+      company: "Trustana",
+      date: `June 2022 - November 2022`,
+      position: "Software Engineer Intern",
+      description: (
+        <ol>
+          <li>
+            Researched, documented and performed a proof of concept to integrate
+            localisation software into Saas platform. Also played a key role in
+            integrating localisation software into the platform.
+          </li>
+          <li>
+            Contributed to the overall improvement of UX for supplier portal by
+            refactoring how components are displayed and implementing skeleton
+            loaders into website flow.
+          </li>
+          <li>
+            Worked in an agile development environment that required active
+            participation in the requirements gathering, design and development
+            phases. Utilised tools such as Confluence and Jira.
+          </li>
+        </ol>
+      ),
+    },
+    {
       company: "National Kidney Foundation",
       date: `Aug 2021 - June 2022`,
       position: "Freelance Web Developer",
       description: (
         <ol>
           <li>
-            Worked closely with clients to gather requirements for the design of
-            newletters.
+            Worked closely with other designers to design and develop reusable
+            email templates to be used for marketing campaigns.
           </li>
           <li>
-            Designed and formatted HTML EDMs to be published as newsletters with
-            frontend tools.
+            Worked on email template formatting with frontend tools such as HTML
+            and CSS.
           </li>
         </ol>
       ),
@@ -123,17 +156,19 @@ function Experience() {
               </div>
               <h5 className="position">{ele.position}</h5>
               <div className="experience-description">{ele.description}</div>
-
-              <h5>Tech stack:</h5>
-              <div className="icons">
-                {ele.stack &&
-                  ele.stack.map((stack) => (
-                    <div key={stack.alt}>
-                      <img src={stack.imgLink} alt={stack.alt} />
-                      <div className="text">{stack.alt}</div>
-                    </div>
-                  ))}
-              </div>
+              {ele.stack && (
+                <>
+                  <h5>Tech stack:</h5>
+                  <div className="icons">
+                    {ele.stack.map((stack) => (
+                      <div key={stack.alt}>
+                        <img src={stack.imgLink} alt={stack.alt} />
+                        <div className="text">{stack.alt}</div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
               <hr></hr>
             </div>
           ))}
