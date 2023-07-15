@@ -39,11 +39,6 @@ export default function AboutMe() {
     },
     {
       imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-      alt: "Java",
-    },
-    {
-      imgLink:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       alt: "mySQL",
     },
@@ -81,9 +76,9 @@ export default function AboutMe() {
               idea to developing a fully functional and scalable piece of
               software fascinating. This fueled my passion for learning and
               tinkering with new technologies, and creating software projects
-              that I am proud of. At the moment, I mainly do{" "}
-              <strong>front-end web development</strong>, but I'm also keen in
-              learning backend development.
+              that I am proud of. At the moment, I mainly do front-end web
+              development, but have been dabbling with backend technologies as
+              well.
             </p>
           </div>
           <div className="p3">
