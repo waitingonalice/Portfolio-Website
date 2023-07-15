@@ -11,27 +11,27 @@ function Experience() {
       description: (
         <ol>
           <li>
-            Was wholly responsible for building a feature that allowed suppliers
-            and internal users to import products with a given excel template.
-            This sped up the manual process of importing products individually
-            by supporting multiple product uploads with a single file.
+            Played a key role in establishing the company's component library
+            using Storybook that was published as a package via AWS
+            Codeartifact. Built, maintained and migrated existing components
+            from the codebase to the component library to be used across
+            different projects to ensure UI consistency and improve developer
+            efficiency.
           </li>
           <li>
-            Built reusable components for the codebase. Most notably, a
-            component that allowed users to upload multiple files at once that
-            connected to AWS S3, with custom validations and UI.
+            Built a reusable upload interface which supports multiple uploads at
+            once with custom file validations that is connected to AWS S3 on the
+            frontend for asset management.
           </li>
           <li>
-            Helped to establish company's component library using Storybook that
-            was published as a package via AWS Codeartifact. Built and migrated
-            existing components from the codebase to the component library to be
-            used across different projects to ensure UI consistency and improve
-            developer efficiency. (Eventually)
+            Implemented client-side caching using Apollo's cache to reduce the
+            number of API calls made to the backend, improving product search
+            times and user experience.
           </li>
           <li>
-            Was responsible for building multiple key services for Sass
-            platforms on the frontend, mainly the Product Management, Internal
-            Admin and Product Catalog portals.
+            Was responsible for setting up and building multiple key services
+            for Sass platforms on the frontend, mainly the Product Management,
+            Internal Admin and Product Catalog portals.
           </li>
           <li>
             Wrote automation scripts to improve developer experience and
