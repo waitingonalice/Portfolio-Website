@@ -39,11 +39,6 @@ export default function AboutMe() {
     },
     {
       imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-      alt: "Java",
-    },
-    {
-      imgLink:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       alt: "mySQL",
     },
