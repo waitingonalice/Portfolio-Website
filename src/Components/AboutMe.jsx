@@ -81,9 +81,10 @@ export default function AboutMe() {
               idea to developing a fully functional and scalable piece of
               software fascinating. This fueled my passion for learning and
               tinkering with new technologies, and creating software projects
-              that I am proud of. At the moment, I mainly do{" "}
-              <strong>front-end web development</strong>, but I'm also keen in
-              learning backend development.
+              that I am proud of. At the moment, I am working on a personal
+              project that involves building full stack applications contained
+              within a monorepo as a means to learn more about the latest
+              technologies and best practices.
             </p>
           </div>
           <div className="p3">

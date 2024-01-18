@@ -6,38 +6,41 @@ function Experience() {
   const experience = [
     {
       company: "Trustana",
-      date: `December 2022 - Present`,
+      date: `June 2022 - Present`,
       position: "Associate Software Engineer",
       description: (
         <ol>
           <li>
-            Was wholly responsible for building a feature that allowed suppliers
-            and internal users to import products with a given excel template.
-            This sped up the manual process of importing products individually
-            by supporting multiple product uploads with a single file.
+            Played a key role in establishing the company's component library
+            using Storybook that was published as a package via AWS
+            Codeartifact.
           </li>
           <li>
-            Built reusable components for the codebase. Most notably, a
-            component that allowed users to upload multiple files at once that
-            connected to AWS S3, with custom validations and UI.
+            Built and maintained reusable components for the component library
+            to be used across different projects to ensure UI consistency and
+            improve developer efficiency.
           </li>
           <li>
-            Helped to establish company's component library using Storybook that
-            was published as a package via AWS Codeartifact. Built and migrated
-            existing components from the codebase to the component library to be
-            used across different projects to ensure UI consistency and improve
-            developer efficiency. (Eventually)
+            Collaborated with designers and product managers to build dashboards
+            that supported data visualization, data filtering, data exporting
+            and generation.
           </li>
           <li>
-            Was responsible for building multiple key services for Sass
-            platforms on the frontend, mainly the Product Management, Internal
-            Admin and Product Catalog portals.
+            Was involved in setting up numerous projects and pipelines that
+            enabled developers to have a better experience in developing and
+            deploying their code.
           </li>
           <li>
-            Wrote automation scripts to improve developer experience and
-            increase work efficiency. This reduced the number of bugs written by
-            automating manual processes and was also used as a measure to scale
-            to the increasing size of the codebase.
+            Adopted practices such as caching and debouncing of data to reduce
+            load on the server/browser, reducing cost, improving product search
+            times and user experience.
+          </li>
+          <li>
+            Wrote numerous APIs and AWS Lambda functions that was orchestrated
+            by a Step function to provide a service that generated product data
+            for customers/vendors. Also worked on improving the flow by
+            leveraging on parallelism in order to reduce the time taken to
+            generate product data.
           </li>
         </ol>
       ),
@@ -78,30 +81,6 @@ function Experience() {
           alt: "Git",
         },
       ],
-    },
-    {
-      company: "Trustana",
-      date: `June 2022 - November 2022`,
-      position: "Software Engineer Intern",
-      description: (
-        <ol>
-          <li>
-            Researched, documented and performed a proof of concept to integrate
-            localisation software into Saas platform. Also played a key role in
-            integrating localisation software into the platform.
-          </li>
-          <li>
-            Contributed to the overall improvement of UX for supplier portal by
-            refactoring how components are displayed and implementing skeleton
-            loaders into website flow.
-          </li>
-          <li>
-            Worked in an agile development environment that required active
-            participation in the requirements gathering, design and development
-            phases. Utilised tools such as Confluence and Jira.
-          </li>
-        </ol>
-      ),
     },
     {
       company: "National Kidney Foundation",
