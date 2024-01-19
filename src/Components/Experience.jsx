@@ -98,11 +98,6 @@ function Experience() {
             engagement.
           </li>
           <li>
-            Applied HTML and CSS expertise to ensure seamless email template
-            formatting, resulting in improved click-through rates and user
-            engagement.
-          </li>
-          <li>
             Overcame challenges related to email client compatibility in the
             development process.
           </li>
