@@ -21,26 +21,25 @@ function Experience() {
             improve developer efficiency.
           </li>
           <li>
-            Collaborated with designers and product managers to build dashboards
-            that supported data visualization, data filtering, data exporting
-            and generation.
+            Collaborated with cross-functional teams, including designers and
+            product managers, to develop feature-rich dashboards supporting data
+            visualization, data filtering, and data exporting, serving vendors
+            and customers.
           </li>
           <li>
-            Was involved in setting up numerous projects and pipelines that
-            enabled developers to have a better experience in developing and
-            deploying their code.
+            Orchestrated the setup of multiple projects and pipelines, enhancing
+            the development and deployment experience for fellow developers,
+            utilizing Gitlab CICD and bash scripting.
           </li>
           <li>
-            Adopted practices such as caching and debouncing of data to reduce
-            load on the server/browser, reducing cost, improving product search
-            times and user experience.
+            Implemented optimization strategies, including caching and
+            debouncing, resulting in reduced server load, improved product
+            search times, and cost savings.
           </li>
           <li>
-            Wrote numerous APIs and AWS Lambda functions that was orchestrated
-            by a Step function to provide a service that generated product data
-            for customers/vendors. Also worked on improving the flow by
-            leveraging on parallelism in order to reduce the time taken to
-            generate product data.
+            Engineered AWS Lambda functions and APIs orchestrated by a Step
+            function, leveraging parallelism to significantly reduce product
+            data generation time.
           </li>
         </ol>
       ),
@@ -89,12 +88,27 @@ function Experience() {
       description: (
         <ol>
           <li>
-            Worked closely with other designers to design and develop reusable
-            email templates to be used for marketing campaigns.
+            Collaborated closely with fellow designers to design and develop
+            reusable email templates, contributing to successful marketing
+            campaigns.
           </li>
           <li>
-            Worked on email template formatting with frontend tools such as HTML
-            and CSS.
+            Applied HTML and CSS expertise to ensure seamless email template
+            formatting, resulting in improved click-through rates and user
+            engagement.
+          </li>
+          <li>
+            Applied HTML and CSS expertise to ensure seamless email template
+            formatting, resulting in improved click-through rates and user
+            engagement.
+          </li>
+          <li>
+            Overcame challenges related to email client compatibility in the
+            development process.
+          </li>
+          <li>
+            Engineered responsive design principles to optimize email template
+            content for a diverse range of devices.
           </li>
         </ol>
       ),
@@ -108,6 +122,11 @@ function Experience() {
           imgLink:
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
           alt: "CSS3",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+          alt: "Javascript",
         },
         {
           imgLink:
