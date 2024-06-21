@@ -39,8 +39,8 @@ export default function AboutMe() {
     },
     {
       imgLink:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      alt: "mySQL",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg",
+      alt: "PostgreSQL",
     },
     {
       imgLink:
@@ -76,21 +76,19 @@ export default function AboutMe() {
               idea to developing a fully functional and scalable piece of
               software fascinating. This fueled my passion for learning and
               tinkering with new technologies, and creating software projects
-              that I am proud of. At the moment, I am working on a personal
-              project that involves building full stack applications contained
-              within a monorepo as a means to learn more about the latest
-              technologies and best practices.
+              that I am proud of. At the moment, I am working on a fullstack
+              application that is self-hosted on my own infrastructure.
             </p>
           </div>
           <div className="p3">
             <p>
               Besides web development, I have worked on other projects such as
-              cryptography and neural networking. All of my works can be found
-              on{" "}
+              setting up and maintaining a personal mini datacenter at home. All
+              of my works can be found on&nbsp;
               <strong>
                 <a href="https://github.com/waitingonalice">Github</a>
-              </strong>{" "}
-              which I update regularly.
+              </strong>
+              &nbsp; which I update regularly.
             </p>
           </div>
         </div>

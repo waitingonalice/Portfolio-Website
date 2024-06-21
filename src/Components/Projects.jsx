@@ -2,22 +2,22 @@ import React from "react";
 import "../Styles/Content/projects.scss";
 import { Card } from "./Card/Card";
 import visualAlgo from "../images/visualAlgo.png";
-import spaceX from "../images/spacex.png";
 import portfolio from "../images/portfolio.png";
+import designSystem from "../images/design-system.png";
 import { HiOutlineExternalLink } from "react-icons/hi";
 function Projects() {
   const projectMapper = [
     {
-      image: spaceX,
-      alt: "SpaceX",
-      title: "SpaceX Rockets",
-      link: "https://github.com/waitingonalice/SpaceX-Rockets",
+      image: designSystem,
+      alt: "Design System",
+      title: "Design System",
+      link: "https://www.npmjs.com/package/@waitingonalice/design-system",
       description: (
         <p>
-          I needed to learn how to consume and mutate GraphQL APIs during my
-          internship, hence this project was born. It is a simple React
-          application that filters and displays all SpaceX rockets based on
-          their launchsites.
+          A design system package that provides a set of UI components for me to
+          reuse across different projects. It is built with React and tested
+          with Storybook. Rollup is used to bundle the package and published to
+          NPM via Github Actions.
         </p>
       ),
       stack: [
@@ -33,13 +33,18 @@ function Projects() {
         },
         {
           imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-          alt: "GraphQL",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+          alt: "TailwindCSS",
         },
         {
           imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-          alt: "Tailwind",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rollup/rollup-original.svg",
+          alt: "Rollup",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg",
+          alt: "Storybook",
         },
       ],
     },

@@ -5,8 +5,90 @@ import "../Styles/Content/experience.scss";
 function Experience() {
   const experience = [
     {
+      company: "Mastplot",
+      date: `January 2024 - Present`,
+      position: "Fullstack Software Developer",
+      description: (
+        <ol>
+          <li>
+            Implemented development workflows utilising docker compose to ensure
+            developers had a consistent development environment improving
+            developer efficiency.
+          </li>
+          <li>
+            Architected CI pipelines to easily deploy code to on-premise servers
+            utilising bash scripting and Github Actions.
+          </li>
+          <li>
+            Developed a complex, interactive frontend application using DeckGL,
+            Maplibre, and Tileserver-gl.
+          </li>
+          <li>
+            Demonstrated full-stack capabilities by building RESTful APIs and
+            collaborating with backend developers on data migrations.
+          </li>
+          <li>
+            Mentored junior developers, fostering knowledge sharing and best
+            practices through code reviews.
+          </li>
+        </ol>
+      ),
+      stack: [
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+          alt: "Typescript",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+          alt: "Python",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          alt: "React",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+          alt: "NextJS",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          alt: "NodeJS",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+          alt: "FastAPI",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg",
+          alt: "PostgreSQL",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+          alt: "Github",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          alt: "Git",
+        },
+        {
+          imgLink:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg",
+          alt: "Docker",
+        },
+      ],
+    },
+    {
       company: "Trustana",
-      date: `June 2022 - Present`,
+      date: `June 2022 - January 2024`,
       position: "Associate Software Engineer",
       description: (
         <ol>
@@ -56,13 +138,13 @@ function Experience() {
         },
         {
           imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-          alt: "NodeJS",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+          alt: "NextJS",
         },
         {
           imgLink:
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-          alt: "NextJS",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          alt: "NodeJS",
         },
         {
           imgLink:

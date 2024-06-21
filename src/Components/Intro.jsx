@@ -5,6 +5,8 @@ import { MdOutlineDescription } from "react-icons/md";
 import { RiLinkedinFill } from "react-icons/ri";
 import { IoMdArrowDropright } from "react-icons/io";
 import { HiChevronDoubleUp } from "react-icons/hi";
+import Resume from "../../static/resume.pdf";
+
 function Intro() {
   return (
     <>
@@ -15,20 +17,14 @@ function Intro() {
           </div>
 
           <div className="job-title">
-            <h2>
-              Software Engineer at{" "}
-              <a href="https://www.trustana.com/">Trustana.</a>
-            </h2>
+            <h2>Fullstack Software Developer</h2>
           </div>
           <div className="links">
             <a className="portfolio-btn" href="#about">
               Portfolio <IoMdArrowDropright />
             </a>
             <div className="icon-wrapper">
-              <a
-                href="https://github.com/waitingonalice/CV/blob/main/Resume.pdf"
-                className="link-btn"
-              >
+              <a target="_blank" href={Resume} className="link-btn">
                 <MdOutlineDescription />
                 <p>Resume</p>
               </a>
