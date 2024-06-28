@@ -11,21 +11,28 @@ function Experience() {
       description: (
         <ol>
           <li>
-            Implemented development workflows utilising docker compose to ensure
-            developers had a consistent development environment improving
-            developer efficiency.
+            Built multiple services by implementing RESTful APIs with MVC
+            architecture using Python FastAPI as a web server and handled API
+            integrations on the frontend. Also collaborated with backend
+            engineers to handle data migrations with Postgres in between
+            releases.
           </li>
           <li>
-            Architected CI pipelines to easily deploy code to on-premise servers
-            utilising bash scripting and Github Actions.
+            Led the development of the interactive frontend for a live
+            navigation application used by seafarers, utilizing technologies
+            such as NextJS, Typescript, DeckGL, Maplibre and Tileserver-GL to
+            ensure smooth navigation even with limited internet connectivity.
           </li>
           <li>
-            Developed a complex, interactive frontend application using DeckGL,
-            Maplibre, and Tileserver-gl.
+            Boosted developer efficiency by 50% by introducing Docker Compose.
+            This addressed challenges of inconsistent environments and
+            difficulty replicating production issues, leading to a smoother
+            development workflow.
           </li>
           <li>
-            Demonstrated full-stack capabilities by building RESTful APIs and
-            collaborating with backend developers on data migrations.
+            Built container images for services (e.g. Python FastAPI, NextJS)
+            and architected CI pipelines using Github Actions and bash scripting
+            to easily deploy applications to on-premise servers with every push.
           </li>
           <li>
             Mentored junior developers, fostering knowledge sharing and best
@@ -93,6 +100,22 @@ function Experience() {
       description: (
         <ol>
           <li>
+            Led the integration of Product Generation, Product Editing and
+            Attribute Management APIs into the frontend application by
+            collaborating closely with backend developers, ensuring smooth
+            communication between front-end and back-end services.
+          </li>
+          <li>
+            Engineered AWS Lambda functions and APIs orchestrated by a Step
+            function, leveraging parallelism to significantly reduce product
+            data generation time.
+          </li>
+          <li>
+            Successfully built and deployed multiple frontend features
+            leveraging optimization strategies such as caching and debouncing,
+            resulting in reduced server load and improving product search times.
+          </li>
+          <li>
             Played a key role in establishing the company's component library
             using Storybook that was published as a package via AWS
             Codeartifact.
@@ -103,25 +126,9 @@ function Experience() {
             improve developer efficiency.
           </li>
           <li>
-            Collaborated with cross-functional teams, including designers and
-            product managers, to develop feature-rich dashboards supporting data
-            visualization, data filtering, and data exporting, serving vendors
-            and customers.
-          </li>
-          <li>
             Orchestrated the setup of multiple projects and pipelines, enhancing
             the development and deployment experience for fellow developers,
             utilizing Gitlab CICD and bash scripting.
-          </li>
-          <li>
-            Implemented optimization strategies, including caching and
-            debouncing, resulting in reduced server load, improved product
-            search times, and cost savings.
-          </li>
-          <li>
-            Engineered AWS Lambda functions and APIs orchestrated by a Step
-            function, leveraging parallelism to significantly reduce product
-            data generation time.
           </li>
         </ol>
       ),
